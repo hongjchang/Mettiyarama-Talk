@@ -47,6 +47,45 @@ a:hover{
 	padding-bottom: 10px;
 }
 
+/*========For Scrolling Progress========*/
+.progress-container {
+	width: 100%;
+	height: 5px;
+	background: #ccc;
+	position: fixed;
+}
+.progress-bar {
+	height: 5px;
+	background: rgb(27, 176, 240);
+	width: 0%;
+}
+
+/*========Closable banner========*/
+#fixed-alert {
+    width: 100%;
+    height: 1%;
+    background-color: rgb(146, 214, 243);
+    position: sticky;
+	bottom: 0;
+    padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	text-align: center;
+	font-size: 18px;
+	z-index: 1;
+}
+#btn-dismiss {
+    width: auto;
+	background-color: transparent;
+	color: rgb(171, 12, 6);
+	font-weight:1000;
+	font-size:19px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+}
 
 /*========For body content========*/
 * {
@@ -87,38 +126,13 @@ footer {
 	padding: 1px;
 	text-align: center;
 	color: white;
+	position: absolute;
 }
 @media (max-width: 600px) {
 	nav, article {
 		width: auto;
 		height: auto;
 	}
-}
-
-/*========Closable banner========*/
-#fixed-alert {
-    width: 100%;
-    height: 2%;
-    background-color: rgb(146, 214, 243);
-    position: sticky;
-	top: 0;
-    padding-top: 0.7%;
-	padding-bottom: 0.7%;
-	padding-left: 0.5%;
-	padding-right: 0.5%;
-	text-align: center;
-	z-index: 1;
-}
-#btn-dismiss {
-    width: auto;
-	background-color: transparent;
-	color: rgb(171, 12, 6);
-	font-weight:1000;
-	font-size:16px;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	overflow: hidden;
 }
 
 /*========Tooltip text========*/
@@ -128,7 +142,6 @@ footer {
 	border-bottom: 1px none black; /* If you want dots under the hoverable text */
 	cursor: default;
 }
-
 /* Tooltip text */
 .tooltip .tooltipText {
 	visibility: hidden;
@@ -151,7 +164,6 @@ footer {
 	opacity: 0;
 	transition: opacity 0.3s;
 }
-
 /* Tooltip arrow */
 .tooltip .tooltipText::after {
 	content: "";

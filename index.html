@@ -22,23 +22,26 @@
 </head>
 
 <body>
-    <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
-    <div id="fixed-alert">
-        <button id="btn-dismiss" data-dismiss="alert">&times; Close</button>
-        <i>The Buddhism Teaching sessions by Bhante are available every fortnights on Wednesday. Session details can be found in their <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer">Facebook page</a> or <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer">WhatsApp group</a>.</i><br/><b>This webpage supports well in most computer browsers, but please expect any responsiveness issues if you're viewing on mobile devices.</b>
+    <!--Progress indicator when scrolling based on https://www.w3schools.com/howto/howto_js_scroll_indicator.asp -->
+    <div class="progress-container">
+        <div class="progress-bar" id="scrollProgressBar"></div>
     </div>
     <script>
-        var btn = document.querySelector('#btn-dismiss');
-        btn.addEventListener("click", function(){
-            var alert = document.querySelector('#fixed-alert');
-            alert.style.display = 'none';
-        });
+        //Run the function when user scrolling
+        window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollProgressBar").style.width = scrolled + "%";
+        }
     </script>
 
     <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
     <header>
         <h1>Bhante's Talk on Wednesday</h1>
-        <p style="font-size:14px;">Last Modified on <u>22/10/2022 1:10am GMT+11</u></p>
+        <p style="font-size:14px;">Last Modified on <u>28/10/2022 11:02pm GMT+11</u></p>
         <hr>
     </header>
     
@@ -155,10 +158,22 @@
             <p style="text-indent:35px;text-align:justify;">The video recordings are coverted using <a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net</a> website. There aren't any permission granted or collaboration with <a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Mettiyarama Centre</a>, but my primary intention is only to record all past Bhante's talks from the aforementioned target source.</p>
         </nav>
     </section>
-    
+
     <footer>
         <p>No Copyright &copy 2022. Created by hongjchang on 5/10/2022 &#8901; All works are done individually &#8901; Webpage theme referenced from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools</a> &#8901; This page is created from own interest and neither cooperation nor sponsoring affiliated with the target source.</p>
     </footer>
 
+    <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
+    <div id="fixed-alert">
+        <button id="btn-dismiss" data-dismiss="alert">&times; Close</button>
+        <i>The Buddhism Teaching sessions by Bhante are available every fortnights on Wednesday. Session details can be found in their <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer">Facebook page</a> or <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer">WhatsApp group</a>.</i><br/><b>This webpage supports well in most computer browsers, but please expect any responsiveness issues if you're viewing on mobile devices.</b>
+    </div>
+    <script>
+        var btn = document.querySelector('#btn-dismiss');
+        btn.addEventListener("click", function(){
+            var alert = document.querySelector('#fixed-alert');
+            alert.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
