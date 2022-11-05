@@ -34,13 +34,13 @@ section h3 {
 	background-color: rgb(7, 87, 19);
 	color: #f1f1f1;
     position: sticky;
-	bottom: 0;
-    padding-top: 1%;
-	padding-bottom: 1%;
+	top: 0;
+    padding-top: 0.3%;
+	padding-bottom: 0.5%;
 	padding-left: 0.5%;
 	padding-right: 0.5%;
 	text-align: center;
-	font-size: 18px;
+	font-size: 14px;
 	z-index: 1;
 	font-family: 'Product Sans';
 	font-weight: 400;
@@ -50,7 +50,7 @@ section h3 {
 	background-color: transparent;
 	color: rgb(235, 30, 23);
 	font-weight:1000;
-	font-size:19px;
+	font-size:16px;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -67,6 +67,24 @@ a:visited{
 }
 a:hover{
 	color: rgb(125, 63, 27);
+}
+
+/*========Return to top button=======*/
+#toTopBtn {
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: rgb(7, 87, 19); /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 11px; /* Some padding */
+	border-radius: 20px;
+	font-size: 10px;
+	font-weight: bold;
+}
+#toTopBtn:hover {
+	background-color:#ccc;
+	color:rgb(7, 87, 19);
+	font-weight: bold;
 }
 
 /*========Article content in main body========*/
@@ -166,7 +184,7 @@ footer {
 	padding: 1px;
 	text-align: center;
 	color: white;
-	position: absolute;
+	position: relative;
 }
 @media (max-width: 600px) {
 	nav, article {
