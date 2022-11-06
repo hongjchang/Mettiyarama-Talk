@@ -1,5 +1,6 @@
 body{
-	background-color: rgba(157, 242, 170, 0.45);
+	/* background-color: rgba(157, 242, 170, 0.45); */
+	background-image: linear-gradient(#cbefd1,#7ec188,#3f904b);
 	font-family: 'Ubuntu', sans-serif;
 	margin-top: 0%;
 	margin-left: 0%;
@@ -26,121 +27,11 @@ section h3 {
 	font-weight: 500;
 }
 
-/*========Closable banner========*/
-#fixed-alert {
-    width: 100%;
-    height: 1%;
-    /* background-color: rgb(146, 214, 243); */
-	background-color: rgb(7, 87, 19);
-	color: #f1f1f1;
-    position: sticky;
-	top: 0;
-    padding-top: 0.3%;
-	padding-bottom: 0.5%;
-	padding-left: 0.5%;
-	padding-right: 0.5%;
-	text-align: center;
-	font-size: 14px;
-	z-index: 1;
-	font-family: 'Product Sans';
-	font-weight: 400;
-}
-#btn-dismiss {
-    width: auto;
-	background-color: transparent;
-	color: rgb(235, 30, 23);
-	font-weight:1000;
-	font-size:16px;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	overflow: hidden;
-}
-
-/*========Hyperlinks========*/
-a:link {
-	text-decoration: none;
-	color: rgb(25, 202, 52);
-}
-a:visited{
-	color: rgb(27, 176, 240);
-}
-a:hover{
-	color: rgb(125, 63, 27);
-}
-
-/*========Return to top button=======*/
-#toTopBtn {
-	border: none; /* Remove borders */
-	outline: none; /* Remove outline */
-	background-color: rgb(7, 87, 19); /* Set a background color */
-	color: white; /* Text color */
-	cursor: pointer; /* Add a mouse pointer on hover */
-	padding: 11px; /* Some padding */
-	border-radius: 20px;
-	font-size: 10px;
+/*========Responsive info under the header========*/
+.responsive-info{
+	color: #ddd;
+	font-size: 12px;
 	font-weight: bold;
-}
-#toTopBtn:hover {
-	background-color:#ccc;
-	color:rgb(7, 87, 19);
-	font-weight: bold;
-}
-
-/*========Article content in main body========*/
-#resp-table {
-	width: 100%;
-	display: table;
-}
-#resp-table-body{
-	display: table-row-group;
-}
-.resp-table-row{
-	display: table-row;
-	padding-bottom: 30px;
-}
-.table-body-cell{
-	display: table-cell;
-	padding-left: 20px;
-	padding-right: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-/*========For Scrolling Progress========*/
-.progress-container {
-	width: 100%;
-	height: 4px;
-	background: transparent;
-	position: fixed;
-}
-.progress-bar {
-	height: 4px;
-	background: rgb(19, 206, 47);
-	width: 0%;
-}
-
-/*========Custom Scroll Bar========*/
-/* width */
-::-webkit-scrollbar {
-	width: 7.5px;
-}
-::-webkit-scrollbar-track {
-	background: transparent;
-}
-::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background: rgb(19, 206, 47);
-}
-::-webkit-scrollbar-thumb:hover {
-	background: rgb(9, 97, 22);
-}
-::-webkit-resizer {
-	background: scroll;
-}
-::-webkit-scrollbar-track-piece{
-	padding-left: 5px;
-	padding-right: 5px;
 }
 
 /*========For body content========*/
@@ -191,6 +82,121 @@ footer {
 		width: auto;
 		height: auto;
 	}
+}
+
+/*========Closable banner========*/
+#fixed-alert {
+    width: 100%;
+    height: 1%;
+    background-color: rgb(146, 214, 243);
+	color: #555;
+    position: sticky;
+	top: 0;
+    padding-top: 0.3%;
+	padding-bottom: 0.5%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	text-align: center;
+	font-size: 14px;
+	z-index: 1;
+	font-family: 'Product Sans';
+	font-weight: 600;
+}
+#btn-dismiss {
+    width: auto;
+	background-color: transparent;
+	color: rgb(235, 30, 23);
+	font-weight:1000;
+	font-size:16px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+/*========Hyperlinks========*/
+a:link {
+	text-decoration: none;
+	color: rgb(25, 202, 52);
+}
+a:visited{
+	color: rgb(27, 176, 240);
+}
+a:hover{
+	color: rgb(125, 63, 27);
+}
+
+/*========Return to top button=======*/
+#toTopBtn {
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #ccc; /* Set a background color */
+	color: rgb(7, 87, 19); /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 11px; /* Some padding */
+	border-radius: 50px;
+	font-size: 14px;
+	font-family: 'Product Sans', sans-serif;
+}
+#toTopBtn:hover {
+	background-color:rgb(7, 87, 19);
+	color:white;
+}
+
+/*========Article content in main body========*/
+#resp-table {
+	width: 100%;
+	display: table;
+}
+#resp-table-body{
+	display: table-row-group;
+}
+.resp-table-row{
+	display: table-row;
+	padding-bottom: 30px;
+}
+.table-body-cell{
+	display: table-cell;
+	padding-left: 20px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/*========For Scrolling Progress========*/
+.progress-container {
+	width: 100%;
+	height: 4px;
+	background: transparent;
+	position: fixed;
+}
+.progress-bar {
+	height: 4px;
+	background: rgb(19, 206, 47);
+	width: 0%;
+}
+
+/*========Custom Scroll Bar========*/
+/* width */
+::-webkit-scrollbar {
+	width: 7.5px;
+}
+::-webkit-scrollbar-track {
+	background: #bbb;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0,0,0,0.3);
+}
+::-webkit-resizer {
+	background: scroll;
+}
+::-webkit-scrollbar-track-piece{
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 /*========Tooltip text========*/
