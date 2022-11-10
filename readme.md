@@ -4,7 +4,7 @@
 > https://hongjchang.github.io/Mettiyarama-Talk/
 
 ## **Details**
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=hongjchang)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=hongjchang.Mettiyarama-Talk)
 
 **Main Purpose:** To create a HTML web page to record each talk sessions.
 
