@@ -128,19 +128,20 @@ a:hover{
 
 /*========Return to top button=======*/
 #toTopBtn {
-	border: none; /* Remove borders */
-	outline: none; /* Remove outline */
-	background-color: #ccc; /* Set a background color */
-	color: rgb(7, 87, 19); /* Text color */
-	cursor: pointer; /* Add a mouse pointer on hover */
-	padding: 11px; /* Some padding */
-	border-radius: 50px;
-	font-size: 14px;
-	font-family: 'Product Sans', sans-serif;
+	border: none;
+	outline: none;
+	color: rgb(7, 87, 19);
+	cursor: pointer;
+	/* padding: 11px;
+	/* border-radius: 50px; */
+	font-size: 15px;
 }
 #toTopBtn:hover {
-	background-color:rgb(7, 87, 19);
-	color:white;
+	color:#aaa;
+	text-decoration: underline;
+}
+#toTopBtn:active {
+	background-color: #ccc;
 }
 
 /*========Article content in main body========*/
