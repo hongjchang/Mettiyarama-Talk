@@ -40,6 +40,8 @@ code {
 	width: 50%;
 	position: relative;
 	transition: all 1s;
+	cursor: default;
+	user-select: none;
 }
 .popup h2 { /*Popup's title*/
 	margin-top: 0;
@@ -55,6 +57,7 @@ code {
 	font-weight: bold;
 	text-decoration: none;
 	color: #333;
+	cursor: pointer;
 }
 .popup .closeBtn:hover {
 	color: #06D85F;
