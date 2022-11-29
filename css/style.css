@@ -1,6 +1,6 @@
 body{
 	/* background-color: rgba(157, 242, 170, 0.45); */
-	background-image: linear-gradient(#ccf3d3,#72e182);
+	background-image: linear-gradient(#dcf0df,#72e182);
 	font-family: 'Ubuntu', sans-serif;
 	margin-top: 0%;
 	margin-left: 0%;
@@ -14,6 +14,22 @@ h1{
 
 code {
 	font-size: 14px;
+}
+
+/*========Header Notice At Top=======*/
+.notice-head{
+	width: auto;
+	font-family: 'Product Sans', sans-serif;
+	font-size: 20px;
+	font-weight: 900;
+	color:rgb(7,87,19);
+	background-color: rgba(7, 87, 19, 0.2);;
+	border-radius: 13px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-top: -1px;
 }
 
 /*========Google font style========*/
@@ -205,7 +221,7 @@ a:hover{
 	position: relative;
 	display: inline-block;
 	border-bottom: 1px none black; /* If you want dots under the hoverable text */
-	cursor: default;
+	cursor: help;
 }
 /* Tooltip text */
 .tooltip .tooltipText {
