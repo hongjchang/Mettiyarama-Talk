@@ -49,7 +49,7 @@
     <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
     <div id="fixed-alert">
         <button id="btn-dismiss" data-dismiss="alert">&times; Close</button>
-        The Buddhism Teaching sessions by Bhante are available every fortnights on Wednesday unless exceptions apply.
+        The Buddhism Teaching sessions by Bhante are available fortnightly on Wednesday unless exceptions apply.
     </div>
     <script>
         var btn = document.querySelector('#btn-dismiss');
@@ -59,10 +59,29 @@
         });
     </script>
 
+    <!--A pop up box for notice at top of the page but modified a little. Found here:https://codepen.io/imprakash/pen/GgNMXO -->
+    <div class="overlayBox">
+        <div class="popup">
+            <h2>FYI,</h2>
+            <a class="closeBtn" data-dismiss="alert" id="popupCloseBtn">&times;</a>
+            <div class="content">
+                The talks are currently <b>paused</b> since <u>19 Oct 2022</u> until the upcoming event details are published. Please stay tuned for the upcoming event.
+                <p style="padding-top:0px;">Thank you for your patience.</p>
+            </div>
+            <script>
+                var btn = document.querySelector('#popupCloseBtn');
+                btn.addEventListener("click", function(){
+                    var alert = document.querySelector('.overlayBox');
+                    alert.style.display = 'none';
+                });
+            </script>
+        </div>
+    </div>
+
     <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
     <header>
         <h1>Bhante's Talk on Wednesday</h1>
-        <p>Last Modified on <u>29 Nov 2022 07:39pm GMT+8</u></p>
+        <p>Last Modified on <u>29 Nov 2022 10:14pm GMT+8</u></p>
         <hr>
         <div class="responsive-info">
             <b>⚠️This webpage supports well in most computer browsers, but please expect any responsiveness issues if you're viewing on mobile devices.⚠️</b>
@@ -78,10 +97,6 @@
         </nav>
 
         <article>
-            <div class="notice-head">
-                <p>FYI, the talks are currently paused since <u>19 Oct 2022</u> until further notice. Stay tuned for the upcoming occurrence.</p>
-            </div>
-
             <!--2 <div table-row> = 1 embed video
                 Add each video to the TOP. Sort them from newest one first.
             -->
@@ -90,13 +105,13 @@
             <div id="resp-table">
                 <div id="resp-table-body">
                     <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session3"><h3>Next session: 30 Nov 2022<br/><code>佛陀的经钥匙系列开示(54) 之 N/A</code></h3></div>
+                        <div class="table-body-cell" id="session3"><h3>Next session: 30 Nov 2022<br/><code>佛陀的经钥匙系列开示(54) 之 </code></h3></div>
                     </div>
                     <div class=“resp-table-row”>
                         <div class="table-body-cell">
                             <!--Image reference: https://www.youtube.com/error/ -->
                             <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Source: YouTube, 2022"><br/>
-                            Not Available Yet. Will Be Shown Up Here Soon.
+                            Video will be available after the session ends.
                         </div>
                     </div>
 
@@ -111,7 +126,7 @@
                     </div>
                     <div class=“resp-table-row”>
                         <div class="table-body-cell">
-                            Downloaded video from the embedded link above:
+                            Downloaded video from the embedded video above:
                             <br/>
                             <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
                             To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
@@ -153,7 +168,7 @@
                 let mybutton = document.getElementById("toTopBtn");
                 function toTop() {
                     document.body.scrollTop = 0; // For Safari
-                    document.documentElement.scrollTop = 260; // For Chrome, Firefox, IE and Opera
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                 }
             </script>
 
@@ -194,7 +209,7 @@
         </nav>
         <nav class="nav-right">
             <h3>Videos Wouldn't Be Available After Some Time!</h3>
-            <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded video streams. <b>Hence, videos with the <i>"Video Unavailable"</i> messages are not viewable already.</b></p>
+            <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded video streams. <b>Videos with the <i>"Video Unavailable"</i> messages might not be viewable already.</b></p>
         </nav>
         <nav class="nav-right">
             <h3>Acknowledgement to All Videos Here</h3>
