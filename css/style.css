@@ -1,6 +1,11 @@
+/*========Animated Scroll========*/
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	/* background-color: rgba(157, 242, 170, 0.45); */
-	background-image: linear-gradient(#dcf0df,#72e182);
+	background-image: linear-gradient(#eef5ef,#d0f2d5,#72e182);
 	font-family: 'Ubuntu', sans-serif;
 	margin-top: 0%;
 	margin-left: 0%;
@@ -16,6 +21,32 @@ code {
 	font-size: 14px;
 }
 
+/*========Google font style========*/
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+header p{
+	font-size: 14px;
+	font-family: 'Product Sans';
+}
+section h3 {
+	font-family: 'Product Sans', sans-serif;
+	font-weight: 500;
+}
+article blockquote{
+	font-family: 'Product Sans Light';
+	font-size: 14px;
+	border: 2px solid silver;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/*========Poster for Additional talk=======*/
+.poster-image {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.poster-image:hover {opacity: 0.7;}
+
 /*========Header Notice At Top=======*/
 .overlayBox {
 	position: fixed;
@@ -27,6 +58,7 @@ code {
 	transition: opacity 250ms;
 	visibility: visible;
 	opacity: 1;
+	z-index: 3;
 }
 .overlayBox:target {
 	visibility: visible;
@@ -45,7 +77,7 @@ code {
 }
 .popup h2 { /*Popup's title*/
 	margin-top: 0;
-	color: #333;
+	color: rgb(7,87,19);
 	font-family: 'Product Sans', sans-serif;
 }
 .popup .closeBtn { /*Popup's close button*/
@@ -67,12 +99,13 @@ code {
 	overflow: auto;
 	font-size: 17px;
 	font-weight: 550;
-	color:rgb(7,87,19);
+	color: rgb(7,87,19);
 	padding-right: 27px;
 }
 @media screen and (max-width: 700px){
 	.popup{
 		width: 90%;
+		height:65%;
 	}
 	.popup .content{
 		font-size: 10px;
@@ -80,17 +113,6 @@ code {
 	.popup h2{
 		font-size: small;
 	}
-}
-
-/*========Google font style========*/
-@import url('https://fonts.cdnfonts.com/css/google-sans');
-header p{
-	font-size: 14px;
-	font-family: 'Product Sans';
-}
-section h3 {
-	font-family: 'Product Sans Medium', sans-serif;
-	font-weight: 500;
 }
 
 /*========Responsiveness info under the header========*/
@@ -105,7 +127,7 @@ section h3 {
 	box-sizing: border-box;
 }
 header {
-	/*background-color: rgb(110, 83, 67);*/
+	/* old background-color: rgb(110, 83, 67); */
 	background-color: rgb(7, 87, 19);
 	padding: 15px;
 	text-align: center;
@@ -117,6 +139,9 @@ nav {
 	width: 15%;
 	background: #ccc;
 	padding: 20px;
+}
+.nav-left{
+	list-style: none;
 }
 .nav-right {
 	float: right;
@@ -142,6 +167,7 @@ footer {
 	text-align: center;
 	color: white;
 	position: relative;
+	z-index: 1;
 }
 @media (max-width: 600px) {
 	nav, article {
@@ -164,7 +190,7 @@ footer {
 	padding-right: 0.5%;
 	text-align: center;
 	font-size: 14px;
-	z-index: 1;
+	z-index: 2;
 	font-family: 'Product Sans';
 	font-weight: 600;
 }
@@ -198,13 +224,22 @@ a:hover{
 	outline: none;
 	color: rgb(7, 87, 19);
 	cursor: pointer;
-	/* padding: 11px;
-	/* border-radius: 50px; */
-	font-size: 15px;
+	/* display: none; */
+	bottom: 90px;
+	right: 36px;
+	position: fixed;
+	z-index: 2;
+	padding:15px;
+	border-radius: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	animation: rotate 3.3s linear infinite;
 }
+@keyframes rotate { to {transform: rotate(360deg);} }
 #toTopBtn:hover {
 	color:#aaa;
 	text-decoration: underline;
+	animation-play-state:paused;
 }
 #toTopBtn:active {
 	background-color: #ccc;
@@ -227,7 +262,6 @@ a:hover{
 	padding-left: 20px;
 	padding-right: 10px;
 	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
 /*========For Scrolling Progress========*/
@@ -312,5 +346,5 @@ a:hover{
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltipText {
 	visibility: visible;
-	opacity: 1;
+	opacity: 0.93;
 }

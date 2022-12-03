@@ -30,15 +30,16 @@
         Adapted here:https://codepen.io/ppolyzos/pen/AWKgOv
     -->
 
+    <!-- Return to top button with rotating animation. (https://css-tricks.com/books/greatest-css-tricks/scroll-animation/)-->
+
     <!--Progress indicator when scrolling based on https://www.w3schools.com/howto/howto_js_scroll_indicator.asp -->
     <div class="progress-container">
         <div class="progress-bar" id="scrollProgressBar"></div>
     </div>
     <script>
-        //Run the function when user scrolling
-        window.onscroll = function() {myFunction()};
-
-        function myFunction() {
+        //Script for progress bar
+        window.onscroll = function() {progressFunction()};
+        function progressFunction() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
@@ -46,10 +47,30 @@
         }
     </script>
 
+    <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
+    and this one for no JS version:https://stackoverflow.com/a/32102805 -->
+    <button onclick="toTop()" id="toTopBtn" href="#top">Top</button>
+    <script>
+        //Script for the go to top button
+        let mybutton = document.getElementById("toTopBtn");
+        // window.onscroll = function() {scrollFunction()};
+        // function scrollFunction(){
+        //     if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
+        //         mybutton.style.display = "block";
+        //     }else{
+        //         mybutton.style.display = "none";
+        //     }
+        // }
+        function toTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
     <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
     <div id="fixed-alert">
         <button id="btn-dismiss" data-dismiss="alert">&times; Close</button>
-        The Buddhism Teaching sessions by Bhante are available fortnightly on Wednesday unless exceptions apply.
+        The Buddhism Teaching sessions by Bhante are available fortnightly on Wednesday, unless exceptions apply.
     </div>
     <script>
         var btn = document.querySelector('#btn-dismiss');
@@ -65,8 +86,8 @@
             <h2>FYI,</h2>
             <a class="closeBtn" data-dismiss="alert" id="popupCloseBtn">&times;</a>
             <div class="content">
-                The talks are currently <b>paused</b> since <u>19 Oct 2022</u> until the upcoming event details are published. Please stay tuned for the upcoming event.
-                <p style="padding-top:0px;">Thank you for your patience.</p>
+                The talks are currently <b>paused</b> since <u>19 Oct 2022</u> due to an ongoing teenage camp organised (or maybe other circumstances, not sure). So please stay tuned for the upcoming event.
+                <p style="padding-top:0px;">Sorry for any inconvenience caused and thank you for your patience.<br/>Sadhu Sadhu Sadhu🙏</p>
             </div>
             <script>
                 var btn = document.querySelector('#popupCloseBtn');
@@ -81,7 +102,7 @@
     <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
     <header>
         <h1>Bhante's Talk on Wednesday</h1>
-        <p>Last Modified on <u>29 Nov 2022 10:51pm GMT+8</u></p>
+        <p>Last Modified on <u>03 Dec 2022, 22:29 [UTC+8]</u></p>
         <hr>
         <div class="responsive-info">
             <b>⚠️This webpage supports well in most computer browsers, but please expect any responsiveness issues if you're viewing on mobile devices.⚠️</b>
@@ -89,9 +110,10 @@
     </header>
 
     <section>
-        <nav style="list-style:none;">
+        <nav class="nav-left">
             <h3>Navigation Panel</h3>
-            <li><a href="#session3">30 Nov 2022</a></li>
+            <li><a href="#session4">07 Dec 2022</a></li>
+            <li><a href="#session3">Additional - 03 Dec 2022</a></li>
             <li><a href="#session2">19 Oct 2022</a></li>
             <li><a href="#session1">05 Oct 2022</a></li>
         </nav>
@@ -105,13 +127,33 @@
             <div id="resp-table">
                 <div id="resp-table-body">
                     <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session3"><h3>Next session: 30 Nov 2022<br/><code>佛陀的经钥匙系列开示(54) 之 </code></h3></div>
+                        <div class="table-body-cell" id="session4"><h3>Next session: 07 Dec 2022<br/><code>佛陀的经钥匙系列开示(54) 之 </code></h3></div>
                     </div>
                     <div class=“resp-table-row”>
                         <div class="table-body-cell">
                             <!--Image reference: https://www.youtube.com/error/ -->
                             <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Source: YouTube, 2022"><br/>
                             Video will be available after the session ends.
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class=“resp-table-row”>
+                        <div class="table-body-cell" id="session3">
+                            <h3>Additional Talk: 03 Dec 2022</h3>
+                            <a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" title="Click for details" target="_blank" rel="noopener noreferrer"><img src="https://scontent.fbki2-1.fna.fbcdn.net/v/t39.30808-6/316679058_517111997122273_336374981396784363_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=-OO1PMpda2YAX_1byF1&_nc_ht=scontent.fbki2-1.fna&oh=00_AfAJYnytmoshLUuxfGkca0UE4Y9TMKHnWtF8KLz5V1fmXw&oe=6390A6CD" alt="Poster" width="390" height="500" class="poster-image"></a>
+                            <blockquote>Embedded below refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
+                        </div>
+                    </div>
+                    <div class=“resp-table-row”>
+                        <div class="table-body-cell">
+                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class=“resp-table-row”>
+                        <div class="table-body-cell">
+                            Recorded video of the whole session:
+                            <iframe src="https://drive.google.com/file/d/11Neo6MadVYuMLZL2sk0TiRViZyCbGmT3/view" width="700" height="400" oncontextmenu="return false;" allowfullscreen allow="autoplay; encrypted-media;"></iframe>
                         </div>
                     </div>
 
@@ -127,7 +169,6 @@
                     <div class=“resp-table-row”>
                         <div class="table-body-cell">
                             Downloaded video from the embedded video above:
-                            <br/>
                             <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
                             To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
                             Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
@@ -135,12 +176,6 @@
                             -->
                             <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
                             <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" oncontextmenu="return false;" allowfullscreen allow="autoplay; encrypted-media;"></iframe>
-                        </div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <!--Return to top button: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
-                            <p onclick="toTop()" id="toTopBtn">Return To Top</p>
                         </div>
                     </div>
                     
@@ -153,25 +188,8 @@
                             <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&show_text=true&width=560&t=0" width="700" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                         </div>
                     </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <!--Return to top button: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
-                            <p onclick="toTop()" id="toTopBtn">Return To Top</p>
-                        </div>
-                    </div>
                 </div> <!--End table body-->
             </div><!--End table-->
-
-            <script>
-                //Script for the go to top button
-                //Same reference link as the button element:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
-                let mybutton = document.getElementById("toTopBtn");
-                function toTop() {
-                    document.body.scrollTop = 0; // For Safari
-                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-                }
-            </script>
-
         </article>
 
         <nav class="nav-right">
@@ -184,6 +202,7 @@
                 &nbsp;
                 <a href="https://goo.gl/maps/Kxbnsz2F217UY6yP6" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Google%20Maps-%231877F2.svg?&style=flat&logo=googlemaps&logoColor=red&color=darkgreen" alt="Google Maps"></a>
             </p>
+            <img src="https://scontent.fbki2-1.fna.fbcdn.net/v/t39.30808-6/311932769_483737813793025_449261659372925349_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=nLW7GBz2-DgAX8Zp5dL&_nc_ht=scontent.fbki2-1.fna&oh=00_AfBXx74b0CrnpTrS7TpUDxrpY5JLIyYMpNYQiRzb0O2ThQ&oe=638FC893" width="215px" height="300px" oncontextmenu="return false" ondragstart="return false" style="border-radius:5px;margin-left:auto;margin-right:auto;display:block" title="Actual event poster from the targeted source">
             <!--Text indentation at paragraph: https://coder-coder.com/how-to-indent-paragraph-text-in-html-css/ -->
             <p style="text-indent:35px;text-align: justify;">This webpage is created to compile and record the Buddhism talks presented by a Bhante from <b>Mettiyarama Centre</b> (a Buddhist organisation/meditation centre in <b>Kota Kinabalu, Sabah</b>).</p>
             <p style="text-align: justify;">This talk is titled as <b>"The Golden Key of Buddha"</b> or <b>"佛陀的经钥匙系列"</b> in Chinese. It started since a year ago and is about "the truth of lifestyle" from Buddha's teachings which is based on the most traditional and original knowledges from the <i>suttas</i>.</p>
@@ -209,31 +228,32 @@
         </nav>
         <nav class="nav-right">
             <h3>Videos Wouldn't Be Available After Some Time!</h3>
-            <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded video streams. <b>Videos with the <i>"Video Unavailable"</i> messages might not be viewable already.</b></p>
+            <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded video streams. <b>They're not viewable already.</b></p>
         </nav>
         <nav class="nav-right">
             <h3>Acknowledgement to All Videos Here</h3>
-            <p style="text-indent:35px;text-align:justify;">The video recordings are converted using <a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net</a> website. My primary intention of "repost" these videos is to record all past Bhante's talks from the targeted source since past recordings on their Facebook page will be unavailable after some time.</p>
+            <p style="text-indent:35px;text-align:justify;">The video recordings are converted and downloaded with the <a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net</a> website. My primary intention of "repost" these videos is to record all past Bhante's talks from the targeted source since past recordings on their Facebook page will be unavailable after some time.</p>
+            <p style="text-align:justify">This webpage is <b>created from personal interest</b>, and <b>to record past live streams</b> for future rewatches, as well as <b>to share with others</b> who're also interested in this. Neither sponsorships nor cooperations with any third-parties are affiliated to this webpage. Page theme is adapted from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools</a>.</p>
             <p><u>Proper Citation:</u><br/><i>Facebook (2022). All embedded video recordings and favicon are adapted from Mettiyarama Centre. Retrieved from: <a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">here</a></i></p>
         </nav>
         <nav class="nav-right">
             <h3>Tags</h3>
             <p>
-                <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=佛陀的经钥匙系列" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23佛陀的经钥匙系列-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&color=silver"></a>
-                <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&color=silver"></a>
+                <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=佛陀的经钥匙系列" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23佛陀的经钥匙系列-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&color=lightgrey"></a>
+                <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&color=lightgrey"></a>
             </p>
         </nav>
     </section>
 
     <footer>
-        <p>No Copyright &copy; 05 Oct 2022 by hongjchang &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/GitHub-%230077B5.svg?&style=flat&logo=github&logoColor=white&labelColor=lightgrey&color=black" alt="GitHub"></a> &#8901; Webpage theme adapted from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools</a> &#8901; Webpage inspired from own interest hence neither cooperations affiliated with any targets</p>
+        <p>No Copyright &copy; 05 Oct 2022 by hongjchang &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/GitHub%20Pages-%230077B5.svg?&style=flat&logo=github&logoColor=white&labelColor=lightgrey&color=black" alt="GitHub Pages"></a></p>
     </footer>
 </body>
 </html>
