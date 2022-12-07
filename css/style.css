@@ -77,6 +77,7 @@ article blockquote{
 }
 .popup h2 { /*Popup's title*/
 	margin-top: 0;
+	margin-right: 20px;
 	color: rgb(7,87,19);
 	font-family: 'Product Sans', sans-serif;
 }
