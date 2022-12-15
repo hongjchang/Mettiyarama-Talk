@@ -1,6 +1,7 @@
 <!--
-    Name: hongjchang
-    File Created: 5/10/2022
+    Name            : hongjchang
+    Created On      : 5/10/2022
+    Note            : This entire webpage/project was done by myself with no physical help but only Google's help. Hence, if you would like to use/cite/adapt/reference this project, PLEASE CREDIT ME AS A REFERENCE in your work(s). (Although this webpage is not copyrighted, but some graphics may be from external sources.)
 -->
 <!DOCTYPE html>
 <html>
@@ -99,15 +100,16 @@
             });
         </script>
 
-        <!--A pop up box for notice at top of the page but modified a little. Found here:https://codepen.io/imprakash/pen/GgNMXO -->
+        <!--A pop up box for notice at top of the page but modified a little. Found here:https://codepen.io/imprakash/pen/GgNMXO 
+        Change button text on hover: https://stackoverflow.com/a/54242070 -->
         <div class="overlayBox" oncontextmenu="return false;">
             <div class="popup">
                 <h2>Welcome to Bhante's Talk on Wednesday!</h2>
                 <div class="content">
                     <p style="padding-top:0px">Please refer to the targeted source's Facebook page for the upcoming event details. Link is included in the <b style="color:rgb(7, 87, 19)">About section</b> at the right of this page.</p>
-                    <p style="padding-top:0px;">Thank you for browsing and Sukhi Hotu! 🙏</p>
+                    <p style="padding-top:0px;">Thank you for browsing and Sukhi Hotu! 🙏🙏🙏</p>
                 </div>
-                <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn">OK</button>
+                <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn"><span>OK</span></button>
                 <script>
                     var btn = document.querySelector('#popupCloseBtn');
                     btn.addEventListener("click", function(){
