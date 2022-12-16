@@ -24,6 +24,10 @@
 
     <!--Importing Google Sans / Product Sans font family from https://www.cdnfonts.com/google-sans.font -->
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+
+    <!--Fontawesome.com token (Adapted from someone's token on yt in which I used this in my Sunway Uni Web Form's sign in page)-->
+    <!--This token is used for DARK MODE ICON-->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 
 <body onload="loadingScreen()">
@@ -39,9 +43,11 @@
         function showPage(){
             document.getElementById("loader").style.display = "none";
             document.getElementById("allContent").style.display = "block";
+            
+            //Remove a css property (https://www.geeksforgeeks.org/how-to-remove-css-property-using-javascript/)
+            document.styleSheets[0].cssRules[1].style.removeProperty('background-color');
         }
     </script>
-
 
     <!--Added a div below here for all the main content for the loading screen -->
     <div id="allContent" class="animate-bottom">
@@ -70,7 +76,7 @@
 
         <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
         and this one for no JS version:https://stackoverflow.com/a/32102805 -->
-        <button onclick="toTop()" id="toTopBtn" href="#top">Top</button>
+        <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top">TOP</button>
         <script>
             //Script for the go to top button
             let mybutton = document.getElementById("toTopBtn");
@@ -107,7 +113,7 @@
             <div class="popup">
                 <h2>Page Responsiveness Warning</h2>
                 <div class="content">
-                    <p style="padding-top:0px">⚠️This webpage <b style="color:rgb(7, 87, 19)">supports well in most computer browsers</b>, but the responsiveness and viewability may not work well in mobile devices.⚠️</p>
+                    <p style="padding-top:0px">⚠️This webpage <b>supports well in most computer browsers</b>, but the responsiveness and viewability may not work well in mobile devices.⚠️</p>
                     <p style="padding-top:0px;">Thanks for your understanding and Sukhi Hotu! 🙏🙏🙏</p>
                 </div>
                 <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn"><span>OK</span></button>
@@ -121,10 +127,22 @@
             </div>
         </div>
 
+        <!--
+        Dark mode (https://tealfeed.com/darklight-mode-toggle-html-css-javascript-sxgub)
+        Button toggling (https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp)-->
+        <button onclick="darkModeToggle()" id="darkModeBtn" title="Dark/Light Theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        <script>
+            checkDarkMode();
+            function darkModeToggle(){
+                document.body.classList.toggle("dark");
+            }
+        </script>
+
         <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
         <header>
             <h1>Wednesday Bhante's Talk</h1>
-            <p>Last Modified on <u>16 Dec 2022, 11:28 UTC+8</u></p>
+            <p>Last Modified on <u>16 Dec 2022, 19:47 UTC+8</u></p>
+            <hr/>
         </header>
 
         <section>

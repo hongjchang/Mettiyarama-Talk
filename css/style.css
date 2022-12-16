@@ -13,6 +13,7 @@ body{
 	margin-right: 0%;
 	margin-bottom: 0%;
 	background-color: rgba(7, 87, 19);
+	transition: .382s;
 }
 
 code {
@@ -27,6 +28,114 @@ section hr{
 	border-radius: 17px;
 	background: rgb(7,87,19);
 	border: none;
+}
+
+iframe{
+	border:none;
+}
+
+/*========Dark Mode========*/
+/*
+Background: rgb(5,52,12)
+Text:rgb(146, 197, 154)
+*/
+body.dark{
+	background-color: rgb(5,52,12);
+	color: #dedede;
+	background-image: linear-gradient(#484848,#3d6242,#115a1c);
+}
+body.dark section hr{
+	background: rgb(208, 236, 212);
+}
+body.dark #darkModeBtn {
+	color: black;
+	background-color: white;
+}
+body.dark #darkModeBtn:hover {
+	color:#f1f1f1;
+	background-color: #aaa;
+}
+body.dark #darkModeBtn:active {
+	background-color: #bbb;
+}
+body.dark article blockquote{
+	border: 2px solid #ababab;
+}
+body.dark .popup{
+	background: black;
+}
+body.dark .popup h2{
+	color: rgb(146, 197, 154);
+}
+body.dark .popup .closeBtn{
+	color: white;
+	background-color: black;
+}
+body.dark .popup .closeBtn:hover {
+	color: #047533;
+	background-color: #ccc;
+	box-shadow: 2px 3px rgb(135, 135, 135);
+}
+body.dark .popup .closeBtn:active {
+	color: #047533;
+	background-color: #d0f3d5;
+	box-shadow: -2px -2px rgb(135, 135, 135);
+}
+body.dark .popup .content{
+	color:rgb(146, 197, 154);
+}
+body.dark header{
+	background-color: rgb(5, 52, 12);
+}
+body.dark nav{
+	background:#555;
+}
+body.dark article{
+	background-color: #333;
+}
+body.dark footer{
+	background-color: rgb(5,52,12);
+}
+body.dark #fixed-alert{
+	background-color: rgb(56, 99, 117);
+	color:#dedede;
+}
+body.dark #btn-dismiss{
+	color:rgb(235, 30, 23);
+}
+body.dark a:hover{
+	color: rgb(216, 182, 160);
+}
+body.dark .tooltip .tooltipText {
+	background-color: #ddd;
+	color: black;
+}
+/*=======Dark Mode Button========*/
+#darkModeBtn {
+	border: none;
+	outline: none;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+	/* display: none; */
+	bottom: 120px;
+	right: 35px;
+	position: fixed;
+	z-index: 3;
+	padding-top: 13px;
+	padding-bottom: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 50px;
+	font-size: 18px;
+	font-weight: bold;
+}
+#darkModeBtn:hover {
+	color:black;
+	background-color: #f1f1f1;
+}
+#darkModeBtn:active {
+	background-color: #bbb;
 }
 
 /*========Loading Screen========*/
@@ -180,7 +289,7 @@ article blockquote{
 		height:60%;
 	}
 	.popup .content{
-		font-size: 14px;
+		font-size: 17px;
 	}
 }
 
@@ -198,11 +307,13 @@ header {
 }
 h1{
 	font-family: Georgia, 'Times New Roman', sans-serif;
-	padding-bottom: 20px;
 }
 header p{
 	font-size: 12px;
-	margin-bottom: -10px;
+}
+header hr{
+	margin: 0px;
+	padding: 0px;
 }
 nav {
 	float: left;
@@ -297,25 +408,24 @@ a:hover{
 	outline: none;
 	color: rgb(7, 87, 19);
 	cursor: pointer;
-	/* display: none; */
-	bottom: 50px;
+	bottom: 40px;
 	right: 30px;
 	position: fixed;
 	z-index: 2;
 	padding:15px;
 	border-radius: 50px;
-	font-size: 18px;
+	font-family: 'Ubuntu';
 	font-weight: bold;
+	font-size: 16px;
 	animation: rotate 3.3s linear infinite;
 }
 @keyframes rotate { to {transform: rotate(360deg);} }
 #toTopBtn:hover {
-	color:#aaa;
-	text-decoration: underline;
+	background-color:#aaa;
 	animation-play-state:paused;
 }
 #toTopBtn:active {
-	background-color: #ccc;
+	background-color: #bbb;
 }
 
 /*========Article content in main body========*/
