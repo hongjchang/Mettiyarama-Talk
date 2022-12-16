@@ -15,10 +15,6 @@ body{
 	background-color: rgba(7, 87, 19);
 }
 
-h1{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 code {
 	font-size: 14px;
 }
@@ -82,10 +78,6 @@ section hr{
 
 /*========Google font style========*/
 @import url('https://fonts.cdnfonts.com/css/google-sans');
-header p{
-	font-size: 14px;
-	font-family: 'Product Sans';
-}
 section h3 {
 	font-family: 'Product Sans', sans-serif;
 	font-weight: 500;
@@ -105,7 +97,7 @@ article blockquote{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(0, 0, 0, 0.85);
+	background: rgba(0, 0, 0, 0.9);
 	transition: opacity 250ms;
 	visibility: visible;
 	opacity: 1;
@@ -120,7 +112,7 @@ article blockquote{
 	padding: 20px;
 	background: #fff;
 	border-radius: 13px;
-	height:38%;
+	height:40%;
 	width: 50%;
 	position: relative;
 	transition: all 1s;
@@ -130,8 +122,10 @@ article blockquote{
 .popup h2 { /*Popup's title*/
 	margin-top: 0;
 	margin-right: 20px;
+	margin-bottom: 4px;
 	color: rgb(7,87,19);
-	font-family: 'Product Sans', sans-serif;
+	font-family: 'Ubuntu';
+	font-size: 30px;
 }
 .popup .closeBtn { /*Popup's close button*/
 	position: absolute;
@@ -170,31 +164,24 @@ article blockquote{
 	display: none;
 }
 .popup .closeBtn:hover:before{
-	content: 'Dismiss';
+	content: 'Close Message';
 }
 .popup .content { /*Content texts*/
-	max-height: 50%;
+	max-height: 55%;
 	overflow: auto;
 	font-size: 17px;
 	font-weight: 550;
 	color: rgb(7,87,19);
 	padding-right: 27px;
 }
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1300px){
 	.popup{
 		width: 80%;
-		height:65%;
+		height:60%;
 	}
 	.popup .content{
-		font-size: 13px;
+		font-size: 14px;
 	}
-}
-
-/*========Responsiveness info under the header========*/
-.responsive-info{
-	color: #ddd;
-	font-size: 12px;
-	font-weight: bold;
 }
 
 /*========For body content========*/
@@ -204,10 +191,18 @@ article blockquote{
 header {
 	/* old background-color: rgb(110, 83, 67); */
 	background-color: rgb(7, 87, 19);
-	padding: 15px;
+	padding: 20px;
 	text-align: center;
 	font-size: 35px;
 	color: white;
+}
+h1{
+	font-family: Georgia, 'Times New Roman', sans-serif;
+	padding-bottom: 20px;
+}
+header p{
+	font-size: 12px;
+	margin-bottom: -10px;
 }
 nav {
 	float: left;
