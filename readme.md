@@ -1,6 +1,6 @@
 # Bhante's Talk
 
-## **View As A Webpage**
+## **View The Webpage Here**
 > https://hongjchang.github.io/Mettiyarama-Talk/
 
 ## **Details**
