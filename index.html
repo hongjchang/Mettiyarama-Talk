@@ -26,11 +26,11 @@
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
 </head>
 
-<body onload="loadingScreen()">
+<body onload="loadingScreen(), disableScroll()">
     <!-- Loading Screen. Ref:https://www.w3schools.com/howto/howto_css_loader.asp
         Discord video src:https://discord.com/assets/7209f284854b7ea1e5642c91fd2e43d4.webm -->
     <div id="loader">
-        <video src="src/loading.webm" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="true" oncontextmenu="return false;" autoplay muted loop width="200px" title="Source: Discord, 2022"></video>
+        <video src="src/loading.webm" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="true" oncontextmenu="return false;" autoplay muted loop width="200px" title="Loading... (Discord, 2022)"></video>
     </div>
     <p style="position:absolute;font-size:13px;text-align:center;bottom: 6%;left: 36%;color:lightgrey;"><a href="https://discord.com/app">Discord</a> 2022 Christmas special logo. All copyrights subject to its owner.</p>
     <script>
@@ -118,7 +118,24 @@
                     btn.addEventListener("click", function(){
                         var alert = document.querySelector('.overlayBox');
                         alert.style.display = 'none';
+                        enableScroll();
                     });
+
+                    //Code below from here: https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
+                    function disableScroll() {
+                        // Get the current page scroll position
+                        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                            // if any scroll is attempted, set this to the previous value
+                            window.onscroll = function() {
+                                window.scrollTo(scrollLeft, scrollTop);
+                            };
+                        document.body.classList.add("no-scroll");
+                    }
+                    function enableScroll() {
+                        window.onscroll = function() {};
+                        document.body.classList.remove("no-scroll");
+                    }
                 </script>
             </div>
         </div>
@@ -139,13 +156,14 @@
         <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
         <header>
             <h1>Wednesday Bhante's Talk</h1>
-            <p>Last Modified on <u>10 Jan 2023, 18:31 UTC+8</u></p>
+            <p>Last Modified on <u>11 Jan 2023, 22:43 UTC+8</u></p>
             <hr/>
         </header>
 
         <section>
             <nav class="nav-left">
                 <h3>Navigation Panel</h3>
+                <li><a href="#session7">1 Feb 2023</a></li>
                 <li><a href="#session6">11 Jan 2023</a></li>
                 <li><a href="#session5">21 Dec 2022</a></li>
                 <li><a href="#session4">07 Dec 2022</a></li>
@@ -162,14 +180,32 @@
                 <!--This is a responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
                 <div id="resp-table">
                     <div id="resp-table-body">
+                        <button class="sortBy">Sort By: Most Recent</button>
+
                         <div class=“resp-table-row”>
-                            <div class="table-body-cell" id="session6"><h3>Upcoming session: 11 Jan 2023<br/><code>佛陀的经钥匙系列开示(56) 之 </code></h3></div>
+                            <div class="table-body-cell" id="session7"><h3>Upcoming session: 1 Feb 2023<br/><code>佛陀的经钥匙系列开示(57) 之 </code></h3></div>
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
                                 <!--Image reference: https://www.youtube.com/error/ -->
-                                <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Source: YouTube, 2022"><br/>
+                                <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Unable to fetch video in (YouTube, 2022)"><br/>
                                 Video will be available after the session ends.
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session6"><h3>11 Jan 2023<br/><code>佛陀的经钥匙系列开示(56) 之 12缘起法 - 生 & 有</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                            </div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                Downloaded video from the embedded video above:<br/>
+                                <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
                         </div>
 
@@ -308,20 +344,20 @@
             <nav class="nav-right">
                 <h3>Tags</h3>
                 <p>
-                    <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=佛陀的经钥匙系列" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23佛陀的经钥匙系列-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&color=silver"></a>
-                    <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&color=silver"></a>
+                    <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=佛陀的经钥匙系列" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23佛陀的经钥匙系列-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
                 </p>
             </nav>
             <nav class="nav-right">
                 <h3>Citations and Attributions</h3>
-                <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<sup>↗</sup></a> (2022). All Facebook-Embedded Past Streams are converted using this website. My primary intention is to "persist" these sessions since official ones will be removed from view.</p>
+                <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<sup>↗</sup></a> (2022). All Google Drive videos (unless stated otherwise) are converted and downloaded via this website. My primary intention is to "persist" these sessions since official ones will be removed from view. I acknowledge the owner of the downloaded belongs to the targeted source (Mettiyarama Centre). I also cite this website as I used it to download the videos from Facebook.</p>
                 <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<sup>↗</sup></a> (2023). All embedded past streams and webpage's favicon are adapted from the targeted source's profile page.</p>
                 <p><a href="https://www.flaticon.com/free-icons/night-mode" target="_blank" rel="noopener noreferrer">Icon Hubs - Flaticon<sup>↗</sup></a> (2023). Dark Mode Icon.</p>
             </nav>

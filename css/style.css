@@ -34,15 +34,39 @@ iframe{
 	border:none;
 }
 
+/*Disable Scrolling (index.html line 132)*/
+.no-scroll{
+	height: 100%;
+	overflow: hidden;
+}
+
+.sortBy{
+	position: sticky;
+	left:60px;
+	bottom: 7px;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'Ubuntu';
+	color: black;
+	border: none;
+	cursor: default;
+	padding:7px;
+
+}
+
 /*========Dark Mode========*/
 /*
 Background: rgb(5,52,12)
 Text:rgb(146, 197, 154)
 */
 body.dark{
-	background-color: rgb(7, 87, 19);
+	background-color: rgb(7,87,19);
 	color: #dedede;
 	background-image: linear-gradient(#27472b,#0f2912);
+}
+body.dark .sortBy{
+	color:#dedede;
+	background-color: black;
 }
 body.dark section hr{
 	background: #dedede;
@@ -93,7 +117,7 @@ body.dark .popup .content{
 	color:rgb(146, 197, 154);
 }
 body.dark header{
-	background-color: rgb(7,87,19);
+	background-color: rgb(5, 60, 13);
 }
 body.dark nav{
 	background:#222;
@@ -102,7 +126,7 @@ body.dark article{
 	background-color: black;
 }
 body.dark footer{
-	background-color: rgb(7,87,19);
+	background-color: rgb(5, 60, 13);
 }
 body.dark #fixed-alert{
 	background-color: rgb(146, 214, 243);
@@ -195,7 +219,7 @@ body.dark .tooltip .tooltipText {
 section h3 {
 	font-family: 'Product Sans', sans-serif;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 22px;
 }
 article blockquote{
 	font-family: 'Product Sans Light';
