@@ -1,6 +1,4 @@
-# Bhante's Talk
-
-## **View The Webpage Here**
+# Mettiyarama Talk
 > https://hongjchang.github.io/Mettiyarama-Talk/
 
 ## **Details**
@@ -23,10 +21,10 @@
 - A note for myself (or developers) about **committing files with >100MB to GitHub**:
     - Based on https://git-lfs.github.com/ :
     - In VSCode git terminal,
-    1. `git lfs install`
-    2. `git lfs track "*.mp4"` where mp4 is the extension of the large file.
-    3. `git add .gitattributes`
-    4. Just commit and PUSH like normal.
+        1. `git lfs install`
+        2. `git lfs track "*.mp4"` where mp4 is the extension of the large file.
+        3. `git add .gitattributes`
+        4. Just commit and PUSH like normal.
     - Or include git lfs when installing git on computer. Then, no need steps above already.
 
 **Link to this Repository:**
