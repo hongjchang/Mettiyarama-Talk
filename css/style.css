@@ -5,12 +5,10 @@ html{
 
 /*========Text Selection========*/
 ::-moz-selection { /* Firefox (Okay to exclude this)*/
-	color: #fff;
-	background-color: rgb(7, 87, 19);
+	color: rgb(7, 87, 19);
 }
 ::selection {
-	color: #fff;
-	background-color: rgb(7, 87, 19);
+	color: rgb(7, 87, 19);
 }
 
 /*========Uncategorised========*/
