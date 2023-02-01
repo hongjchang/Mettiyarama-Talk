@@ -3,12 +3,6 @@ html{
 	scroll-behavior: smooth;
 }
 
-/*========Text Selection========*/
-::selection {
-	background-color: rgb(7, 87, 19);
-	color: white;
-}
-
 /*========Uncategorised========*/
 body{
 	/* background-color: rgba(157, 242, 170, 0.45); */
@@ -69,6 +63,9 @@ body.dark{
 	background-color: rgb(7,87,19);
 	color: #dedede;
 	background-image: linear-gradient(#27472b,#0f2912);
+}
+body.dark ::selection{
+	background-color:rgb(7,87,19);
 }
 body.dark .sortBy{
 	color:#dedede;
