@@ -5,8 +5,8 @@ html{
 
 /*========Text Selection========*/
 ::-moz-selection { /* Firefox (Okay to exclude this)*/
-	color: red;
-	background: yellow;
+	color: #fff;
+	background: rgb(7, 87, 19);
 }
 ::selection {
 	color: #fff;
