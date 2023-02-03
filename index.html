@@ -42,7 +42,7 @@
     <div id="loader">
         <video src="src/loading.webm" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="true" oncontextmenu="return false;" autoplay muted loop width="200px" title="Loading... (Discord, 2022)"></video>
     </div>
-    <p style="position:absolute;font-size:13px;text-align:center;bottom: 6%;left: 36%;color:lightgrey;"><a href="https://discord.com/app">Discord</a> 2022 Christmas special logo. All copyrights subject to its owner.</p>
+    <p style="position:absolute;font-size:9px;text-align:center;bottom:1%;left:50%;transform:translate(-50%,-50%);color:lightgrey;"><a href="https://discord.com/app">Discord</a> 2022 Christmas special logo. All copyrights subject to its owner.</p>
     <script>
         var myVar;
         function loadingScreen(){ myVar = setTimeout(showPage, 1000); }
@@ -111,7 +111,7 @@
             <div class="popup">
                 <h2>Page Responsiveness Warning</h2>
                 <div class="content">
-                    <p style="padding-top:0px">⚠️This webpage <b>supports well in most computer browsers</b>, but the responsiveness and viewability may not work well in mobile devices.⚠️</p>
+                    <p style="padding-top:0px">⚠️It is <b>recommended to view this webpage on a PC</b> due to this webpage may not work well in mobile devices in terms of viewability and responsiveness despite it supports well on most browsers.⚠️</p>
                     <p style="padding-top:0px;">Thanks for your understanding and Sukhi Hotu! 🙏🙏🙏</p>
                 </div>
                 <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn"><span>OK</span></button>
@@ -158,14 +158,14 @@
         <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
         <header>
             <h1>Wednesday Bhante's Talk</h1>
-            <p>Last Modified on <u>1 Feb 2023, 13:04 UTC+8</u></p>
+            <p>Last Modified on <u>3 Feb 2023, 22:20 UTC+8</u></p>
             <hr/>
         </header>
 
         <section>
             <nav class="nav-left">
                 <h3>Navigation Panel</h3>
-                <li><a href="#session7">1 Feb 2023</a></li>
+                <li><a href="#session7">8 Feb 2023</a></li>
                 <li><a href="#session6">11 Jan 2023</a></li>
                 <li><a href="#session5">21 Dec 2022</a></li>
                 <li><a href="#session4">07 Dec 2022</a></li>
@@ -175,17 +175,13 @@
             </nav>
 
             <article>
-                <!--2 <div table-row> = 1 embed video
-                    Add each video to the TOP. Sort them from newest one first.
-                -->
-                
                 <!--This is a responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
                 <div id="resp-table">
                     <div id="resp-table-body">
-                        <button class="sortBy">Sort By: Most Recent</button>
-
+                        <button class="sortBy">Sorted By: Most Recent</button>
+                    <!--Latest session. Sort them from newest one first.-->
                         <div class=“resp-table-row”>
-                            <div class="table-body-cell" id="session7"><h3>Upcoming session: 1 Feb 2023<br/><code>佛陀的经钥匙系列开示(57) 之 </code></h3></div>
+                            <div class="table-body-cell" id="session7"><h3>Upcoming session: 8 Feb 2023<br/><code>佛陀的经钥匙系列开示(57) 之 </code></h3></div>
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
@@ -194,6 +190,7 @@
                                 Video will be available after the session ends.
                             </div>
                         </div>
+                    <!--Latest session until here-->
 
                         <hr>
                         <div class=“resp-table-row”>
@@ -201,13 +198,20 @@
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
-                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            </div>
-                        </div>
-                        <div class=“resp-table-row”>
-                            <div class="table-body-cell">
-                                Downloaded video from the embedded video above:<br/>
-                                <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                                <div class="tabContainer">
+                                    <input type="radio" id="tab12" name="tabContainer" checked="checked">
+                                    <label for="tab12">Embedded</label>
+                                    <div class="tab">
+                                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    </div>
+
+                                    <input type="radio" id="tab13" name="tabContainer" checked="checked">
+                                    <label for="tab13">Downloaded</label>
+                                    <div class="tab">
+                                        <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                    </div>
+                                </div> <!--End of tabContainer-->
                             </div>
                         </div>
 
@@ -217,13 +221,20 @@
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
-                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            </div>
-                        </div>
-                        <div class=“resp-table-row”>
-                            <div class="table-body-cell">
-                                Downloaded video from the embedded video above:<br/>
-                                <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                                <div class="tabContainer">
+                                    <input type="radio" id="tab10" name="tabContainer" checked="checked">
+                                    <label for="tab10">Embedded</label>
+                                    <div class="tab">
+                                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    </div>
+
+                                    <input type="radio" id="tab11" name="tabContainer" checked="checked">
+                                    <label for="tab11">Downloaded</label>
+                                    <div class="tab">
+                                        <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                    </div>
+                                </div> <!--End of tabContainer-->
                             </div>
                         </div>
 
@@ -233,34 +244,53 @@
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
-                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            </div>
-                        </div>
-                        <div class=“resp-table-row”>
-                            <div class="table-body-cell">
-                                Downloaded video from the embedded video above:<br/>
-                                <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                                <div class="tabContainer">
+                                    <input type="radio" id="tab8" name="tabContainer" checked="checked">
+                                    <label for="tab8">Embedded</label>
+                                    <div class="tab">
+                                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    </div>
+
+                                    <input type="radio" id="tab9" name="tabContainer" checked="checked">
+                                    <label for="tab9">Downloaded</label>
+                                    <div class="tab">
+                                        <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                    </div>
+                                </div> <!--End of tabContainer-->
                             </div>
                         </div>
 
                         <hr>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell" id="session3">
-                                <h3>Additional Talk: 03 Dec 2022</h3>
-                                <blockquote style="text-align:center;"><a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">View event poster here</a></blockquote>
+                                <h3>Additional Talk: 03 Dec 2022<br/><code>十愿十行，利乐有情 Hosted By External Organiser</code></h3>
                             </div>
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
-                                Recorded video from the beginning of the session:<br/>
-                                <blockquote>⬇️Apologies for the <b>multiple audio sources</b> from the recording below. There was a mistake caused during recording.<br/><b>Please continue to the embedded recording</b> beneath the video below for the continuing part of the session.</blockquote>
-                                <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
-                            </div>
-                        </div>
-                        <div class=“resp-table-row”>
-                            <div class="table-body-cell">
-                                <blockquote>⬇️Embedded below refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
-                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                                <div class="tabContainer">
+                                    <input type="radio" id="tab5" name="tabContainer" checked="checked">
+                                    <label for="tab5">Event Poster</label>
+                                    <div class="tab" style="text-align:center;">
+                                        🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">View event poster here</a>
+                                    </div>
+
+                                    <input type="radio" id="tab6" name="tabContainer" checked="checked">
+                                    <label for="tab6">Part One Embedded</label>
+                                    <div class="tab">
+                                        <blockquote>⬇️This video refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
+                                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    </div>
+
+                                    <input type="radio" id="tab7" name="tabContainer" checked="checked">
+                                    <label for="tab7">Part Two Recorded</label>
+                                    <div class="tab">
+                                        <blockquote>⬇️Apologies for the <b>multiple audio sources</b> from the recording below. There was a mistake caused during recording.<br/><b>Please continue to the embedded recording</b> beneath the video below for the continuing part of the session.</blockquote>
+                                        <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
+                                    </div>
+                                </div> <!--End of tabContainer-->
                             </div>
                         </div>
 
@@ -270,19 +300,26 @@
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
-                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            </div>
-                        </div>
-                        <div class=“resp-table-row”>
-                            <div class="table-body-cell">
-                                Downloaded video from the embedded video above:<br/>
-                                <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
-                                To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
-                                Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
-                                <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
-                                -->
-                                <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
-                                <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                                <div class="tabContainer">
+                                    <input type="radio" id="tab3" name="tabContainer" checked="checked">
+                                    <label for="tab3">Embedded</label>
+                                    <div class="tab">
+                                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                    </div>
+
+                                    <input type="radio" id="tab4" name="tabContainer" checked="checked">
+                                    <label for="tab4">Downloaded</label>
+                                    <div class="tab">
+                                        <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
+                                        To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
+                                        Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
+                                        <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
+                                        -->
+                                        <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
+                                        <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                    </div>
+                                </div> <!--End of tabContainer-->
                             </div>
                         </div>
                         
@@ -292,7 +329,20 @@
                         </div>
                         <div class=“resp-table-row”>
                             <div class="table-body-cell">
-                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&show_text=true&width=560&t=0" width="700" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                                <div class="tabContainer">
+                                    <input type="radio" id="tab1" name="tabContainer" checked="checked">
+                                    <label for="tab1">Embedded</label>
+                                    <div class="tab">
+                                        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&show_text=true&width=560&t=0" width="700" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    </div>
+
+                                    <input type="radio" id="tab2" name="tabContainer" checked="checked">
+                                    <label for="tab2">Downloaded</label>
+                                    <div class="tab">
+                                        <blockquote>Unfortunately there was no downloaded recording for this session.</blockquote>
+                                    </div>
+                                </div> <!--End of tabContainer-->
                             </div>
                         </div>
                     </div> <!--End table body-->
@@ -331,19 +381,31 @@
                 </p>
 
                 <p style="font-size:12px; text-decoration:underline; text-align:right;">Updated on 20 Oct 2022 08:41pm GMT+11</p>
-            </nav>
-            <nav class="nav-right">
-                <h3>Videos Wouldn't Be Available After Some Time!</h3>
-                <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded recordings. <b>They're not viewable already.</b></p>
-            </nav>
-            <nav class="nav-right">
-                <h3>About Me</h3>
-                <p style="text-align:justify;text-indent:35px;">Hello there! I'm hongjchang and this webpage is created by myself! On 05 Oct 2022.</p>
-                <p style="text-align:justify;">The purposes of creating this webpage are (1)I was inspired from a project of the data visualisation subject during my university study recently when I was introduced into GitHub Pages and found it interesting to host webpages online without additional money. Besides, (2)I wanted <u>to record past live streams</u> for future rewatches, as well as <u>sharing the talks with others</u> who're also interested and/or finding this.</p>
-                <p style="text-align:justify">Hope you like this page and feel free to share this page with others.</p>
-                <p>Neither sponsorships nor cooperations with any third-parties are affiliated to this webpage.<br/>Page theme is adapted from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools<sup>↗</sup></a></p>
-            </nav>
-            <nav class="nav-right">
+            <!-- </nav>
+            <nav class="nav-right"> -->
+                <h3 class="collapsible">Videos Wouldn't Be Available After Some Time!</h3>
+                <div class="collapsibleContent">
+                    <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded recordings. <b>They're not viewable already.</b></p>
+                </div>
+            <!-- </nav>
+            <nav class="nav-right"> -->
+                <h3 class="collapsible">About Me</h3>
+                <div class="collapsibleContent">
+                    <p style="text-align:justify;text-indent:35px;">Hello there! I'm hongjchang and this webpage is created by myself! On 05 Oct 2022.</p>
+                    <p style="text-align:justify;">The purposes of creating this webpage are (1)I was inspired from a project of the data visualisation subject during my university study recently when I was introduced into GitHub Pages and found it interesting to host webpages online without additional money. Besides, (2)I wanted <u>to record past live streams</u> for future rewatches, as well as <u>sharing the talks with others</u> who're also interested and/or finding this.</p>
+                    <p style="text-align:justify">Hope you like this page and feel free to share this page with others.</p>
+                    <p>Neither sponsorships nor cooperations with any third-parties are affiliated to this webpage.<br/>Page theme is adapted from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools<sup>↗</sup></a></p>
+                </div>
+            <!-- </nav>
+            <nav class="nav-right"> -->
+                <h3 class="collapsible">Citations and Attributions</h3>
+                <div class="collapsibleContent">
+                    <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<sup>↗</sup></a> (2022). All Google Drive videos (unless stated otherwise) are converted and downloaded via this website. My primary intention is to "persist" these sessions since official ones will be removed from view. I acknowledge the owner of the downloaded belongs to the targeted source (Mettiyarama Centre). I also cite this website as I used it to download the videos from Facebook.</p>
+                    <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<sup>↗</sup></a> (2023). All embedded past streams and webpage's favicon are adapted from the targeted source's profile page.</p>
+                    <p><a href="https://www.flaticon.com/free-icons/night-mode" target="_blank" rel="noopener noreferrer">Icon Hubs - Flaticon<sup>↗</sup></a> (2023). Dark Mode Icon.</p>
+                </div>
+            <!-- </nav>
+            <nav class="nav-right"> -->
                 <h3>Tags</h3>
                 <p>
                     <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
@@ -357,12 +419,23 @@
                     <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
                 </p>
             </nav>
-            <nav class="nav-right">
-                <h3>Citations and Attributions</h3>
-                <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<sup>↗</sup></a> (2022). All Google Drive videos (unless stated otherwise) are converted and downloaded via this website. My primary intention is to "persist" these sessions since official ones will be removed from view. I acknowledge the owner of the downloaded belongs to the targeted source (Mettiyarama Centre). I also cite this website as I used it to download the videos from Facebook.</p>
-                <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<sup>↗</sup></a> (2023). All embedded past streams and webpage's favicon are adapted from the targeted source's profile page.</p>
-                <p><a href="https://www.flaticon.com/free-icons/night-mode" target="_blank" rel="noopener noreferrer">Icon Hubs - Flaticon<sup>↗</sup></a> (2023). Dark Mode Icon.</p>
-            </nav>
+            <!--Collapsible for all right navs (https://www.w3schools.com/howto/howto_js_collapsible.asp)-->
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+                }
+            </script>
         </section>
 
         <footer>

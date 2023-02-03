@@ -16,10 +16,6 @@ body{
 	transition: .382s;
 }
 
-code {
-	font-size: 14px;
-}
-
 section hr{
 	margin-left: 15px;
 	margin-right: 15px;
@@ -93,7 +89,7 @@ body.dark #toTopBtn:active{
 	background-color: #ddd;
 }
 body.dark article blockquote{
-	border: 2px solid #dedede;
+	border: 2px solid #aaa;
 }
 body.dark .popup{
 	background: black;
@@ -145,6 +141,16 @@ body.dark .tooltip .tooltipText {
 	background-color: #dedede;
 	color: black;
 }
+body.dark .tabContainer label{
+	color: #ccc;
+	background: #222;
+}
+body.dark .tabContainer .tab, body.dark .tabContainer input[type="radio"]:checked + label{
+	background: #333;
+}
+body.dark .active, body.dark .collapsible:hover {
+	color: rgb(146, 197, 154);
+}
 /*=======Dark Mode Button========*/
 #darkModeBtn {
 	border: none;
@@ -174,8 +180,9 @@ body.dark .tooltip .tooltipText {
 #loader {
 	position: absolute;
 	z-index: 1;
-	top: 34%;
-	left:45%;
+	top: 50%;
+	left:50%;
+	transform:translate(-50%,-50%);
 	/* left: 50%;
 	top: 50%;
 	margin-top: 0%;
@@ -224,12 +231,17 @@ section h3 {
 	font-weight: 500;
 	font-size: 22px;
 }
+code {
+	font-size: 14px;
+	font-family: 'Product Sans', sans-serif;
+}
 article blockquote{
 	font-family: 'Product Sans Light';
 	font-size: 14px;
 	border: 2px solid silver;
 	padding: 5px;
 	border-radius: 5px;
+	width: fit-content;
 }
 
 /*========Header Notice At Top=======*/
@@ -255,8 +267,8 @@ article blockquote{
 	background: #fff;
 	border-radius: 13px;
 	border: 4px solid white;
-	height:40%;
-	width: 50%;
+	height:42%;
+	width: 52%;
 	position: relative;
 	transition: all 1s;
 	cursor: default;
@@ -317,10 +329,10 @@ article blockquote{
 	color: rgb(7,87,19);
 	padding-right: 27px;
 }
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1400px){
 	.popup{
-		width: 80%;
-		height:60%;
+		width: 60%;
+		height:50%;
 	}
 	.popup .content{
 		font-size: 17px;
@@ -350,13 +362,17 @@ header hr{
 	padding: 0px;
 }
 nav {
-	float: left;
-	width: 15%;
+	width: 11%;
 	background: #ccc;
 	padding: 20px;
 }
 .nav-left{
+	float: left;
 	list-style: none;
+	position: sticky;
+	top: 0%;
+	left: 0%;
+	z-index: 2;
 }
 .nav-left li{
 	padding-bottom:4px;
@@ -365,12 +381,14 @@ nav {
 	float: right;
 	width: 20%;
 	background: #ccc;
-	padding: 20px;
+}
+.nav-right h3{
+	padding-top: 20px;
 }
 article {
 	float: left;
 	padding: 10px;
-	width: 65%;
+	width: 69%;
 	background-color: #f1f1f1;
 }
 section::after {
@@ -392,6 +410,103 @@ footer {
 		width: auto;
 		height: auto;
 	}
+}
+
+/*========2 Tabs For Each Session========*/
+.tabContainer{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 760px;
+	margin: 0px auto auto 0px;
+	padding: 10px 5px 0px 5px; /*left-bottom-right-top*/
+}
+.tabContainer input[type="radio"]{
+	display: none;
+}
+.tabContainer label{
+	padding: 10px;
+	background: #e2e2e2;
+	font-weight: bold;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.tabContainer label{ /*Added this to shift the first tab to the right*/
+	margin-left: 10px;
+	margin-right: 0px;
+}
+.tabContainer .tab{
+	width: 100%;
+	padding:20px;
+	border-radius: 8px;
+	background: #fff;
+	order: 1; /*This one will decide whether tabs are at top or bottom (as in the video)*/
+	display: none;
+	font-size: 16px;
+	-webkit-animation: fadeEffect 0.5s; /*Add a fade animation (found on W3Schools' fade tab article)*/
+	animation: fadeEffect 0.5s;
+}
+@-webkit-keyframes fadeEffect{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes fadeEffect{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+.tabContainer input[type="radio"]:checked + label + .tab{
+	display: block;
+}
+.tabContainer input[type="radio"]:checked + label {
+	background: #fff;
+}
+
+/*========Collapsible For Right Nav========*/
+.collapsible { /*Expand collapse button*/
+	cursor: pointer;
+	border: none;
+	outline: none;
+	margin-top: 0px;
+	margin-bottom:0px;
+}
+/*.active =  Add background color to collapsible when clicked
+    hover = a background color when hover */
+.active, .collapsible:hover {
+	color: rgb(7,87,19);
+}
+.collapsible:before{
+	content: '\02795'; /*Unicode for +*/
+	font-size: 10px;
+	color: white;
+	float: right;
+	margin-left: 5px;
+}
+.active:before{
+	content: "\2796"; /*Unicode for -*/
+}
+/* Style the collapsible content. Note: hidden by default */
+.collapsibleContent {
+	overflow: hidden;
+	margin-top: 0px;
+	margin-bottom:0px;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+}
+
+/*========Article content in main body========*/
+#resp-table {
+	width: 100%;
+	display: table;
+}
+#resp-table-body{
+	display: table-row-group;
+}
+.resp-table-row{
+	display: table-row;
+}
+.table-body-cell{
+	display: table-cell;
+	padding-left: 10px;
+	padding-right: 5px;
 }
 
 /*========Closable banner========*/
@@ -462,24 +577,6 @@ a:hover{
 }
 #toTopBtn:active {
 	background-color: #aaa;
-}
-
-/*========Article content in main body========*/
-#resp-table {
-	width: 100%;
-	display: table;
-}
-#resp-table-body{
-	display: table-row-group;
-}
-.resp-table-row{
-	display: table-row;
-}
-.table-body-cell{
-	display: table-cell;
-	padding-left: 20px;
-	padding-right: 10px;
-	padding-top: 5px;
 }
 
 /*========For Scrolling Progress========*/
