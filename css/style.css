@@ -177,7 +177,7 @@ body.dark .active, body.dark .collapsible:hover {
 }
 
 /*========Return to top button=======*/
-.toTopBtn {
+#toTopBtn {
 	border: none;
 	outline: none;
 	color: rgb(7, 87, 19);
@@ -194,11 +194,11 @@ body.dark .active, body.dark .collapsible:hover {
 	animation: rotate 3.3s linear infinite;
 }
 @keyframes rotate { to {transform: rotate(360deg);} }
-.toTopBtn:hover {
+#toTopBtn:hover {
 	background-color:#bbb;
 	animation-play-state:paused;
 }
-.toTopBtn:active {
+#toTopBtn:active {
 	background-color: #aaa;
 }
 

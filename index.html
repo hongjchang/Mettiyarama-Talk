@@ -74,10 +74,10 @@
 
         <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
         and this one for no JS version:https://stackoverflow.com/a/32102805 -->
-        <button onclick="toTop()" class="toTopBtn" href="#top" title="Return to top">TOP</button>
+        <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top">TOP</button>
         <script>
             //Script for the go to top button
-            let mybutton = document.getElementsByClassName("toTopBtn");
+            let mybutton = document.getElementById("toTopBtn");
             // window.onscroll = function() {scrollFunction()};
             // function scrollFunction(){
             //     if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
