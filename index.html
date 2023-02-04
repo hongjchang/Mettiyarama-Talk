@@ -42,7 +42,7 @@
     <div id="loader">
         <video src="src/loading.webm" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="true" oncontextmenu="return false;" autoplay muted loop width="200px" title="Loading... (Discord, 2022)"></video>
     </div>
-    <p style="position:absolute;font-size:9px;text-align:center;bottom:1%;left:50%;transform:translate(-50%,-50%);color:lightgrey;"><a href="https://discord.com/app">Discord</a> 2022 Christmas special logo. All copyrights subject to its owner.</p>
+    <p class="loadingCaption"><a href="https://discord.com/app">Discord</a> 2022 Christmas special logo. All copyrights subject to its owner.</p>
     <script>
         var myVar;
         function loadingScreen(){ myVar = setTimeout(showPage, 1000); }
@@ -74,10 +74,10 @@
 
         <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
         and this one for no JS version:https://stackoverflow.com/a/32102805 -->
-        <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top">TOP</button>
+        <button onclick="toTop()" class="toTopBtn" href="#top" title="Return to top">TOP</button>
         <script>
             //Script for the go to top button
-            let mybutton = document.getElementById("toTopBtn");
+            let mybutton = document.getElementsByClassName("toTopBtn");
             // window.onscroll = function() {scrollFunction()};
             // function scrollFunction(){
             //     if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
@@ -154,11 +154,11 @@
                 document.body.classList.toggle("dark");
             }
         </script>
-
+        
         <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
         <header>
             <h1>Wednesday Bhante's Talk</h1>
-            <p>Last Modified on <u>3 Feb 2023, 22:20 UTC+8</u></p>
+            <p>Last Modified on <u>4 Feb 2023, 23:48 UTC+8</u></p>
             <hr/>
         </header>
 

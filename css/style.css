@@ -176,6 +176,32 @@ body.dark .active, body.dark .collapsible:hover {
 	background-color: #aaa;
 }
 
+/*========Return to top button=======*/
+.toTopBtn {
+	border: none;
+	outline: none;
+	color: rgb(7, 87, 19);
+	cursor: pointer;
+	bottom: 40px;
+	right: 30px;
+	position: fixed;
+	z-index: 2;
+	padding:15px;
+	border-radius: 50px;
+	font-family: 'Ubuntu';
+	font-weight: bold;
+	font-size: 16px;
+	animation: rotate 3.3s linear infinite;
+}
+@keyframes rotate { to {transform: rotate(360deg);} }
+.toTopBtn:hover {
+	background-color:#bbb;
+	animation-play-state:paused;
+}
+.toTopBtn:active {
+	background-color: #aaa;
+}
+
 /*========Loading Screen========*/
 #loader {
 	position: absolute;
@@ -197,6 +223,9 @@ body.dark .active, body.dark .collapsible:hover {
 	border-top: 16px solid #3498db;
 	-webkit-animation: spin 2s linear infinite;
 	animation: spin 2s linear infinite; */
+  }
+  .loadingCaption{
+	position:absolute;font-size:9px;text-align:center;bottom:1%;left:50%;transform:translate(-50%,-50%);color:lightgrey;
   }
   /* @-webkit-keyframes spin {
 	0% { -webkit-transform: rotate(0deg); }
@@ -473,15 +502,15 @@ footer {
 .active, .collapsible:hover {
 	color: rgb(7,87,19);
 }
+/*!!!!!!CSS's unicode = \xxxxx = hex       HTML's = &#xxxxx!!!!!!!*/
 .collapsible:before{
-	content: '\02795'; /*Unicode for +*/
+	content: "\25BC"; /* Unicode for down triangle */
 	font-size: 10px;
-	color: white;
 	float: right;
 	margin-left: 5px;
 }
 .active:before{
-	content: "\2796"; /*Unicode for -*/
+	content: "\25B2"; /*Unicode for up triangle*/
 }
 /* Style the collapsible content. Note: hidden by default */
 .collapsibleContent {
@@ -507,6 +536,7 @@ footer {
 	display: table-cell;
 	padding-left: 10px;
 	padding-right: 5px;
+	padding-bottom: 10px;
 }
 
 /*========Closable banner========*/
@@ -551,32 +581,6 @@ a:visited{
 a:hover{
 	color: rgb(125, 63, 27);
 	text-decoration: underline;
-}
-
-/*========Return to top button=======*/
-#toTopBtn {
-	border: none;
-	outline: none;
-	color: rgb(7, 87, 19);
-	cursor: pointer;
-	bottom: 40px;
-	right: 30px;
-	position: fixed;
-	z-index: 2;
-	padding:15px;
-	border-radius: 50px;
-	font-family: 'Ubuntu';
-	font-weight: bold;
-	font-size: 16px;
-	animation: rotate 3.3s linear infinite;
-}
-@keyframes rotate { to {transform: rotate(360deg);} }
-#toTopBtn:hover {
-	background-color:#bbb;
-	animation-play-state:paused;
-}
-#toTopBtn:active {
-	background-color: #aaa;
 }
 
 /*========For Scrolling Progress========*/
