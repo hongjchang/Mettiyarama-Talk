@@ -57,21 +57,6 @@
 
     <!--Added a div below here for all the main content for the loading screen -->
     <div id="allContent" class="animate-bottom">
-        <!--Progress indicator when scrolling based on https://www.w3schools.com/howto/howto_js_scroll_indicator.asp -->
-        <div class="progress-container">
-            <div class="progress-bar" id="scrollProgressBar"></div>
-        </div>
-        <script>
-            //Script for progress bar
-            window.onscroll = function() {progressFunction()};
-            function progressFunction() {
-                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = (winScroll / height) * 100;
-                document.getElementById("scrollProgressBar").style.width = scrolled + "%";
-            }
-        </script>
-
         <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
         and this one for no JS version:https://stackoverflow.com/a/32102805 -->
         <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top">TOP</button>
@@ -125,22 +110,29 @@
 
                     //Code below from here: https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
                     function disableScroll() {
-                        // Get the current page scroll position
-                        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                            // if any scroll is attempted, set this to the previous value
-                            window.onscroll = function() {
-                                window.scrollTo(scrollLeft, scrollTop);
-                            };
                         document.body.classList.add("no-scroll");
                     }
                     function enableScroll() {
-                        window.onscroll = function() {};
                         document.body.classList.remove("no-scroll");
                     }
                 </script>
             </div>
         </div>
+
+        <!--Progress indicator when scrolling based on https://www.w3schools.com/howto/howto_js_scroll_indicator.asp -->
+        <div class="progress-container">
+            <div class="progress-bar" id="scrollProgressBar"></div>
+        </div>
+        <script>
+            //Script for progress bar
+            window.onscroll = function() {progressFunction()};
+            function progressFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("scrollProgressBar").style.width = scrolled + "%";
+            }
+        </script>
 
         <!--
         Dark mode (https://tealfeed.com/darklight-mode-toggle-html-css-javascript-sxgub)

@@ -401,7 +401,7 @@ nav {
 	position: sticky;
 	top: 0%;
 	left: 0%;
-	z-index: 2;
+	z-index:1;
 }
 .nav-left li{
 	padding-bottom:4px;
@@ -589,6 +589,7 @@ a:hover{
 	height: 4px;
 	background: transparent;
 	position: fixed;
+	z-index: 2;
 }
 .progress-bar {
 	height: 4px;
