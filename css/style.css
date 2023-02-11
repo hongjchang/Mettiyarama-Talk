@@ -128,11 +128,8 @@ body.dark footer{
 	background-color: rgb(5, 60, 13);
 }
 body.dark #fixed-alert{
-	background-color: rgb(146, 214, 243);
-	color:#555;
-}
-body.dark #btn-dismiss{
-	color:rgb(235, 30, 23);
+	background-color: rgb(11, 65, 88);
+	color: #aaa;
 }
 body.dark a:hover{
 	color: rgb(216, 182, 160);
@@ -273,7 +270,7 @@ article blockquote{
 	width: fit-content;
 }
 
-/*========Header Notice At Top=======*/
+/*========Top Popup Message=======*/
 .overlayBox {
 	position: fixed;
 	top: 0;
