@@ -13,7 +13,7 @@ body{
 	margin-right: 0%;
 	margin-bottom: 0%;
 	background-color: rgb(7, 87, 19);
-	transition: .382s;
+	transition: 1s;
 }
 
 section hr{
@@ -121,6 +121,9 @@ body.dark header{
 body.dark nav{
 	background:#222;
 }
+body.dark .nav-right{
+	background: #222;
+}
 body.dark article{
 	background-color: black;
 }
@@ -145,9 +148,16 @@ body.dark .tabContainer label{
 body.dark .tabContainer .tab, body.dark .tabContainer input[type="radio"]:checked + label{
 	background: #333;
 }
-body.dark .active, body.dark .collapsible:hover {
+body.dark .activeCollap, body.dark .collapsible:hover {
 	color: rgb(146, 197, 154);
 }
+body.dark .pagination a{
+	color: white;
+}
+body.dark .pagination a.activePage{
+	background-color: rgb(5, 60, 13);
+}
+body.dark .pagination a:hover:not(.activePage) { background-color: #333; }
 /*=======Dark Mode Button========*/
 #darkModeBtn {
 	border: none;
@@ -270,6 +280,111 @@ article blockquote{
 	width: fit-content;
 }
 
+/*========Hyperlinks========*/
+* a:link {
+	text-decoration: none;
+	color: rgb(25, 202, 52);
+}
+* a:visited{
+	color: rgb(27, 176, 240);
+}
+* a:hover{
+	color: rgb(125, 63, 27);
+	text-decoration: underline;
+}
+
+/*========Header Section========*/
+* {
+	box-sizing: border-box;
+}
+header {
+	/* old background-color: rgb(110, 83, 67); */
+	background-color: rgb(7, 87, 19);
+	padding: 20px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+h1{
+	font-family: Georgia, 'Times New Roman', sans-serif;
+}
+header p{
+	font-size: 12px;
+}
+header hr{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*========Body Part========*/
+nav {
+	background: #ccc;
+	padding: 20px;
+}
+.nav-left{
+	width: 11%;
+	float: left;
+	list-style: none;
+	position: sticky;
+	top: 0%;
+	left: 0%;
+	z-index:1;
+}
+.nav-left li{
+	padding-bottom:4px;
+}
+.nav-right{
+	float: right;
+	background: #ccc;
+	width: 20%;
+}
+.nav-right h3{
+	padding-top: 10px;
+}
+article {
+	float: left;
+	padding: 10px;
+	width: 69%;
+	background-color: #f1f1f1;
+}
+section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+footer {
+	/*background-color: rgb(112, 97, 88);*/
+	background-color: rgb(7, 87, 19);
+	padding: 1px;
+	text-align: center;
+	color: white;
+	position: relative;
+	z-index: 1;
+}
+@media (max-width: 600px) {
+	nav, article {
+		width: auto;
+		height: auto;
+	}
+}
+
+/*========Pagination=======*/
+.pagination{
+	margin-left: 47%;
+	padding: 30px 0px 8px 0px;
+}
+.pagination a{
+	color: black;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+}
+.pagination a.activePage{
+	background-color: rgb(7, 87, 19);
+	color: white;
+}
+.pagination a:hover:not(.activePage) { background-color: #ccc; }
+
 /*========Top Popup Message=======*/
 .overlayBox {
 	position: fixed;
@@ -365,79 +480,6 @@ article blockquote{
 	}
 }
 
-/*========For body content========*/
-* {
-	box-sizing: border-box;
-}
-header {
-	/* old background-color: rgb(110, 83, 67); */
-	background-color: rgb(7, 87, 19);
-	padding: 20px;
-	text-align: center;
-	font-size: 35px;
-	color: white;
-}
-h1{
-	font-family: Georgia, 'Times New Roman', sans-serif;
-}
-header p{
-	font-size: 12px;
-}
-header hr{
-	margin: 0px;
-	padding: 0px;
-}
-nav {
-	width: 11%;
-	background: #ccc;
-	padding: 20px;
-}
-.nav-left{
-	float: left;
-	list-style: none;
-	position: sticky;
-	top: 0%;
-	left: 0%;
-	z-index:1;
-}
-.nav-left li{
-	padding-bottom:4px;
-}
-.nav-right {
-	float: right;
-	width: 20%;
-	background: #ccc;
-}
-.nav-right h3{
-	padding-top: 20px;
-}
-article {
-	float: left;
-	padding: 10px;
-	width: 69%;
-	background-color: #f1f1f1;
-}
-section::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-footer {
-	/*background-color: rgb(112, 97, 88);*/
-	background-color: rgb(7, 87, 19);
-	padding: 1px;
-	text-align: center;
-	color: white;
-	position: relative;
-	z-index: 1;
-}
-@media (max-width: 600px) {
-	nav, article {
-		width: auto;
-		height: auto;
-	}
-}
-
 /*========2 Tabs For Each Session========*/
 .tabContainer{
 	display: flex;
@@ -496,7 +538,7 @@ footer {
 }
 /*.active =  Add background color to collapsible when clicked
     hover = a background color when hover */
-.active, .collapsible:hover {
+.activeCollap, .collapsible:hover {
 	color: rgb(7,87,19);
 }
 /*!!!!!!CSS's unicode = \xxxxx = hex       HTML's = &#xxxxx!!!!!!!*/
@@ -506,7 +548,7 @@ footer {
 	float: right;
 	margin-left: 5px;
 }
-.active:before{
+.activeCollap:before{
 	content: "\25B2"; /*Unicode for up triangle*/
 }
 /* Style the collapsible content. Note: hidden by default */
@@ -516,6 +558,55 @@ footer {
 	margin-bottom:0px;
 	max-height: 0;
 	transition: max-height 0.5s ease-out;
+}
+
+/*========Tooltip text========*/
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px none black; /* If you want dots under the hoverable text */
+	cursor: help;
+}
+/* Tooltip text */
+.tooltip .tooltipText {
+	visibility: hidden;
+	width: 150px;
+	background-color: #555;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 6px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 110%;
+	left: 50%;
+	margin-left: -60px;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+/* Tooltip arrow */
+.tooltip .tooltipText::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: none;
+	border-color: #555 transparent transparent transparent;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltipText {
+	visibility: visible;
+	opacity: 0.93;
 }
 
 /*========Article content in main body========*/
@@ -567,19 +658,6 @@ footer {
 	overflow: hidden;
 }
 
-/*========Hyperlinks========*/
-a:link {
-	text-decoration: none;
-	color: rgb(25, 202, 52);
-}
-a:visited{
-	color: rgb(27, 176, 240);
-}
-a:hover{
-	color: rgb(125, 63, 27);
-	text-decoration: underline;
-}
-
 /*========For Scrolling Progress========*/
 .progress-container {
 	width: 100%;
@@ -624,53 +702,4 @@ a:hover{
 ::-webkit-scrollbar-track-piece{
 	padding-left: 5px;
 	padding-right: 5px;
-}
-
-/*========Tooltip text========*/
-.tooltip {
-	position: relative;
-	display: inline-block;
-	border-bottom: 1px none black; /* If you want dots under the hoverable text */
-	cursor: help;
-}
-/* Tooltip text */
-.tooltip .tooltipText {
-	visibility: hidden;
-	width: 150px;
-	background-color: #555;
-	font-size: 14px;
-	color: #fff;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 6px;
-
-	/* Position the tooltip text */
-	position: absolute;
-	z-index: 1;
-	bottom: 110%;
-	left: 50%;
-	margin-left: -60px;
-
-	/* Fade in tooltip */
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-/* Tooltip arrow */
-.tooltip .tooltipText::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: none;
-	border-color: #555 transparent transparent transparent;
-}
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltipText {
-	visibility: visible;
-	opacity: 0.93;
 }
