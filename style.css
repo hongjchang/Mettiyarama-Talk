@@ -42,7 +42,6 @@ iframe{
 	left:60px;
 	bottom: 7px;
 	font-size: 13px;
-	font-weight: bold;
 	font-family: 'Ubuntu';
 	color: black;
 	border: none;
@@ -125,6 +124,7 @@ body.dark nav{
 body.dark .nav-right{
 	background: #222;
 }
+body.dark .nav-right h3:hover{ color: rgb(146, 197, 154); }
 body.dark article{
 	background-color: black;
 }
@@ -410,6 +410,7 @@ nav {
 .nav-right h3{
 	padding-top: 10px;
 }
+.nav-right h3:hover{ color: rgb(7, 87, 19); }
 article {
 	float: left;
 	padding: 10px;
@@ -477,7 +478,7 @@ footer {
 	background: #fff;
 	border-radius: 13px;
 	border: 4px solid white;
-	height:42%;
+	height:52%;
 	width: 52%;
 	position: relative;
 	transition: all 1s;
@@ -532,7 +533,7 @@ footer {
 	content: 'Close Message';
 }
 .popup .popup-content { /*Content texts*/
-	max-height: 55%;
+	max-height: 65%;
 	overflow: auto;
 	font-size: 17px;
 	font-weight: 550;
