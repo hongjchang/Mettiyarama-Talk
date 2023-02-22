@@ -533,7 +533,7 @@ footer {
 	content: 'Close Message';
 }
 .popup .popup-content { /*Content texts*/
-	max-height: 65%;
+	max-height: 75%;
 	overflow: auto;
 	font-size: 17px;
 	font-weight: 550;
@@ -543,10 +543,10 @@ footer {
 @media screen and (max-width: 1400px){
 	.popup{
 		width: 60%;
-		height:50%;
+		height:60%;
 	}
 	.popup .content{
-		font-size: 17px;
+		font-size: 15px;
 	}
 }
 
@@ -563,7 +563,7 @@ footer {
 }
 .tabContainer label{
 	padding: 10px;
-	background: #e2e2e2;
+	background: #eee;
 	font-weight: bold;
 	transition: 0.5s;
 	cursor: pointer;
@@ -576,7 +576,7 @@ footer {
 	width: 100%;
 	padding:20px;
 	border-radius: 8px;
-	background: #fff;
+	background: #dedede;
 	order: 1; /*This one will decide whether tabs are at top or bottom (as in the video)*/
 	display: none;
 	font-size: 16px;
@@ -595,7 +595,7 @@ footer {
 	display: block;
 }
 .tabContainer input[type="radio"]:checked + label {
-	background: #fff;
+	background: #dedede;
 }
 
 /*========Collapsible For Right Nav========*/

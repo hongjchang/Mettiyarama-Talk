@@ -80,9 +80,21 @@
             <div class="popup">
                 <h2>Page Responsiveness Warning</h2>
                 <div class="popup-content">
-                    <p style="padding-top:0px">⚠️It is <b>recommended to view this webpage on a PC</b> due to this webpage may not work well in mobile devices in terms of viewability and responsiveness, despite it supports well on most browsers.⚠️</p>
-                    <p style="padding-top:0px;">🔤Chinese support available! Interact with the button at the bottom right corner.<br/>🈶欢迎互动右下角的按钮以切换中文语言。</p>
-                    <p style="padding-top:0px;">Thank you for understanding and Sukhi Hotu! 🙏🙏🙏</p>
+                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                    <div class="tabContainer">
+                        <input type="radio" id="tab1" name="tabContainer" checked="checked">
+                        <label for="tab1">Webpage Layout</label>
+                        <div class="tab">
+                            <p style="padding-top:0px">⚠️It is <b>recommended to view this webpage on a PC</b> due to this webpage may not work well in mobile devices in terms of viewability and responsiveness, despite it supports well on most browsers.⚠️</p>
+                            <p style="padding-top:0px;">Thank you for understanding and Sukhi Hotu! 🙏🙏🙏</p>
+                        </div>
+
+                        <input type="radio" id="tab2" name="tabContainer" checked="checked">
+                        <label for="tab2">New Language</label>
+                        <div class="tab">
+                            <p style="padding-top:0px;">🔤Chinese support available! Interact with the button at the bottom right corner.<br/>🈶欢迎点击右下角的按钮以切换中文语言。</p>
+                        </div>
+                    </div> <!--End of tabContainer-->
                 </div>
                 <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn"><span>OK</span></button>
                 <!--Script at bottom-->
@@ -92,7 +104,7 @@
         <!--Language Changer (https://youtu.be/xDHhZqWtOq8?t=53)
         Apple iOS switch (adapted from my SunwayUniWebForm and https://codeburst.io/pure-css3-input-as-the-ios-checkbox-8b6347d5cefb)-->
         <span class="en">ABC</span>
-        <input class="apple-switch" type="checkbox">
+        <input class="apple-switch" type="checkbox" title="Change language here">
         <span class="chi">中文</span>
 
         <!--These 2 divs are for 2 languages. But they are copied, so pls follow the English one. -->
@@ -112,13 +124,14 @@
             <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
             <header>
                 <h1>Wednesday Bhante's Talk</h1>
-                <p>Last Modified on <u>16 Feb 2023, 16:20 UTC+8</u></p>
+                <p>Last Modified on <u>22 Feb 2023, 22:45 UTC+8</u></p>
                 <hr/>
             </header>
 
             <section>
                 <nav class="nav-left">
                     <h3>Navigation Panel</h3>
+                    <li><a href="#session9">8 Mar 2023</a></li>
                     <li><a href="#session8">22 Feb 2023</a></li>
                     <li><a href="#session7">8 Feb 2023</a></li>
                     <li><a href="#session6">11 Jan 2023</a></li>
@@ -136,7 +149,7 @@
                             <button class="sortBy">Sorted By: <b>Most Recent</b></button>
     <!--Latest session. Sort them from newest one first.-->
                             <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session8"><h3>Upcoming session: 22 Feb 2023<br/><code>佛陀的经钥匙系列开示(58) 之</code></h3></div>
+                                <div class="table-body-cell" id="session9"><h3>Upcoming session: 8 Mar 2023<br/><code>佛陀的经钥匙系列开示(59) 之</code></h3></div>
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
@@ -149,24 +162,29 @@
 
                             <hr>
                             <div class=“resp-table-row”>
+                                <div class="table-body-cell" id="session8"><h3>22 Feb 2023<br/><code>佛陀的经钥匙系列开示(58) 之 12缘起法 - 爱</code></h3><blockquote>内容：爱的升起就是乐受在哪里出现，渴爱就在哪里升起。</blockquote></div>
+                            </div>
+                            <div class=“resp-table-row”>
+                                <div class="table-body-cell">
+                                    <u>Embedded</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F857293482023553%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>Downloaded</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1MriS7qQfrDq8qJbLfY71R_cczt6zqMJU/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div class=“resp-table-row”>
                                 <div class="table-body-cell" id="session7"><h3>8 Feb 2023<br/><code>佛陀的经钥匙系列开示(57) 之 12缘起法 - 取 & 恭喜发<b>"内财"</b></code></h3><blockquote>内容：取，即执着、不放下，要求欲乐。<br/>&emsp;&emsp;&emsp;要灭掉取，就要放下、不执着。<br/>&emsp;&emsp;&emsp;有爱才有取，才会有有和生。</blockquote></div>
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tab14" name="tabContainer" checked="checked">
-                                        <label for="tab14">Embedded</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tab15" name="tabContainer" checked="checked">
-                                        <label for="tab15">Downloaded</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>Embedded</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>Downloaded</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -176,20 +194,11 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tab12" name="tabContainer" checked="checked">
-                                        <label for="tab12">Embedded</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tab13" name="tabContainer" checked="checked">
-                                        <label for="tab13">Downloaded</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>Embedded</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>Downloaded</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -199,20 +208,11 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tab10" name="tabContainer" checked="checked">
-                                        <label for="tab10">Embedded</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tab11" name="tabContainer" checked="checked">
-                                        <label for="tab11">Downloaded</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>Embedded</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>Downloaded</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -222,20 +222,11 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tab8" name="tabContainer" checked="checked">
-                                        <label for="tab8">Embedded</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tab9" name="tabContainer" checked="checked">
-                                        <label for="tab9">Downloaded</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>Embedded</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>Downloaded</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -247,28 +238,15 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tab5" name="tabContainer" checked="checked">
-                                        <label for="tab5">Event Poster</label>
-                                        <div class="tab" style="text-align:center;">
-                                            🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">View event poster here<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>
-                                        </div>
-
-                                        <input type="radio" id="tab6" name="tabContainer" checked="checked">
-                                        <label for="tab6">Part One Recorded</label>
-                                        <div class="tab">
-                                            <blockquote>⬇️Apologies for the <b>multiple audio sources</b> from the recording below. There was a mistake caused during recording.<br/>This video refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
-                                            <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tab7" name="tabContainer" checked="checked">
-                                        <label for="tab7">Part Two Embedded</label>
-                                        <div class="tab">
-                                            <blockquote>⬇️This video is the continuing part of the session.</blockquote>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <blockquote style="margin-top:0px;">🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">View event poster here<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></blockquote>
+                                    
+                                    <u>Part One Recorded</u><br/>
+                                    <blockquote>⬇️Apologies for the <b>multiple audio sources</b> from the recording below. There was a mistake caused during recording.<br/>This video refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
+                                    <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
+                                    
+                                    <br/><br/><u>Part Two Embedded</u><br/>
+                                    <blockquote>⬇️This video is the continuing part of the session.</blockquote>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                                 </div>
                             </div>
 
@@ -278,26 +256,17 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tab3" name="tabContainer" checked="checked">
-                                        <label for="tab3">Embedded</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tab4" name="tabContainer" checked="checked">
-                                        <label for="tab4">Downloaded</label>
-                                        <div class="tab">
-                                            <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
-                                            To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
-                                            Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
-                                            <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
-                                            -->
-                                            <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
-                                            <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>Embedded</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                    
+                                    <br/><br/><u>Downloaded</u><br/>
+                                    <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
+                                    To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
+                                    Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
+                                    <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
+                                    -->
+                                    <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
+                                    <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
                             
@@ -307,20 +276,11 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tab1" name="tabContainer" checked="checked">
-                                        <label for="tab1">Embedded</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&show_text=true&width=560&t=0" width="700" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tab2" name="tabContainer" checked="checked">
-                                        <label for="tab2">Downloaded</label>
-                                        <div class="tab">
-                                            <blockquote>Unfortunately there was no downloaded recording for this session.</blockquote>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>Embedded</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>Downloaded</u><br/>
+                                    <blockquote>Unfortunately there was no downloaded recording for this session.</blockquote>
                                 </div>
                             </div>
                         </div> <!--End table body-->
@@ -335,7 +295,7 @@
                 </article>
 
                 <nav class="nav-right">
-                    <h3>About This Page and The Event</h3>
+                    <h3>About This Page And Event</h3>
                     <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
                     <p>
                         <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Facebook-%230077B5.svg?&style=flat&logo=facebook&logoColor=white" alt="Facebook"></a>
@@ -431,13 +391,14 @@
             <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
             <header>
                 <h1>星期三佛法开示</h1>
-                <p>最后更新于 <u>2023年2月16日, 下午4时20分 UTC+8</u></p>
+                <p>最后更新于 <u>2023年2月22日, 下午10时45分 UTC+8</u></p>
                 <hr/>
             </header>
 
             <section>
                 <nav class="nav-left">
                     <h3>浏览指南</h3>
+                    <li><a href="#session9">2023年3月8日</a></li>
                     <li><a href="#session8">2023年2月22日</a></li>
                     <li><a href="#session7">2023年2月8日</a></li>
                     <li><a href="#session6">2023年1月11日</a></li>
@@ -455,7 +416,7 @@
                             <button class="sortBy">依：<b>最新</b> 为排序</button>
     <!--Latest session. Sort them from newest one first.-->
                             <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session8"><h3>下一次活动: 2023年2月22日<br/><code>佛陀的经钥匙系列开示(58) 之</code></h3></div>
+                                <div class="table-body-cell" id="session9"><h3>下一次活动: 2023年3月8日<br/><code>佛陀的经钥匙系列开示(59) 之</code></h3></div>
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
@@ -468,24 +429,29 @@
 
                             <hr>
                             <div class=“resp-table-row”>
+                                <div class="table-body-cell" id="session8"><h3>22 Feb 2023<br/><code>佛陀的经钥匙系列开示(58) 之 12缘起法 - 爱</code></h3><blockquote>内容：爱的升起就是乐受在哪里出现，渴爱就在哪里升起。</blockquote></div>
+                            </div>
+                            <div class=“resp-table-row”>
+                                <div class="table-body-cell">
+                                    <u>已崁入</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F857293482023553%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>已下载</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1MriS7qQfrDq8qJbLfY71R_cczt6zqMJU/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div class=“resp-table-row”>
                                 <div class="table-body-cell" id="session7"><h3>2023年2月8日<br/><code>佛陀的经钥匙系列开示(57) 之 12缘起法 - 取 & 恭喜发<b>"内财"</b></code></h3><blockquote>内容：取，即执着、不放下，要求欲乐。<br/>&emsp;&emsp;&emsp;要灭掉取，就要放下、不执着。<br/>&emsp;&emsp;&emsp;有爱才有取，才会有有和生。</blockquote></div>
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tabN" name="tabContainer" checked="checked">
-                                        <label for="tabN">已崁入</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tabO" name="tabContainer" checked="checked">
-                                        <label for="tabO">已下载</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>已崁入</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>已下载</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -495,20 +461,11 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tabL" name="tabContainer" checked="checked">
-                                        <label for="tabL">已崁入</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tabM" name="tabContainer" checked="checked">
-                                        <label for="tabM">已下载</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>已崁入</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>已下载</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -518,20 +475,11 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tabJ" name="tabContainer" checked="checked">
-                                        <label for="tabJ">已崁入</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tabK" name="tabContainer" checked="checked">
-                                        <label for="tabK">已下载</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>已崁入</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>已下载</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -541,20 +489,11 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tabH" name="tabContainer" checked="checked">
-                                        <label for="tabH">已崁入</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tabI" name="tabContainer" checked="checked">
-                                        <label for="tabI">已下载</label>
-                                        <div class="tab">
-                                            <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>已崁入</u><br/>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>已下载</u><br/>
+                                    <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
 
@@ -566,28 +505,16 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tabE" name="tabContainer" checked="checked">
-                                        <label for="tabE">活动海报</label>
-                                        <div class="tab" style="text-align:center;">
-                                            🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">点击以查看海报<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>
-                                        </div>
-
-                                        <input type="radio" id="tabF" name="tabContainer" checked="checked">
-                                        <label for="tabF">个人录制——上集</label>
-                                        <div class="tab">
-                                            <blockquote>⬇️对于此影片有<b>多种语音来源</b>的问题真的感到抱歉。这是录制过程所影响的。<br/>此影片是此活动中的第一部分，也就是从<b>下午一点至三点的部分</b>。请点击已崁入影片里上传者的账号以观看<b>第二部分。</b></blockquote>
-                                            <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tabG" name="tabContainer" checked="checked">
-                                        <label for="tabG">已崁入——下集</label>
-                                        <div class="tab">
-                                            <blockquote>⬇️此影片是这个活动的下半部分。</blockquote>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>活动海报</u><br/>
+                                    <blockquote style="margin-top:0px;">🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">点击以查看海报<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></blockquote>
+                                    
+                                    <u>个人录制——上集</u><br/>
+                                    <blockquote>⬇️对于此影片有<b>多种语音来源</b>的问题真的感到抱歉。这是录制过程所影响的。<br/>此影片是此活动中的第一部分，也就是从<b>下午一点至三点的部分</b>。请点击已崁入影片里上传者的账号以观看<b>第二部分。</b></blockquote>
+                                    <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
+                                    
+                                    <br/><br/><u>已崁入——下集</u><br/>
+                                    <blockquote>⬇️此影片是这个活动的下半部分。</blockquote>
+                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                                 </div>
                             </div>
 
@@ -597,26 +524,16 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tabC" name="tabContainer" checked="checked">
-                                        <label for="tabC">已崁入</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                        </div>
+                                    <u>已崁入</u><br/>                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
-                                        <input type="radio" id="tabD" name="tabContainer" checked="checked">
-                                        <label for="tabD">已下载</label>
-                                        <div class="tab">
-                                            <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
-                                            To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
-                                            Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
-                                            <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
-                                            -->
-                                            <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
-                                            <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <br/><br/><u>已下载</u><br/>
+                                    <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
+                                    To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
+                                    Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
+                                    <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
+                                    -->
+                                    <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
+                                    <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             </div>
                             
@@ -626,20 +543,10 @@
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
-                                    <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                                    <div class="tabContainer">
-                                        <input type="radio" id="tabA" name="tabContainer" checked="checked">
-                                        <label for="tabA">已崁入</label>
-                                        <div class="tab">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&show_text=true&width=560&t=0" width="700" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                        </div>
-
-                                        <input type="radio" id="tabB" name="tabContainer" checked="checked">
-                                        <label for="tabB">已下载</label>
-                                        <div class="tab">
-                                            <blockquote>不好意思，此活动没有可观看的录影。</blockquote>
-                                        </div>
-                                    </div> <!--End of tabContainer-->
+                                    <u>已崁入</u><br/>                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                    
+                                    <br/><br/><u>已下载</u><br/>
+                                    <blockquote>不好意思，此活动没有可观看的录影。</blockquote>
                                 </div>
                             </div>
                         </div> <!--End table body-->
