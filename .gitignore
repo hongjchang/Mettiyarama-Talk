@@ -11,3 +11,5 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
+text-field-index.html
+text-field-style.css

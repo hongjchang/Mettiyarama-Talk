@@ -441,6 +441,7 @@ footer {
 /*========Pagination=======*/
 .pagination{
 	margin-left: 47%;
+	margin-bottom: 10px;
 	padding: 30px 0px 8px 0px;
 }
 .pagination a{
@@ -772,4 +773,106 @@ footer {
 ::-webkit-scrollbar-track-piece{
 	padding-left: 5px;
 	padding-right: 5px;
+}
+
+/*========Special Text Field (Newsletter Sub)========*/
+.big-container{
+    padding: 20px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+.big-container h2{
+    text-decoration: underline;
+    margin-bottom: 15px;
+	font-family: 'Product Sans', sans-serif;
+}
+/*Inner container for the fields*/
+.text-field-container{
+    position: relative;
+    padding: 15px;
+    /* justify-content: center;
+    align-items:center; */
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+/*Text field whole input element*/
+.text-field-container .text-field-inputbox{
+    position: relative;
+    width: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.text-field-container .text-field-inputbox input{
+    position: relative;
+    padding: 8px 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    z-index: 2;
+}
+/*Text field label*/
+.text-field-container .text-field-inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+.text-field-container .text-field-inputbox input:valid ~ span,
+.text-field-container .text-field-inputbox input:focus ~ span{
+    font-size: 0.75em;
+	padding: 15px 0;
+    transform: translateY(-32px);
+}
+/*Text field's bottom line*/
+.text-field-container .text-field-inputbox i{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    /* background: linear-gradient(45deg, #2196f3,#ff4685); */
+	background: linear-gradient(60deg, #075713,#47ff62);
+    transition: 0.5s;
+    z-index: 1;
+    border-radius: 4px;
+    pointer-events: none;
+}
+.text-field-container .text-field-inputbox input:valid ~ i,
+.text-field-container .text-field-inputbox input:focus ~ i{
+    height: 100%;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+/*Submit button*/
+.submit-button{
+    position: relative;
+    margin: 15px 43%;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #000;
+    border: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+.submit-button:hover{
+    transition: 0.35s;
+    /* background: linear-gradient(45deg, #2196f3,#ff4685);*/
+	background: linear-gradient(60deg, #075713,#47ff62);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    border: 0;
+}
+.submit-button:active{
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
 }
