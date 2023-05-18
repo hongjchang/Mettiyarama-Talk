@@ -263,17 +263,18 @@ input.apple-switch:checked ~ .lang-content.contentChi{
 	color: rgb(7, 87, 19);
 	cursor: pointer;
 	bottom: 40px;
-	right: 30px;
+	right: 38px;
 	position: fixed;
 	z-index: 2;
-	padding:15px;
+	padding:10px;
 	border-radius: 50px;
 	font-family: 'Ubuntu';
 	font-weight: bold;
 	font-size: 16px;
-	animation: rotate 3.3s linear infinite;
+	animation-timing-function: ease-in-out;
+	/* animation: rotate 3.3s linear infinite; */
 }
-@keyframes rotate { to {transform: rotate(360deg);} }
+/* @keyframes rotate { to {transform: rotate(360deg);} } */
 #toTopBtn:hover {
 	background-color:#bbb;
 	animation-play-state:paused;

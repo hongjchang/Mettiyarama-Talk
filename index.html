@@ -27,6 +27,9 @@
 
     <!--Google Fonts Open in new tab icon (https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Aopen_in_new%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+
+    <!--Google Fonts icon for return to top button-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body onload="loadingScreen(), disableScroll()">
@@ -111,7 +114,7 @@
         <div class="lang-content contentEng">
             <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
             and this one for no JS version:https://stackoverflow.com/a/32102805 -->
-            <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top">TOP</button>
+            <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top"><span class="material-symbols-outlined">arrow_upward</span></button>
             <!--Script at bottom-->
 
             <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
@@ -124,14 +127,14 @@
             <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
             <header>
                 <h1>Wednesday Bhante's Talk</h1>
-                <p>Last Modified on <u>30 Apr 2023, 18:19 UTC+10</u></p>
+                <p>Last Modified on <u>18 May 2023, 15:08 UTC+10</u></p>
                 <hr/>
             </header>
 
             <section>
                 <nav class="nav-left">
                     <h3>Navigation Panel</h3>
-                    <li><a href="#session12">10 May 2023</a></li>
+                    <li><a href="#session12">24 May 2023</a></li>
                     <li><a href="#session11">26 Apr 2023</a></li>
                     <li><a href="#session10">12 Apr 2023</a></li>
                     <li><a href="#session9">8 Mar 2023</a></li>
@@ -154,7 +157,7 @@
                             <button class="sortBy">Sorted By: <b>Most Recent</b></button>
     <!--Latest session. Sort them from newest one first.-->
                             <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session12"><h3>Upcoming session: 10 May 2023<br/><code>佛陀的经钥匙系列开示(62) 之</code></h3></div>
+                                <div class="table-body-cell" id="session12"><h3>Upcoming session: 24 May 2023<br/><code>佛陀的经钥匙系列开示(62) 之</code></h3></div>
                             </div>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell">
@@ -768,14 +771,13 @@
 <script>
     //Script for the go to top button
     let mybutton = document.getElementById("toTopBtn");
-    // window.onscroll = function() {scrollFunction()};
-    // function scrollFunction(){
-    //     if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
-    //         mybutton.style.display = "block";
-    //     }else{
-    //         mybutton.style.display = "none";
-    //     }
-    // }
+    window.onscroll = function() {
+        if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
+            mybutton.style.display = "block";
+        }else{
+            mybutton.style.display = "none";
+        }
+    };
     function toTop() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
