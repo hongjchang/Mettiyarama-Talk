@@ -93,7 +93,7 @@ body.dark article blockquote{
 }
 body.dark .popup{
 	background: black;
-	border: 4px solid #dedede;
+	border: 4px solid #878787;
 }
 body.dark .popup h2{
 	color: rgb(146, 197, 154);
@@ -165,21 +165,24 @@ body.dark .chi { color: white; }
 body.dark .big-container{background-color: #111;}
 body.dark .text-field-container{background-color: #222;}
 body.dark .text-field-container .text-field-inputbox span{color: #fff;}
+body.dark .swipe-to-close-btn{ background: #242424;color: rgb(146, 197, 154); }
+body.dark .swipe-to-close-btn:hover{ color:#047533;background-color: #aaa; }
+body.dark .swipe-to-close-btn:active{ background-color: #d0f3d5; }
 /*=======Dark Mode Button========*/
 #darkModeBtn {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	/* display: none; */
-	bottom: 120px;
+	/* bottom: 120px;
 	right: 35px;
-	position: fixed;
-	z-index: 4;
+	border-radius: 50px;
 	padding-top: 13px;
 	padding-bottom: 10px;
 	padding-left: 15px;
-	padding-right: 15px;
-	border-radius: 50px;
+	padding-right: 15px; */
+	bottom: 0px; right: 0px; padding: 3px;
+	position: fixed;
+	z-index: 4;
 }
 #darkModeBtn:hover {
 	background-color: #bbb;
@@ -190,7 +193,7 @@ body.dark .text-field-container .text-field-inputbox span{color: #fff;}
 
 /*========Apple Switch & Language Changer========*/
 input.apple-switch{ /*Inactive look*/
-	bottom: 200px;
+	bottom: 120px;
 	right: 50px;
 	position: fixed;
 	z-index: 2;
@@ -241,7 +244,7 @@ input.apple-switch:checked ~ .lang-content.contentChi{
 	color: rgb(14, 137, 190);
 	font-size: 14px;
 	font-weight: bold;
-	bottom: 210px;
+	bottom: 130px;
 	right: 110px;
 	position: fixed;
 	z-index: 2;
@@ -250,7 +253,7 @@ input.apple-switch:checked ~ .lang-content.contentChi{
 	color: rgb(14, 137, 190);
 	font-size: 14px;
 	font-weight: bold;
-	bottom: 210px;
+	bottom: 130px;
 	right: 17px;
 	position: fixed;
 	z-index: 2;
@@ -555,6 +558,74 @@ footer {
 	.popup .content{
 		font-size: 15px;
 	}
+}
+
+/*========Popup Message Swipe Button========*/
+.swipe-to-close-btn{
+	position: relative;
+	width: 170px;
+	height: 50px;
+	background: white;
+	border-radius: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #222;
+	text-decoration: none;
+	padding-left: 40px;
+	transition: 0.5s;
+	overflow: hidden;
+	font-family: 'Ubuntu', sans-serif;
+	left: 300px;
+	margin-top: 10px;
+}
+@media screen and (max-width: 1400px) {
+	.swipe-to-close-btn{
+		left: 0px;
+	}
+}
+@media screen and (max-height: 670px) {
+	.swipe-to-close-btn{ height: 40px; width: 160px; }
+	.swipe-to-close-btn span{ width:30px; height: 30px; }
+	.swipe-to-close-btn:hover span{ left: calc(100% - 35px); }
+}
+.swipe-to-close-btn:hover{
+	padding-left: 0px;
+	padding-right: 40px;
+	color: #06D85F;
+	background-color: #eef5ef;
+	text-decoration: none;
+}
+.swipe-to-close-btn:active{ background-color: #d0f3d5; }
+.swipe-to-close-btn span{
+	position: absolute;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	background: rgb(7,87,19);
+	border-radius: 50%;
+	transition: 0.5s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 1.3em;
+}
+.swipe-to-close-btn:hover span{ /*gap between the circle and button edge*/
+	left: calc(100% - 45px);
+}
+.swipe-to-close-btn:after{ /*the little fast swipe diagonal*/
+	content: '';
+	position: absolute;
+	width: 80px;
+	height: 100%;
+	z-index: 1;
+	background: rgba(255, 255, 255, 0.75);
+	transform: translateX(-170px) skewX(30deg);
+	transition: 0.75s ease-in-out;
+}
+.swipe-to-close-btn:hover:after{
+	transform: translateX(170px) skewX(30deg);
 }
 
 /*========2 Tabs For Each Session========*/

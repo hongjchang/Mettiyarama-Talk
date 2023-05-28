@@ -2,7 +2,7 @@
     Name            : hongjchang
     Created On      : 5/10/2022
     Note            : This entire webpage/project was done by myself with no physical support except online references. 
-    Hence, if you would like to use/cite/adapt/reference this project, PLEASE CREDIT ME AS A REFERENCE in your work(s). (Although this webpage is not copyrighted, but some graphics may be from external sources.)
+    Hence, if you would like to use/cite/adapt/reference this project, PLEASE CREDIT ME AS A REFERENCE. Although this webpage is not copyrighted, but some graphics and features are from external sources and may be copyrighted. So you may use them freely in your works but any copyrights will be related to the references themselves instead of me.
 -->
 <!DOCTYPE html>
 <html>
@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
 
     <!--Google Fonts icon for return to top button-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!--Google Fonts icon for popup swipe button-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
@@ -74,7 +77,7 @@
         Button toggling (https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp)
         Downloaded png icon (https://www.flaticon.com/free-icon/dark-mode_8338708?term=night+mode&page=1&position=2&origin=tag&related_id=8338708)
         -->
-        <button onclick="darkModeToggle()" id="darkModeBtn"><img src="src/dark-mode.png" width="20"></button>
+        <button onclick="darkModeToggle()" id="darkModeBtn" title="Dark/light toggle"><img src="src/dark-mode.png" width="15"></button>
         <!--Script at bottom-->
 
         <!--A pop up box for notice at top of the page but modified a little. Found here:https://codepen.io/imprakash/pen/GgNMXO 
@@ -85,24 +88,27 @@
                 <div class="popup-content">
                     <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
                     <div class="tabContainer">
+                        <input type="radio" id="tab2" name="tabContainer" checked="checked">
+                        <label for="tab2">New Language</label>
+                        <div class="tab">
+                            <p style="padding-top:0px;">🔤Chinese support available! Interact with the button at the bottom right corner.<br/>🈶欢迎点击右下角的按钮以切换中文语言。</p>
+                        </div>
+
                         <input type="radio" id="tab1" name="tabContainer" checked="checked">
                         <label for="tab1">Webpage Layout</label>
                         <div class="tab">
                             <p style="padding-top:0px">⚠️It is <b>recommended to view this webpage on a PC</b> due to this webpage may not work well in mobile devices in terms of viewability and responsiveness, despite it supports well on most browsers.⚠️</p>
                             <p style="padding-top:0px;">Thank you for understanding and Sukhi Hotu! 🙏🙏🙏</p>
                         </div>
-
-                        <input type="radio" id="tab2" name="tabContainer" checked="checked">
-                        <label for="tab2">New Language</label>
-                        <div class="tab">
-                            <p style="padding-top:0px;">🔤Chinese support available! Interact with the button at the bottom right corner.<br/>🈶欢迎点击右下角的按钮以切换中文语言。</p>
-                        </div>
                     </div> <!--End of tabContainer-->
                 </div>
-                <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn"><span>OK</span></button>
-                <!--Script at bottom-->
+                
+                <!-- <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn"><span>OK</span></button> -->
+                <!--Swipe button https://youtu.be/L-tPKFxrvLk?t=73 -->
+                <a class="swipe-to-close-btn" id="popupCloseBtn">OK<span class="material-symbols-outlined">arrow_forward</span></a>
             </div>
         </div>
+        <!--Script for popup msg tabs at bottom-->
 
         <!--Language Changer (https://youtu.be/xDHhZqWtOq8?t=53)
         Apple iOS switch (adapted from my SunwayUniWebForm and https://codeburst.io/pure-css3-input-as-the-ios-checkbox-8b6347d5cefb)-->
@@ -120,21 +126,20 @@
             <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
             <div id="fixed-alert">
                 <button id="btn-dismiss" data-dismiss="alert">&times; Dismiss</button>
-                The Buddhism Teaching sessions by Bhante are available fortnightly on Wednesday, unless exceptions apply.
+                This event has came to an end. So this webpage might be an archive for the past session recordings.
                 <!--Script at bottom-->
             </div>
             
             <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
             <header>
                 <h1>Wednesday Bhante's Talk</h1>
-                <p>Last Modified on <u>18 May 2023, 15:08 UTC+10</u></p>
+                <p>Last Updated <u>29 May 2023, 3:00 UTC+10</u></p>
                 <hr/>
             </header>
 
             <section>
                 <nav class="nav-left">
                     <h3>Navigation Panel</h3>
-                    <li><a href="#session12">24 May 2023</a></li>
                     <li><a href="#session11">26 Apr 2023</a></li>
                     <li><a href="#session10">12 Apr 2023</a></li>
                     <li><a href="#session9">8 Mar 2023</a></li>
@@ -152,23 +157,12 @@
                     <!--This is a responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
                     <div id="resp-table">
                         <div id="resp-table-body">
-                            <blockquote style="background:linear-gradient(90deg,#91dd9c,#075713);color:white;border:3px dashed #aaa;width:70%"><b>Unofficial Note:</b> Due to the 十二缘起法 section has already completed since <a href="#session11">26 April 2023</a>, the upcoming session is not yet sure whether will be operating or not. Please keep an eye on the targeted source's announcement page.</blockquote>
-
                             <button class="sortBy">Sorted By: <b>Most Recent</b></button>
     <!--Latest session. Sort them from newest one first.-->
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session12"><h3>Upcoming session: 24 May 2023<br/><code>佛陀的经钥匙系列开示(62) 之</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <!--Image reference: https://www.youtube.com/error/ -->
-                                    <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Unable to fetch video (Source: YouTube, 2022)"><br/>
-                                    Video will be available after the session ends.
-                                </div>
-                            </div>
+                        <!--Image reference: https://www.youtube.com/error/ 
+                        <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Unable to fetch video (Source: YouTube, 2022)">-->
     <!--Latest session until here-->
 
-                            <hr>
                             <div class=“resp-table-row”>
                                 <div class="table-body-cell" id="session11"><h3>26 Apr 2023<br/><code>佛陀的经钥匙系列开示(61) 之 12缘起法 - 总结 及 关于卫塞节</code></h3></div>
                             </div>
