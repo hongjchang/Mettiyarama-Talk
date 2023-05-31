@@ -180,7 +180,7 @@ body.dark .swipe-to-close-btn:active{ background-color: #d0f3d5; }
 	padding-bottom: 10px;
 	padding-left: 15px;
 	padding-right: 15px; */
-	bottom: 0px; right: 0px; padding: 3px;
+	bottom: 0px; left: 0px; padding: 3px;
 	position: fixed;
 	z-index: 4;
 }
@@ -596,6 +596,8 @@ footer {
 	background-color: #eef5ef;
 	text-decoration: none;
 }
+.swipe-to-close-btn:before{ content: "OK"; }
+.swipe-to-close-btn:hover:before{ content: "Dismiss"; }
 .swipe-to-close-btn:active{ background-color: #d0f3d5; }
 .swipe-to-close-btn span{
 	position: absolute;
