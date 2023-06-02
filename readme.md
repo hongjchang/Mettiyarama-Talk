@@ -14,12 +14,12 @@
 
 **Disclaimer:** This repository and the web page are created as purpose like mentioned in 'Main Purpose' above and from my own interest. No copyrights affiliated to any third parties but my intention is to share the Buddhist talks with people whose interested as well as kinda promoting the organiser of the talk sessions. 
 
-You may use this source code for your whatever purpose, just don't forget to credit me.
+You may adapt anything you find useful from this source code, just don't forget to make relevant references.
 
 **Notes:**
 1. All files in the `src` directory are adapted from the targeted source. So all copyrights subjected to the source(s) referenced.
 2. Version histories are equivalent to the commit number, i.e. `1 commit` = `(+)v0.1` while `every 10 commits` = `(+)v1.0` and so on.
-3. Every related references used inside the code are included in the `index.html` file.
+3. Every related references used inside the code are included in `index.html`.
 
 **TL;DR**
 - **Not included in current version** 

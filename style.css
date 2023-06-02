@@ -47,8 +47,24 @@ iframe{
 	border: none;
 	cursor: default;
 	padding:7px;
-
 }
+
+.copyUrlBtn{ 
+	font-family: 'Ubuntu', sans-serif;
+	border-radius: 20px;
+	cursor: pointer;
+	border: none;
+	padding: 10px;
+	font-size: 15px;
+	background-color: #eef5ef;
+	box-shadow: 2.5px 2px 10px rgb(3, 32, 7); /*inset offsetX offsetY blurradius spreadradius colour*/
+	transition: .4s;
+ }
+ .copyUrlBtn:hover{
+	background-color: rgb(7,87,19);
+	box-shadow: none;
+	color: white;
+ }
 
 /*========Dark Mode========*/
 /*
@@ -183,6 +199,7 @@ body.dark .swipe-to-close-btn:active{ background-color: #d0f3d5; }
 	bottom: 0px; left: 0px; padding: 3px;
 	position: fixed;
 	z-index: 4;
+	transition: .4s
 }
 #darkModeBtn:hover {
 	background-color: #bbb;
@@ -276,6 +293,7 @@ input.apple-switch:checked ~ .lang-content.contentChi{
 	font-size: 16px;
 	animation-timing-function: ease-in-out;
 	/* animation: rotate 3.3s linear infinite; */
+	transition: .4s;
 }
 /* @keyframes rotate { to {transform: rotate(360deg);} } */
 #toTopBtn:hover {
@@ -720,7 +738,7 @@ footer {
 /* Tooltip text */
 .tooltip .tooltipText {
 	visibility: hidden;
-	width: 150px;
+	width: fit-content;
 	background-color: #555;
 	font-size: 14px;
 	color: #fff;
@@ -806,6 +824,11 @@ footer {
 	outline: none;
 	cursor: pointer;
 	overflow: hidden;
+	transition: .4s;
+}
+#btn-dismiss:hover{
+	color: rgb(143, 16, 12);
+	text-decoration: underline;
 }
 
 /*========For Scrolling Progress========*/
