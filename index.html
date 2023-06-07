@@ -92,9 +92,9 @@
                     <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
                     <div class="tabContainer">
                         <input type="radio" id="tab2" name="tabContainer" checked="checked">
-                        <label for="tab2">New Language</label>
+                        <label for="tab2">New Language Removed</label>
                         <div class="tab">
-                            <p style="padding-top:0px;">🔤Chinese support available! Interact with the button at the bottom right corner.<br/>🈶欢迎点击右下角的按钮以切换中文语言。</p>
+                            <p style="padding-top:0px;">🔤Chinese language support is no longer supported in this webpage! It may be replaced by auto Google Translate in the future. Apologies and hope you understands.<br/>🈚中文翻译功能已移除了。后期可能将会以自动谷歌翻译功能来取代此功能。如有任何不便敬请原谅。</p>
                         </div>
 
                         <input type="radio" id="tab1" name="tabContainer" checked="checked">
@@ -115,658 +115,341 @@
 
         <!--Language Changer (https://youtu.be/xDHhZqWtOq8?t=53)
         Apple iOS switch (adapted from my SunwayUniWebForm and https://codeburst.io/pure-css3-input-as-the-ios-checkbox-8b6347d5cefb)-->
+        <!--
         <span class="en">ABC</span>
         <input class="apple-switch" type="checkbox" title="Change language here">
-        <span class="chi">中文</span>
+        <span class="chi">中文</span> 
+        -->
 
-        <!--These 2 divs are for 2 languages. But they are copied, so pls follow the English one. -->
-        <div class="lang-content contentEng">
-            <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
-            and this one for no JS version:https://stackoverflow.com/a/32102805 -->
-            <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top"><span class="material-symbols-outlined">arrow_upward</span></button>
+        
+        <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
+        and this one for no JS version:https://stackoverflow.com/a/32102805 -->
+        <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top"><span class="material-symbols-outlined">arrow_upward</span></button>
+        <!--Script at bottom-->
+
+        <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
+        <div id="fixed-alert">
+            <button id="btn-dismiss" data-dismiss="alert">Dismiss</button>
+            This event has came to an end. So this webpage might be an archive for the past session recordings.
             <!--Script at bottom-->
+        </div>
+        
+        <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp
+        Responsive design for smaller screen sizes https://www.w3schools.com/html/html_responsive.asp#:~:text=What%20is%20Responsive%20Web%20Design%3F -->
+        <header>
+            <h1>Wednesday Bhante's Talk</h1>
+            <p>Last Updated <u>8 June 2023, 01:23 UTC+10</u></p>
+            <hr/>
+        </header>
 
-            <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
-            <div id="fixed-alert">
-                <button id="btn-dismiss" data-dismiss="alert">Dismiss</button>
-                This event has came to an end. So this webpage might be an archive for the past session recordings.
-                <!--Script at bottom-->
-            </div>
-            
-            <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
-            <header>
-                <h1>Wednesday Bhante's Talk</h1>
-                <p>Last Updated <u>3 June 2023, 02:04 UTC+10</u></p>
-                <hr/>
-            </header>
+        <section>
+            <nav class="nav-left">
+                <h3>Navigation Panel</h3>
+                <li><a href="#session11">26 Apr 2023</a></li>
+                <li><a href="#session10">12 Apr 2023</a></li>
+                <li><a href="#session9">8 Mar 2023</a></li>
+                <li><a href="#session8">22 Feb 2023</a></li>
+                <li><a href="#session7">8 Feb 2023</a></li>
+                <li><a href="#session6">11 Jan 2023</a></li>
+                <li><a href="#session5">21 Dec 2022</a></li>
+                <li><a href="#session4">07 Dec 2022</a></li>
+                <li><a href="#session3">Additional Talk</a></li>
+                <li><a href="#session2">19 Oct 2022</a></li>
+                <li><a href="#session1">05 Oct 2022</a></li>
+            </nav>
 
-            <section>
-                <nav class="nav-left">
-                    <h3>Navigation Panel</h3>
-                    <li><a href="#session11">26 Apr 2023</a></li>
-                    <li><a href="#session10">12 Apr 2023</a></li>
-                    <li><a href="#session9">8 Mar 2023</a></li>
-                    <li><a href="#session8">22 Feb 2023</a></li>
-                    <li><a href="#session7">8 Feb 2023</a></li>
-                    <li><a href="#session6">11 Jan 2023</a></li>
-                    <li><a href="#session5">21 Dec 2022</a></li>
-                    <li><a href="#session4">07 Dec 2022</a></li>
-                    <li><a href="#session3">Additional Talk</a></li>
-                    <li><a href="#session2">19 Oct 2022</a></li>
-                    <li><a href="#session1">05 Oct 2022</a></li>
-                </nav>
+            <article>
+                <!--This is a responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
+                <div id="resp-table">
+                    <div id="resp-table-body">
+                        <button class="sortBy">Sorted By: <b>Most Recent</b></button>
+<!--Latest session. Sort them from newest one first.-->
+                    <!--Image reference: https://www.youtube.com/error/ 
+                    <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Unable to fetch video (Source: YouTube, 2022)">-->
+<!--Latest session until here-->
 
-                <article>
-                    <!--This is a responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
-                    <div id="resp-table">
-                        <div id="resp-table-body">
-                            <button class="sortBy">Sorted By: <b>Most Recent</b></button>
-    <!--Latest session. Sort them from newest one first.-->
-                        <!--Image reference: https://www.youtube.com/error/ 
-                        <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Unable to fetch video (Source: YouTube, 2022)">-->
-    <!--Latest session until here-->
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session11"><h3>26 Apr 2023<br/><code>佛陀的经钥匙系列开示(61) 之 12缘起法 - 总结 及 关于卫塞节</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F3348484115412074%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1fndI5m4GVpnAwiOH4vf38BxLPgeQzLtm/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                            </div>
+                        </div>
 
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session11"><h3>26 Apr 2023<br/><code>佛陀的经钥匙系列开示(61) 之 12缘起法 - 总结 及 关于卫塞节</code></h3></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session10"><h3>12 Apr 2023<br/><code>佛陀的经钥匙系列开示(60) 之 12缘起法 - 行</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F760444392379519%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1bDlYzlV59Od16OjzI_jO1-hZ2n85KyoY/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F3348484115412074%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1fndI5m4GVpnAwiOH4vf38BxLPgeQzLtm/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session10"><h3>12 Apr 2023<br/><code>佛陀的经钥匙系列开示(60) 之 12缘起法 - 行</code></h3></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session9"><h3>8 Mar 2023<br/><code>佛陀的经钥匙系列开示(59) 之 12缘起法 - 受</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F518220817151731%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1MZkf_8aQuuzSGtCpj5AOUl1MmUaeva7X/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F760444392379519%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1bDlYzlV59Od16OjzI_jO1-hZ2n85KyoY/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session9"><h3>8 Mar 2023<br/><code>佛陀的经钥匙系列开示(59) 之 12缘起法 - 受</code></h3></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session8"><h3>22 Feb 2023<br/><code>佛陀的经钥匙系列开示(58) 之 12缘起法 - 爱</code></h3><blockquote>内容：爱的升起就是乐受在哪里出现，渴爱就在哪里升起。</blockquote></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F857293482023553%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1MriS7qQfrDq8qJbLfY71R_cczt6zqMJU/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F518220817151731%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1MZkf_8aQuuzSGtCpj5AOUl1MmUaeva7X/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session8"><h3>22 Feb 2023<br/><code>佛陀的经钥匙系列开示(58) 之 12缘起法 - 爱</code></h3><blockquote>内容：爱的升起就是乐受在哪里出现，渴爱就在哪里升起。</blockquote></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session7"><h3>8 Feb 2023<br/><code>佛陀的经钥匙系列开示(57) 之 12缘起法 - 取 & 恭喜发<b>"内财"</b></code></h3><blockquote>内容：取，即执着、不放下，要求欲乐。<br/>&emsp;&emsp;&emsp;要灭掉取，就要放下、不执着。<br/>&emsp;&emsp;&emsp;有爱才有取，才会有有和生。</blockquote></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F857293482023553%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1MriS7qQfrDq8qJbLfY71R_cczt6zqMJU/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session7"><h3>8 Feb 2023<br/><code>佛陀的经钥匙系列开示(57) 之 12缘起法 - 取 & 恭喜发<b>"内财"</b></code></h3><blockquote>内容：取，即执着、不放下，要求欲乐。<br/>&emsp;&emsp;&emsp;要灭掉取，就要放下、不执着。<br/>&emsp;&emsp;&emsp;有爱才有取，才会有有和生。</blockquote></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session6"><h3>11 Jan 2023<br/><code>佛陀的经钥匙系列开示(56) 之 12缘起法 - 生 & 有</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session6"><h3>11 Jan 2023<br/><code>佛陀的经钥匙系列开示(56) 之 12缘起法 - 生 & 有</code></h3></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session5"><h3>21 Dec 2022<br/><code>佛陀的经钥匙系列开示(55) 之 12缘起法 - 生</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session5"><h3>21 Dec 2022<br/><code>佛陀的经钥匙系列开示(55) 之 12缘起法 - 生</code></h3></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session4"><h3>07 Dec 2022<br/><code>佛陀的经钥匙系列开示(54) 之 12缘起法 - 老死</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session4"><h3>07 Dec 2022<br/><code>佛陀的经钥匙系列开示(54) 之 12缘起法 - 老死</code></h3></div>
+                        <hr>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell" id="session3">
+                                <h3>Additional Talk: 03 Dec 2022<br/><code>十愿十行，利乐有情 Partnered with another Buddhist org.</code></h3>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <blockquote style="margin-top:0px;">🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">View event poster here<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></blockquote>
+                                
+                                <u>Part One Recorded</u><br/>
+                                <blockquote>⬇️Apologies for the <b>multiple audio sources</b> from the recording below. There was a mistake caused during recording.<br/>This video refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
+                                <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="600" height="300"></iframe>
+                                
+                                <br/><br/><u>Part Two Embedded</u><br/>
+                                <blockquote>⬇️This video is the continuing part of the session.</blockquote>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&t=885" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                             </div>
+                        </div>
 
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session3">
-                                    <h3>Additional Talk: 03 Dec 2022<br/><code>十愿十行，利乐有情 Partnered with another Buddhist org.</code></h3>
-                                </div>
+                        <hr>
+                        <div class=“resp-table-row” id="session2">
+                            <div class="table-body-cell"><h3>19 Oct 2022<br/><code>佛陀的经钥匙系列开示(53) 之 12缘起法 - 五蕴</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
+                                To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
+                                Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
+                                <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
+                                -->
+                                <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
+                                <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                             </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <blockquote style="margin-top:0px;">🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">View event poster here<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></blockquote>
-                                    
-                                    <u>Part One Recorded</u><br/>
-                                    <blockquote>⬇️Apologies for the <b>multiple audio sources</b> from the recording below. There was a mistake caused during recording.<br/>This video refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
-                                    <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
-                                    
-                                    <br/><br/><u>Part Two Embedded</u><br/>
-                                    <blockquote>⬇️This video is the continuing part of the session.</blockquote>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                </div>
+                        </div>
+                        
+                        <hr>
+                        <div class=“resp-table-row” id="session1">
+                            <div class="table-body-cell"><h3>05 Oct 2022<br/><code>佛陀的经钥匙系列开示(52) 之 12缘起法 - 食蕴</code></h3></div>
+                        </div>
+                        <div class=“resp-table-row”>
+                            <div class="table-body-cell">
+                                <u>Embedded</u><br/>
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                
+                                <br/><br/><u>Downloaded</u><br/>
+                                <blockquote>Unfortunately there was no downloaded recording for this session.</blockquote>
                             </div>
+                        </div>
+                    </div> <!--End table body-->
+                </div><!--End table-->
 
-                            <hr>
-                            <div class=“resp-table-row” id="session2">
-                                <div class="table-body-cell"><h3>19 Oct 2022<br/><code>佛陀的经钥匙系列开示(53) 之 12缘起法 - 五蕴</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
-                                    To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
-                                    Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
-                                    <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
-                                    -->
-                                    <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
-                                    <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-                            
-                            <hr>
-                            <div class=“resp-table-row” id="session1">
-                                <div class="table-body-cell"><h3>05 Oct 2022<br/><code>佛陀的经钥匙系列开示(52) 之 12缘起法 - 食蕴</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>Embedded</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>Downloaded</u><br/>
-                                    <blockquote>Unfortunately there was no downloaded recording for this session.</blockquote>
-                                </div>
-                            </div>
-                        </div> <!--End table body-->
-                    </div><!--End table-->
+                <!--Pagination (https://www.w3schools.com/howto/howto_css_pagination.asp)-->
+                <div class="pagination">
+                    <a href="javascript:void(0)" style="cursor:not-allowed;" title="Unavailable. This is the first page.">&laquo;</a>
+                    <a class="activePage" href="javascript:void(0)">1</a>
+                    <a href="javascript:void(0)" style="cursor:not-allowed;" title="Unavailable. This is the last page.">&raquo;</a>
+                </div>
 
-                    <!--Pagination (https://www.w3schools.com/howto/howto_css_pagination.asp)-->
-                    <div class="pagination">
-                        <a href="javascript:void(0)" style="cursor:not-allowed;" title="Unavailable. This is the first page.">&laquo;</a>
-                        <a class="activePage" href="javascript:void(0)">1</a>
-                        <a href="javascript:void(0)" style="cursor:not-allowed;" title="Unavailable. This is the last page.">&raquo;</a>
-                    </div>
-
-                    <!--Special text fields https://youtu.be/kcKkQgRz6K8?t=98 -->
-                    <div class="big-container">
-                        <h2>Subscribe To Our Newsletter To Get Latest Notifications!</h2>
-                        <form method="get" onsubmit="window.alert('Feature not yet implemented, sorry about that.')">
-                            <div class="text-field-container">
-                                <div class="text-field-inputbox">
-                                    <input type="text" name="nameTextField" required maxlength="37">
-                                    <span>Full Name</span>
-                                    <i></i>
-                                </div>
-                                <div class="text-field-inputbox">
-                                    <input type="text" name="emailTextField" required maxlength="37">
-                                    <span>Email Address</span>
-                                    <i></i>
-                                </div>
+                <!--Special text fields https://youtu.be/kcKkQgRz6K8?t=98 -->
+                <div class="big-container">
+                    <h2>Subscribe To Our Newsletter To Get Latest Notifications!</h2>
+                    <form method="get" onsubmit="window.alert('Feature not yet implemented, sorry about that.')">
+                        <div class="text-field-container">
+                            <div class="text-field-inputbox">
+                                <input type="text" name="nameTextField" required maxlength="37">
+                                <span>Full Name</span>
+                                <i></i>
                             </div>
-                            <input type="submit" class="submit-button" value="Submit">
-                        </form>
-                    </div>
-                </article>
+                            <div class="text-field-inputbox">
+                                <input type="text" name="emailTextField" required maxlength="37">
+                                <span>Email Address</span>
+                                <i></i>
+                            </div>
+                        </div>
+                        <input type="submit" class="submit-button" value="Submit">
+                    </form>
+                </div>
+            </article>
 
-                <nav class="nav-right">
-                    <!--Share page button (copy page URL) https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
+            <nav class="nav-right">
+                <!--Share page button (copy page URL) https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
+                <div class="tooltip">
+                    <button class="copyUrlBtn" onclick="copyUrl()" onmouseout="mouseOut()">
+                        <span class="tooltipText" id="copyUrlBtnTooltip">Copy URL</span>
+                        <span class="material-symbols-outlined" style="font-size:14px;">ios_share</span> Share Webpage
+                    </button>
+                </div>
+
+                <h3>About This Page And Event</h3>
+                <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
+                <p>
+                    <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Facebook-%230077B5.svg?&style=flat&logo=facebook&logoColor=white" alt="Facebook"></a>
+                    &nbsp;
+                    <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/WhatsApp-%23E4405F.svg?&style=flat&logo=whatsapp&logoColor=white&color=success" alt="Whatsapp"></a>
+                    &nbsp;
+                    <a href="https://goo.gl/maps/Kxbnsz2F217UY6yP6" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Google%20Maps-%231877F2.svg?&style=flat&logo=googlemaps&logoColor=red&color=darkgreen" alt="Google Maps"></a>
+                    &nbsp;
+                    <a href="https://www.youtube.com/@mettiyaramasabah606" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/YouTube-%231877F2.svg?&style=flat&logo=youtube&logoColor=white&color=ff0000" alt="YouTube"></a>
+                    
+                </p>
+                <!--Text indentation at paragraph: https://coder-coder.com/how-to-indent-paragraph-text-in-html-css/ -->
+                <p style="text-indent:35px;text-align: justify;">This webpage is created to compile and record the Buddhism talks presented by Bhante from <b>Mettiyarama Centre</b>. It's a Buddhist organisation and medication retreat based in <b>Kota Kinabalu, Sabah</b>.</p>
+                <p style="text-align: justify;">This talk is titled as <b>"The Golden Key of Buddha"</b> or <b>"佛陀的经钥匙系列"</b> in Chinese. It started about one and half of the year ago and is about "the truth of lifestyle" from the Buddha's teachings in which it's based on the most traditional and original knowledges from the <i>suttas.</i></p>
+                <p style="text-align: justify;">The organisation is based on <b>Theravada Buddhism</b>. Hence, the talk teaches about the truth of lifestyle based on Buddha's Teachings from (approx.) 2,500 years ago when The Buddha enlightened and gave numerous teachings to the community until his <i>nibbana</i> (kinda never reincarnated again). </p>
+                <p style="text-align:justify;">In a nutshell, this event is currently recurring and consists of various topics in the Buddha's Teachings, in which <b>to make people create loving-kindness</b> and <b>practice a centric heart</b> in our current life.</p>
+
+                <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
+                <p>
                     <div class="tooltip">
-                        <button class="copyUrlBtn" onclick="copyUrl()" onmouseout="mouseOut()">
-                            <span class="tooltipText" id="copyUrlBtnTooltip">Copy URL</span>
-                            <span class="material-symbols-outlined" style="font-size:14px;">ios_share</span> Share Webpage
-                        </button>
+                        Date: <b>every Wednesday <sup>&#8505;</sup></b>
+                        <span class="tooltipText">Every 2nd and 4th Wednesday of the month unless exceptions apply</span>
                     </div>
-
-                    <h3>About This Page And Event</h3>
-                    <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
-                    <p>
-                        <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Facebook-%230077B5.svg?&style=flat&logo=facebook&logoColor=white" alt="Facebook"></a>
-                        &nbsp;
-                        <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/WhatsApp-%23E4405F.svg?&style=flat&logo=whatsapp&logoColor=white&color=success" alt="Whatsapp"></a>
-                        &nbsp;
-                        <a href="https://goo.gl/maps/Kxbnsz2F217UY6yP6" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Google%20Maps-%231877F2.svg?&style=flat&logo=googlemaps&logoColor=red&color=darkgreen" alt="Google Maps"></a>
-                        &nbsp;
-                        <a href="https://www.youtube.com/@mettiyaramasabah606" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/YouTube-%231877F2.svg?&style=flat&logo=youtube&logoColor=white&color=ff0000" alt="YouTube"></a>
-                        
-                    </p>
-                    <!--Text indentation at paragraph: https://coder-coder.com/how-to-indent-paragraph-text-in-html-css/ -->
-                    <p style="text-indent:35px;text-align: justify;">This webpage is created to compile and record the Buddhism talks presented by Bhante from <b>Mettiyarama Centre</b>. It's a Buddhist organisation and medication retreat based in <b>Kota Kinabalu, Sabah</b>.</p>
-                    <p style="text-align: justify;">This talk is titled as <b>"The Golden Key of Buddha"</b> or <b>"佛陀的经钥匙系列"</b> in Chinese. It started about one and half of the year ago and is about "the truth of lifestyle" from the Buddha's teachings in which it's based on the most traditional and original knowledges from the <i>suttas.</i></p>
-                    <p style="text-align: justify;">The organisation is based on <b>Theravada Buddhism</b>. Hence, the talk teaches about the truth of lifestyle based on Buddha's Teachings from (approx.) 2,500 years ago when The Buddha enlightened and gave numerous teachings to the community until his <i>nibbana</i> (kinda never reincarnated again). </p>
-                    <p style="text-align:justify;">In a nutshell, this event is currently recurring and consists of various topics in the Buddha's Teachings, in which <b>to make people create loving-kindness</b> and <b>practice a centric heart</b> in our current life.</p>
-
-                    <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
-                    <p>
-                        <div class="tooltip">
-                            Date: <b>every Wednesday <sup>&#8505;</sup></b>
-                            <span class="tooltipText">Every 2nd and 4th Wednesday of the month unless exceptions apply</span>
-                        </div>
-                        <div class="tooltip">
-                            Time: <b>8:00pm (1 hour) <sup>&#8505;</sup></b>
-                            <span class="tooltipText">Time Zone: GMT+8</span>
-                        </div>
-                        <div class="tooltip">
-                            Venue: <b>Zoom Meeting & Facebook Live <sup>&#8505;</sup></b>
-                            <span class="tooltipText">Details will be published prior to nearly the start of each event instance.</span>
-                        </div>
-                    </p>
-
-                    <p style="font-size:12px; text-decoration:underline; text-align:right;">Updated on 16 Feb 2023 03:55pm GMT+8</p>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3 class="collapsible">Videos Wouldn't Be Available After Some Time!</h3>
-                    <div class="collapsibleContent">
-                        <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded recordings. <b>They're not viewable already.</b></p>
+                    <div class="tooltip">
+                        Time: <b>8:00pm (1 hour) <sup>&#8505;</sup></b>
+                        <span class="tooltipText">Time Zone: GMT+8</span>
                     </div>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3 class="collapsible">About Me</h3>
-                    <div class="collapsibleContent">
-                        <p style="text-align:justify;text-indent:35px;">Hello there! I'm hongjchang and this webpage was created myself! since 05 Oct 2022.</p>
-                        <p style="text-align:justify;">The purposes of creating this webpage are (1)I was inspired from a project of the data visualisation subject during my university study recently when I was introduced into GitHub Pages and found it interesting to host webpages online without additional money. Besides, (2)I wanted <u>to record past live streams</u> for future rewatches, as well as <u>sharing the talks with others</u> who're also interested and/or finding this.</p>
-                        <p style="text-align:justify">Hope you like this page and feel free to share this page with others. Neither sponsorships nor cooperations with any third-parties are affiliated to this webpage.</p>
+                    <div class="tooltip">
+                        Venue: <b>Zoom Meeting & Facebook Live <sup>&#8505;</sup></b>
+                        <span class="tooltipText">Details will be published prior to nearly the start of each event instance.</span>
                     </div>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3 class="collapsible">Citations and Attributions</h3>
-                    <div class="collapsibleContent">
-                        <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2022). All Google Drive videos (unless stated otherwise) are converted and downloaded via this website. My primary intention is to "persist" these sessions since official ones will be removed from view. I acknowledge the owner of the downloaded belongs to the targeted source (Mettiyarama Centre). I also cite this website as I used it to download the videos from Facebook.</p>
-                        <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). All embedded past streams and webpage's favicon are adapted from the targeted source's profile page, unless stated otherwise.</p>
-                        <p><a href="https://www.flaticon.com/free-icons/night-mode" target="_blank" rel="noopener noreferrer">Icon Hubs - Flaticon<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). Dark Mode Icon.</p>
-                        <p>Page theme is adapted from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>
-                    </div>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3>Tags</h3>
-                    <p>
-                        <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=佛陀的经钥匙系列" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23佛陀的经钥匙系列-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                    </p>
-                </nav>
-            </section>
+                </p>
 
-            <footer>
-                <p>No Copyright &copy; hongjchang &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
-            </footer>
-        </div><!--End of Eng language div-->
+                <p style="font-size:12px; text-decoration:underline; text-align:right;">Updated on 16 Feb 2023 03:55pm GMT+8</p>
+            <!-- </nav>
+            <nav class="nav-right"> -->
+                <h3 class="collapsible">Videos Wouldn't Be Available After Some Time!</h3>
+                <div class="collapsibleContent">
+                    <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded recordings. <b>They're not viewable already.</b></p>
+                </div>
+            <!-- </nav>
+            <nav class="nav-right"> -->
+                <h3 class="collapsible">About Me</h3>
+                <div class="collapsibleContent">
+                    <p style="text-align:justify;text-indent:35px;">Hello there! I'm hongjchang and this webpage was created myself! since 05 Oct 2022.</p>
+                    <p style="text-align:justify;">The purposes of creating this webpage are (1)I was inspired from a project of the data visualisation subject during my university study recently when I was introduced into GitHub Pages and found it interesting to host webpages online without additional money. Besides, (2)I wanted <u>to record past live streams</u> for future rewatches, as well as <u>sharing the talks with others</u> who're also interested and/or finding this.</p>
+                    <p style="text-align:justify">Hope you like this page and feel free to share this page with others. Neither sponsorships nor cooperations with any third-parties are affiliated to this webpage.</p>
+                </div>
+            <!-- </nav>
+            <nav class="nav-right"> -->
+                <h3 class="collapsible">Citations and Attributions</h3>
+                <div class="collapsibleContent">
+                    <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2022). All Google Drive videos (unless stated otherwise) are converted and downloaded via this website. My primary intention is to "persist" these sessions since official ones will be removed from view. I acknowledge the owner of the downloaded belongs to the targeted source (Mettiyarama Centre). I also cite this website as I used it to download the videos from Facebook.</p>
+                    <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). All embedded past streams and webpage's favicon are adapted from the targeted source's profile page, unless stated otherwise.</p>
+                    <p><a href="https://www.flaticon.com/free-icons/night-mode" target="_blank" rel="noopener noreferrer">Icon Hubs - Flaticon<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). Dark Mode Icon.</p>
+                    <p>Page theme is adapted from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>
+                </div>
+            <!-- </nav>
+            <nav class="nav-right"> -->
+                <h3>Tags</h3>
+                <p>
+                    <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=佛陀的经钥匙系列" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23佛陀的经钥匙系列-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                    <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
+                </p>
+            </nav>
+        </section>
 
-        <div class="lang-content contentChi">
-            <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
-            and this one for no JS version:https://stackoverflow.com/a/32102805 -->
-            <button onclick="toTop()" id="toTopBtn" href="#top" title="回到顶端">顶部</button>
-            <!--Script at bottom-->
-
-            <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
-            <div id="fixed-alert">
-                <button id="btn-dismiss" data-dismiss="alert">&times; 关闭</button>
-                本佛法开示活动定于每两周三举行，除非另有改变。
-                <!--Script at bottom-->
-            </div>
-            
-            <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp -->
-            <header>
-                <h1>星期三佛法开示</h1>
-                <p>最后更新于 <u>2023年4月21日, 下午8时47分 UTC+10</u></p>
-                <hr/>
-            </header>
-
-            <section>
-                <nav class="nav-left">
-                    <h3>浏览指南</h3>
-                    <li><a href="#session11">2023年4月26日</a></li>
-                    <li><a href="#session10">2023年4月12日</a></li>
-                    <li><a href="#session9">2023年3月8日</a></li>
-                    <li><a href="#session8">2023年2月22日</a></li>
-                    <li><a href="#session7">2023年2月8日</a></li>
-                    <li><a href="#session6">2023年1月11日</a></li>
-                    <li><a href="#session5">2022年12月21日</a></li>
-                    <li><a href="#session4">2022年12月7日</a></li>
-                    <li><a href="#session3">外部主持</a></li>
-                    <li><a href="#session2">2022年10月19日</a></li>
-                    <li><a href="#session1">2022年10月5日</a></li>
-                </nav>
-
-                <article>
-                    <!--This is a responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
-                    <div id="resp-table">
-                        <div id="resp-table-body">
-                            <blockquote style="background-color: rgb(176, 13, 13);color:white;border:3px dashed #aaa;text-align:center;">Note: The Chinese version will <b>not</b> be prioritised for latest update. Please view the English version by clicking the language selector at the bottom-right for latest updates.<br/>注意：本华文版的网页<b>将不会</b>依最新内容而更新。欲了解本网页最新的内容，请于右下角按键以切换英文版本。</blockquote>
-
-                            <button class="sortBy">依：<b>最新</b> 为排序</button>
-    <!--Latest session. Sort them from newest one first.-->
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session11"><h3>下一次活动: 2023年4月26日<br/><code>佛陀的经钥匙系列开示(61) 之</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <!--Image reference: https://www.youtube.com/error/ -->
-                                    <img src="src/yt-monkey-404.png" width="auto" height="auto" title="找不到影片 (源自: YouTube, 2022)"><br/>
-                                    活动录影将在活动结束后发布。
-                                </div>
-                            </div>
-    <!--Latest session until here-->
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session10"><h3>2023年4月12日<br/><code>佛陀的经钥匙系列开示(60) 之 12缘起法 - 行</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F760444392379519%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1bDlYzlV59Od16OjzI_jO1-hZ2n85KyoY/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session9"><h3>2023年3月8日<br/><code>佛陀的经钥匙系列开示(59) 之 12缘起法 - 受</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F518220817151731%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1MZkf_8aQuuzSGtCpj5AOUl1MmUaeva7X/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session8"><h3>22 Feb 2023<br/><code>佛陀的经钥匙系列开示(58) 之 12缘起法 - 爱</code></h3><blockquote>内容：爱的升起就是乐受在哪里出现，渴爱就在哪里升起。</blockquote></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F857293482023553%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1MriS7qQfrDq8qJbLfY71R_cczt6zqMJU/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session7"><h3>2023年2月8日<br/><code>佛陀的经钥匙系列开示(57) 之 12缘起法 - 取 & 恭喜发<b>"内财"</b></code></h3><blockquote>内容：取，即执着、不放下，要求欲乐。<br/>&emsp;&emsp;&emsp;要灭掉取，就要放下、不执着。<br/>&emsp;&emsp;&emsp;有爱才有取，才会有有和生。</blockquote></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session6"><h3>2023年1月11日<br/><code>佛陀的经钥匙系列开示(56) 之 12缘起法 - 生 & 有</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session5"><h3>2022年12月21日<br/><code>佛陀的经钥匙系列开示(55) 之 12缘起法 - 生</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session4"><h3>2022年12月7日<br/><code>佛陀的经钥匙系列开示(54) 之 12缘起法 - 老死</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&width=560&t=0" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell" id="session3">
-                                    <h3>外部主持：2022年12月3日<br/><code>十愿十行，利乐有情 （由另一组佛教团体主持）</code></h3>
-                                </div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>活动海报</u><br/>
-                                    <blockquote style="margin-top:0px;">🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">点击以查看海报<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></blockquote>
-                                    
-                                    <u>个人录制——上集</u><br/>
-                                    <blockquote>⬇️对于此影片有<b>多种语音来源</b>的问题真的感到抱歉。这是录制过程所影响的。<br/>此影片是此活动中的第一部分，也就是从<b>下午一点至三点的部分</b>。请点击已崁入影片里上传者的账号以观看<b>第二部分。</b></blockquote>
-                                    <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="700" height="400"></iframe>
-                                    
-                                    <br/><br/><u>已崁入——下集</u><br/>
-                                    <blockquote>⬇️此影片是这个活动的下半部分。</blockquote>
-                                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&width=560&t=885" width="700" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class=“resp-table-row” id="session2">
-                                <div class="table-body-cell"><h3>2022年10月19日<br/><code>佛陀的经钥匙系列开示(53) 之 12缘起法 - 五蕴</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-
-                                    <br/><br/><u>已下载</u><br/>
-                                    <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
-                                    To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
-                                    Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
-                                    <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
-                                    -->
-                                    <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
-                                    <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="700" height="400" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                                </div>
-                            </div>
-                            
-                            <hr>
-                            <div class=“resp-table-row” id="session1">
-                                <div class="table-body-cell"><h3>2022年10月5日<br/><code>佛陀的经钥匙系列开示(52) 之 12缘起法 - 食蕴</code></h3></div>
-                            </div>
-                            <div class=“resp-table-row”>
-                                <div class="table-body-cell">
-                                    <u>已崁入</u><br/>                                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&width=560&t=0" width="700" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                    
-                                    <br/><br/><u>已下载</u><br/>
-                                    <blockquote>不好意思，此活动没有可观看的录影。</blockquote>
-                                </div>
-                            </div>
-                        </div> <!--End table body-->
-                    </div><!--End table-->
-
-                    <!--Pagination (https://www.w3schools.com/howto/howto_css_pagination.asp)-->
-                    <div class="pagination">
-                        <a href="javascript:void(0)" style="cursor:not-allowed;" title="互动失败。这是第一页了。">&laquo;</a>
-                        <a class="activePage" href="javascript:void(0)">1</a>
-                        <a href="javascript:void(0)" style="cursor:not-allowed;" title="互动失败。这是最后一页了。">&raquo;</a>
-                    </div>
-
-                    <!--Special text fields https://youtu.be/kcKkQgRz6K8?t=98 -->
-                    <div class="big-container">
-                        <h2>订阅我们以获得最即时通知！</h2>
-                        <form method="get" onsubmit="window.alert('此功能尚未完成，深感抱歉。')">
-                            <div class="text-field-container">
-                                <div class="text-field-inputbox">
-                                    <input type="text" name="nameTextField" required maxlength="37">
-                                    <span>性名</span>
-                                    <i></i>
-                                </div>
-                                <div class="text-field-inputbox">
-                                    <input type="text" name="emailTextField" required maxlength="37">
-                                    <span>电子邮件</span>
-                                    <i></i>
-                                </div>
-                            </div>
-                            <input type="submit" class="submit-button" value="发送">
-                        </form>
-                    </div>
-                </article>
-
-                <nav class="nav-right">
-                    <h3>关于网页及开示</h3>
-                    <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
-                    <p>
-                        <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Facebook-%230077B5.svg?&style=flat&logo=facebook&logoColor=white" alt="Facebook"></a>
-                        &nbsp;
-                        <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/WhatsApp-%23E4405F.svg?&style=flat&logo=whatsapp&logoColor=white&color=success" alt="Whatsapp"></a>
-                        &nbsp;
-                        <a href="https://goo.gl/maps/Kxbnsz2F217UY6yP6" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Google%20地图-%231877F2.svg?&style=flat&logo=googlemaps&logoColor=red&color=darkgreen" alt="Google Maps"></a>
-                        &nbsp;
-                        <a href="https://www.youtube.com/@mettiyaramasabah606" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/YouTube-%231877F2.svg?&style=flat&logo=youtube&logoColor=white&color=ff0000" alt="YouTube"></a>
-                        
-                    </p>
-                    <!--Text indentation at paragraph: https://coder-coder.com/how-to-indent-paragraph-text-in-html-css/ -->
-                    <p style="text-indent:35px;text-align: justify;">制作本网页的主要原因是为了记录<b>慈心林</b>的一位尊者所主办的一个佛法开示。慈心林是位于沙巴州亚庇的一个佛教团体皆禅修中心。</p>
-                    <p style="text-align: justify;">此开示之主题为<b>“佛陀的经钥匙系列”</b>。此开示已进行了大约一至一年半之久。此开示所揭发的内容是从佛陀时代所传至今的经典里一一的传授生活中的真理给我们。</p>
-                    <p style="text-align: justify;">慈心林是一个以南传上座部/小乘佛教为主的团体。因此这个开示的所有内容都是佛陀在2500年前证悟后至进入涅槃（意指摆脱轮回）前所教的既真实又可贵的人生知识。</p>
-                    <p style="text-align:justify;">简而言之，此开示目前还保持进行中的状态。此开示也包括各种佛法主题，即<b>让人学会时常升起慈爱的心</b>和<b>学习在这一生中拥有一颗中庸不偏的心。</b></p>
-
-                    <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
-                    <p>
-                        <div class="tooltip">
-                            日期：<b>星期三 <sup>&#8505;</sup></b>
-                            <span class="tooltipText">于每月第二及第四周三进行，除另有改变</span>
-                        </div><br/>
-                        <div class="tooltip">
-                            时间：<b>晚上8时正 (1小时) <sup>&#8505;</sup></b>
-                            <span class="tooltipText">时区: GMT+8</span>
-                        </div><br/>
-                        <div class="tooltip">
-                            地点：<b>Zoom线上会议和Facebook直播 <sup>&#8505;</sup></b>
-                            <span class="tooltipText">详情将在该次开示开始之近时发布</span>
-                        </div>
-                    </p>
-
-                    <p style="font-size:12px; text-decoration:underline; text-align:right;">最后更正于 2023年2月16日 下午3时55分 GMT+8</p>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3 class="collapsible">影片将在一段时间后停止开放观看!</h3>
-                    <div class="collapsibleContent">
-                        <p style="text-indent:35px;text-align:justify;">由于本网页所崁入的影片<b>将在一段时间后自动停止公开观看</b>，因此你将会在该影片看到类似 “影片无法播放” 的字眼。<b>意指这些影片已看不到了。</b></p>
-                    </div>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3 class="collapsible">关于本网页作者</h3>
-                    <div class="collapsibleContent">
-                        <p style="text-align:justify;text-indent:35px;">大家吉祥！我是hongjchang，本网页的作者。这个网页是我一个人自2022年10月5日时创建的。</p>
-                        <p style="text-align:justify;">以下为本网页开发的两个原因。(1)我是因最近就读大学的一个数据美化科目中的一份作业有感启发。这是因为我被那份作业里需要用的Github Pages这种可以无消费寄存网页的功能感到兴趣。其次，(2)我想<b>为自己和对此有兴趣的男女老少记录过去开示片段</b>以方便未来播放。</p>
-                        <p style="text-align:justify">最后，希望本网页能够给予你帮助，也欢迎分享本网页。本网页不含任何与外界的赞助跟合作。</p>
-                    </div>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3 class="collapsible">引述和归属</h3>
-                    <div class="collapsibleContent">
-                        <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2022). 所有本网页里所下载好的Google云端硬碟影片 (除另声明) 都是用此网站来把各个Facebook直播开示的连结转档并下载成影片的。我纯粹只为了想保存这些开示片段，以防止其无法观看。虽然如此，我承认所有本网页里所崁入的Google云端硬碟影片（除另声明）都属于慈心林（本网页主要来源）所拥有。此引述也透彻表明我使用此网站来下载Facebook影片。</p>
-                        <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). 所有崁入影片及本网页图标是由本网页标记来源（慈心林）所拥有。除另声明。</p>
-                        <p><a href="https://www.flaticon.com/free-icons/night-mode" target="_blank" rel="noopener noreferrer">Icon Hubs - Flaticon<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). 黑暗模式图标引述。</p>
-                        <p>本网页设计从此网站参考。 <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>
-                    </div>
-                <!-- </nav>
-                <nav class="nav-right"> -->
-                    <h3>标签</h3>
-                    <p>
-                        <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=佛陀的经钥匙系列" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23佛陀的经钥匙系列-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                        <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                    </p>
-                </nav>
-            </section>
-
-            <footer>
-                <p>无版权所有 &copy; hongjchang &#8901; 网页寄存于 <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
-            </footer>
-        </div><!--End of Chi language div-->
+        <footer>
+            <p>No Copyright &copy; hongjchang &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
+        </footer>
     </div><!--End of animate-bottom class div-->
 </body>
 </html>
