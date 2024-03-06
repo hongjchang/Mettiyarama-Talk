@@ -34,8 +34,9 @@
     <!--Google Fonts icon for popup swipe button-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <!--Google Fonts icon for share page button-->
+    <!--Google Fonts icon for the 2 share buttons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body onload="loadingScreen(), disableScroll()">
@@ -364,26 +365,27 @@
             </article>
 
             <nav class="nav-right">
-                <!--Share page button (copy page URL) https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
+                <!--Copy page URL https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
                 <div class="tooltip">
                     <button class="copyUrlBtn" onclick="copyUrl()" onmouseout="mouseOut()">
                         <span class="tooltipText" id="copyUrlBtnTooltip">Copy URL</span>
-                        <span class="material-symbols-outlined" style="font-size:14px;">ios_share</span> Share Webpage
+                        <span class="material-symbols-outlined" style="font-size:14px;">link</span> Copy Link
                     </button>
                 </div>
+                <!--Show default share options -->
+                <button id="shareBtn"><span class="material-symbols-outlined" style="font-size:14px;">ios_share</span> Share</button>
 
                 <h3>About This Page And Event</h3>
-                <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
                 <p>
-                    <!--YT Subscribe Button (https://developers.google.com/youtube/youtube_subscribe_button )-->
-                    <script src="https://apis.google.com/js/platform.js"></script>
-                    <div class="g-ytsubscribe" data-channelid="UClNJOdkuBwPXQcVSjDxUyNw" data-layout="default" data-count="default"></div>
-                    <br/>
+                    <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
                     <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Facebook-%230077B5.svg?&style=flat&logo=facebook&logoColor=white" alt="Facebook"></a>
                     &nbsp;
                     <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/WhatsApp-%23E4405F.svg?&style=flat&logo=whatsapp&logoColor=white&color=success" alt="Whatsapp"></a>
                     &nbsp;
                     <a href="https://goo.gl/maps/Kxbnsz2F217UY6yP6" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Google%20Maps-%231877F2.svg?&style=flat&logo=googlemaps&logoColor=red&color=darkgreen" alt="Google Maps"></a>
+                    <!--YT Subscribe Button (https://developers.google.com/youtube/youtube_subscribe_button )-->
+                    <script src="https://apis.google.com/js/platform.js"></script>
+                    <div class="g-ytsubscribe" data-channelid="UClNJOdkuBwPXQcVSjDxUyNw" data-layout="default" data-count="default"></div>
                 </p>
                 <!--Text indentation at paragraph: https://coder-coder.com/how-to-indent-paragraph-text-in-html-css/ -->
                 <p style="text-indent:35px;text-align: justify;">This webpage is created to compile and record the Buddhism talks presented by Bhante from <b>Mettiyarama Centre</b>. It's a Buddhist organisation and medication retreat based in <b>Kota Kinabalu, Sabah</b>.</p>
@@ -548,5 +550,19 @@
         var copyUrlBtnTooltip = document.getElementById("copyUrlBtnTooltip");
         copyUrlBtnTooltip.innerHTML = "Copy URL";
     }
+</script>
+
+<script>
+    //Script for default share options button https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share#examples
+    const shareData = {title: "Wed-Bhante-Talk", text: "Bhante talk", url: "https://hongjchang.github.io/Mettiyarama-Talk",};
+    const shareBtn = document.getElementById("shareBtn");
+    shareBtn.addEventListener("click", async () => {
+        try{
+            await navigator.share(shareData);
+            console.log("Share page success!");
+        }catch (err){
+            console.log("Error to share page: ${err}");
+        }
+    });
 </script>
 <!----------All scripts until here----------->
