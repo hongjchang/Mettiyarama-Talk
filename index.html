@@ -49,16 +49,16 @@
     function showPage(){
         document.getElementById("loader").style.display = "none";
         document.getElementById("all-content").style.display = "block";
-        enableScroll();
+        
         //Remove a css property (https://www.geeksforgeeks.org/how-to-remove-css-property-using-javascript/)
         document.styleSheets[0].cssRules[1].style.removeProperty('background-color');
     }
     //Code below from here: https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
     function disableScroll() {
-        document.body.classList.add("no-scroll");
+        //document.body.classList.add("no-scroll");
     }
     function enableScroll() {
-        document.body.classList.remove("no-scroll");
+        //document.body.classList.remove("no-scroll");
     }
 </script>
 
@@ -522,7 +522,7 @@
 
         if(key == "savedScrollPosition" || key == "darkMode"){ continue; } //To prevent displaying these 2 data
 
-        specialTextFieldOutput.innerHTML += `${key}: ${value}<br/>`;
+        specialTextFieldOutput.innerHTML += `${value}<br/>`;
     }
 </script>
 
