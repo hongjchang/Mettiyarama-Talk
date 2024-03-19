@@ -43,24 +43,7 @@
     <div class="loadingIcon"><video src="src/loading.webm" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="true" oncontextmenu="return false;" autoplay muted loop width="200px" title="Loading... (Discord, 2022)"></video></div>
 </div>
 <p class="loadingCaption"><a href="https://discord.com/app">Discord</a> 2022 Christmas special logo. All copyrights subject to its owner.</p>
-<script>
-    var myVar;
-    function loadingScreen(){ myVar = setTimeout(showPage, 2000); }
-    function showPage(){
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("all-content").style.display = "block";
-        
-        //Remove a css property (https://www.geeksforgeeks.org/how-to-remove-css-property-using-javascript/)
-        document.styleSheets[0].cssRules[1].style.removeProperty('background-color');
-    }
-    //Code below from here: https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
-    function disableScroll() {
-        //document.body.classList.add("no-scroll");
-    }
-    function enableScroll() {
-        //document.body.classList.remove("no-scroll");
-    }
-</script>
+<!------Script at bottom------>
 
 <body onload="disableScroll(), loadingScreen()">
     <div id="all-content" class="animate-bottom">
@@ -101,16 +84,22 @@
             <div class="popup-content">
                 <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
                 <div class="tabContainer">
-                    <input type="radio" id="tab2" name="tabContainer" checked="checked">
-                    <label for="tab2">New Language Removed</label>
+                    <input type="radio" id="tab3" name="tabContainer" checked="checked">
+                    <label for="tab3">Keyboard Shortcuts</label>
                     <div class="tab">
-                        <p style="padding-top:0px;">🔤Chinese language support is no longer supported in this webpage! It may be replaced by auto translation in the future. Apologies and thanks for understanding.<br/>中文翻译功能已移除了。后期可能将会以自动翻译功能来取代此功能。如有任何不便敬请原谅。</p>
+                        <p style="padding-top:0px;"><b>SHIFT</b> + <b>L</b> = Toggle Dark Mode</p>
+                    </div>
+
+                    <input type="radio" id="tab2" name="tabContainer" checked="checked">
+                    <label for="tab2">Language Removal Notice</label>
+                    <div class="tab">
+                        <p style="padding-top:0px;">🔤Chinese language does no longer supported already! Apologies and thanks for understanding.<br/>中文翻译功能已移除了。任何不便敬请原谅。</p>
                     </div>
 
                     <input type="radio" id="tab1" name="tabContainer" checked="checked">
                     <label for="tab1">Webpage Layout</label>
                     <div class="tab">
-                        <p style="padding-top:0px">⚠️It is <b>recommended to view this webpage on a PC</b> due to this webpage may not work well in mobile devices in terms of viewability and responsiveness, despite it supports well on most browsers.</p>
+                        <p style="padding-top:0px">⚠️Viewing this page using a PC or large-screen tablet is highly recommended since the page's responsiveness may not work well in smaller-screen devices, despite it supports most newer browsers.</p>
                         <p style="padding-top:0px;">Thank you for understanding and Sukhi Hotu! 🙏🙏🙏</p>
                     </div>
                 </div> <!--End of tabContainer-->
@@ -399,15 +388,15 @@
                 <div class="tooltip">
                     Date: <b>every Wednesday <sup>&#8505;</sup></b>
                     <span class="tooltipText">Every 2nd and 4th Wednesday of the month unless exceptions apply</span>
-                </div>
+                </div><br/>
                 <div class="tooltip">
                     Time: <b>8:00pm (1 hour) <sup>&#8505;</sup></b>
                     <span class="tooltipText">Time Zone: GMT+8</span>
-                </div>
+                </div><br/>
                 <div class="tooltip">
                     Venue: <b>Zoom Meeting & Facebook Live <sup>&#8505;</sup></b>
                     <span class="tooltipText">Details will be published prior to nearly the start of each event instance.</span>
-                </div>
+                </div><br/>
             </p>
 
             <p style="font-size:12px; text-decoration:underline; text-align:right;">Updated on 16 Feb 2023 03:55pm GMT+8</p>
@@ -462,7 +451,27 @@
 <!----------------All scripts---------------->
 <!----DEV NOTES: Features using LocalStorage: 1.dark mode 2.special text field 3.last scroll position----->
 <script>
-    //KNOWN PROBLEM: This feature won't work really as expected but sometimes maybe okay. Might due to popup msg. Unless redo loading screen by removing all-contents div. But in that way, loading screen won't work perfectly anymore although this will work alright.
+    //Script for loading screen & remove scroll after popup msg closed
+    var myVar;
+    function loadingScreen(){ myVar = setTimeout(showPage, 2000); }
+    function showPage(){
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("all-content").style.display = "block";
+        
+        //Remove a css property (https://www.geeksforgeeks.org/how-to-remove-css-property-using-javascript/)
+        document.styleSheets[0].cssRules[1].style.removeProperty('background-color');
+    }
+    //Code below from here: https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
+    function disableScroll() {
+        document.body.classList.add("no-scroll");
+    }
+    function enableScroll() {
+        document.body.classList.remove("no-scroll");
+    }
+</script>
+
+<script>
+    //KNOWN PROBLEM: This feature work as good (but sometimes not). unless redoing the loading screen by removing all-contents div.
     //Individual script for saving scroll position https://medium.com/front-end-weekly/boost-user-experience-memorizing-scroll-position-with-javascript-2adfb6ca6c2b
     let savedScrollPosition = localStorage.getItem("savedScrollPosition");
 
@@ -501,6 +510,7 @@
             }
             localStorage.setItem(key1, value1);
             alert("Please refresh page to view updated data.")
+            field1.value = null; //Clear text field after save
             //location.reload();
         }
     };
@@ -592,6 +602,16 @@
             document.body.classList.remove("dark");
         }
     }
+</script>
+
+<script>
+    //Individual script for Keyboard shortcut https://youtu.be/lNJMDTSkNXo?t=304
+    document.addEventListener("keydown", e => {
+        if(e.key.toLowerCase() === 'l' && e.shiftKey){ //dark mode
+            e.preventDefault();
+            darkModeToggle();
+        }
+    });
 </script>
 
 <script>
