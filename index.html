@@ -1,338 +1,455 @@
 <!--
-    Name            : hongjchang
-    Created On      : 5/10/2022
-    Note            : This entire webpage/project was done individually out of personal interest by using online guidance. Every single online source references have been commented.
+    Name       : hongjchang
+    Created On : 5/10/2022
+    Note       : This entire webpage/project was done individually out of personal interest by using online guidance. Every single online source references have been commented.
 -->
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Mettiyarama Bhante's Talk</title>
+
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="style.css" media="all">
-    <title>Wednesday Bhante's Talk</title>
 
-    <!--Page favicon. Found at: https://www.facebook.com/profile.php?id=100064704306924&sk=photos -->
-    <link rel="icon" href="src/home-page-icon.png" type="image/x-icon">
+    <!--Page favicon. (Image src:https://www.facebook.com/profile.php?id=100064704306924&sk=photos)
+    Different favicon in light & dark modes https://favicon.im/blog/favicon-for-light-dark-modes
+    Emoji page favicon https://css-tricks.com/emoji-as-a-favicon/ -->
+    <link rel="icon" href="src/home-icon.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙏</text></svg>" type="image/x-icon" media="(prefers-color-scheme: dark)">
 
     <!--For Responsive Page (https://www.w3schools.com/html/html_responsive.asp)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Importing Ubuntu font style for body from https://fonts.google.com/share?selection.family=Ubuntu -->
+    <meta charset="utf-8">
+
+    <!--Ubuntu font style https://fonts.google.com/share?selection.family=Ubuntu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
-    <!--Importing Google Sans / Product Sans font family from https://www.cdnfonts.com/google-sans.font -->
+    <!--Product Sans font family https://www.cdnfonts.com/google-sans.font -->
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
 
-    <!--Google Fonts Open in new tab icon (https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Aopen_in_new%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048)-->
+    <!--Google Fonts icons-->
+    <!--open in new tab icon (https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Aopen_in_new%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048)-->
+    <!--return to top button-->
+    <!--popup message's swipe to close button-->
+    <!--2 share buttons-->
+    <!--image viewer's full screen button-->
+    <!--show/hide navbar's hameburger icon-->
+    <!--Shuffle icon for YT iframe player-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
-
-    <!--Google Fonts icon for return to top button-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-    <!--Google Fonts icon for popup swipe button-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-    <!--Google Fonts icon for the 2 share buttons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script>
+        //Features using below 2 functions: loader, popup message, down arrow in header part
+        //Reference: https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
+        function disableScroll() {
+            document.body.classList.add("no-scroll");
+        }
+        function enableScroll() {
+            document.body.classList.remove("no-scroll");
+        }
+    </script>
 </head>
 
-<!-- Loading Screen. Ref:https://www.w3schools.com/howto/howto_css_loader.asp , Discord video src:https://discord.com/assets/7209f284854b7ea1e5642c91fd2e43d4.webm -->
-<div id="loader">
-    <div class="loadingIcon"><video src="src/loading.webm" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="true" oncontextmenu="return false;" autoplay muted loop width="200px" title="Loading... (Discord, 2022)"></video></div>
-</div>
-<p class="loadingCaption"><a href="https://discord.com/app">Discord</a> 2022 Christmas special logo. All copyrights subject to its owner.</p>
-<!------Script at bottom------>
+<!--Disable right click context menu:https://stackoverflow.com/a/47625557 -->
+<body oncontextmenu="return false;">
+    <!--background effect https://youtu.be/zS1XIJ_uUQw
+    [NOT WORKING ANYMORE]Cherry blossom background https://github.com/ludwan/cherryBranch -->
+    <button class="bgEffectToggle">BG is on</button>
+    <script>
+    //Individual script for background effect
+    function bgEffectCreateLines(){
+        let sizeW = Math.random() * 9;
+        let duration = Math.random() * 5;
+        let bgEffectCircle = document.createElement("div");
+        bgEffectCircle.setAttribute("class", "bgEffectCircle");
+        document.body.appendChild(bgEffectCircle);
+        bgEffectCircle.style.width = 2 + sizeW + "px";
+        bgEffectCircle.style.left = Math.random() * + innerWidth + "px";
+        bgEffectCircle.style.animationDuration = 2 + duration + "s";
+        setTimeout(function(){
+            document.body.removeChild(bgEffectCircle);
+        }, 5000);
+    }
+    var bgEffectCircleInterval = null; //Initialise as null for toggle button's purpose
+    bgEffectCircleInterval = setInterval(() => {
+        bgEffectCreateLines();
+    }, 200);
 
-<body onload="disableScroll(), loadingScreen()">
-    <div id="all-content" class="animate-bottom">
-    <!-- Text Selection Colour for dark mode (in style.css file) https://www.w3schools.com/howto/howto_css_text_selection.asp -->
+    //Script for background effect toggle button
+    document.querySelector(".bgEffectToggle").addEventListener("click", function(){
+        if(bgEffectCircleInterval != null){
+            clearInterval(bgEffectCircleInterval);
+            bgEffectCircleInterval = null;
+            document.querySelector(".bgEffectToggle").innerHTML = "BG is off";
+        }else{
+            bgEffectCircleInterval = setInterval(() => { bgEffectCreateLines(); }, 200);
+            document.querySelector(".bgEffectToggle").innerHTML = "BG is on";
+        }
+    });
+    </script>
+
+    <!--Loading screen https://youtu.be/gttmqvZ4kYc?t=64
+        Discord video src:https://discord.com/assets/7209f284854b7ea1e5642c91fd2e43d4.webm
+        [UNUSED, ARCHIVE ONLY] Loading Screen using div. Ref:https://www.w3schools.com/howto/howto_css_loader.asp -->
+    <div id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        <div class="loadingIcon"><video src="src/loading.webm" oncontextmenu="return false;" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="true" autoplay muted loop width="200px" title="Loading... (Discord, 2022)"></video></div>
+        <p class="loadingCaptionDiscord">Loading icon from <a href="https://discord.com/app">Discord</a> &#128900; Any copyright belongs to its owner.</p>
+    </div>
+    <!------Script at bottom------>
+
+    <!--Overriding default text selection colour during dark mode https://www.w3schools.com/howto/howto_css_text_selection.asp -->
+    <!--Implemented in css file > dark mode section-->
 
     <!-- Custom Scroll bar is included in css file. 
     Doc ref:https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
     Adapted here:https://codepen.io/ppolyzos/pen/AWKgOv
     Modified with a white border: https://stackoverflow.com/a/21684424
     -->
+    <!--Implemented in css file-->
 
-    <!-- Return to top button with rotating animation. (https://css-tricks.com/books/greatest-css-tricks/scroll-animation/)-->
+    <!--A pop up box for notice at top of the page but modified a little. Found here:https://codepen.io/imprakash/pen/GgNMXO 
+    Change button text on hover: https://stackoverflow.com/a/54242070 -->
+    <div class="overlayBox">
+        <div class="popup">
+            <h2>Please Log In To Continue</h2>
+            <div class="popup-content">
+                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
+                <div class="tabContainer">
+                    <input type="radio" id="tab2" name="tabContainer" checked="checked">
+                    <label for="tab2">Keyboard Shortcuts</label>
+                    <div class="tab">
+                        <p style="padding-top:0px;"><u>SHIFT</u> + <u>D</u>&emsp;&emsp;Toggle Dark Mode</p>
+                    </div>
 
-    <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp 
-    and this one for no JS version:https://stackoverflow.com/a/32102805 -->
+                    <input type="radio" id="tab1" name="tabContainer" checked="checked">
+                    <label for="tab1">⚠️Page Responsiveness Warning</label>
+                    <div class="tab">
+                        <p style="padding-top:0px">Viewing this page using a PC or large-screen tablet is highly recommended since the page's responsiveness may not work well in smaller-screen devices, despite it supports most newer browsers.</p>
+                        <p style="padding-top:0px;">Thank you for understanding and Sukhi Hotu! 🙏🙏🙏</p>
+                    </div>
+                </div>
+
+                <!----------Special text fields (same as notes taking form fields below) https://youtu.be/kcKkQgRz6K8?t=98 ----------->
+                <div class="popup-text-field-container">
+                    <div class="popup-text-field-inputbox">
+                        <input type="text" name="usernameField" id="username" value="" required>
+                        <span id="textFieldAnimation">Username</span>
+                        <i></i>
+                    </div>
+                    <div class="popup-text-field-inputbox">
+                        <input type="password" name="passwordField" id="password" value="" required>
+                        <span id="textFieldAnimation">Password</span>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+            <!--Swipe button https://youtu.be/L-tPKFxrvLk?t=73 -->
+            <a class="swipe-to-close-btn" id="popupCloseBtn"><span class="material-symbols-outlined">arrow_forward</span></a>
+            <!-- <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn">Log In</button> -->
+            <button class="exitBtn" id="popupExitBtn"><span class="material-symbols-outlined">directions_run</span></button>
+        </div>
+    </div>
+    <!--Script at bottom-->
+
+    <!-- Return to top button with rotating animation https://css-tricks.com/books/greatest-css-tricks/scroll-animation/ -->
+    <!--Return to top button with JS:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp ; no JS version:https://stackoverflow.com/a/32102805 -->
     <button onclick="toTop()" id="toTopBtn" href="#top" title="Return to top"><span class="material-symbols-outlined">arrow_upward</span></button>
     <!--Script at bottom-->
 
-    <!--Progress indicator when scrolling based on https://www.w3schools.com/howto/howto_js_scroll_indicator.asp -->
+    <!--Scrolling progress indicator bar https://www.w3schools.com/howto/howto_js_scroll_indicator.asp -->
     <div class="progress-container">
         <div class="progress-bar" id="scrollProgressBar"></div>
     </div>
     <!--Script at bottom-->
 
-    <!--
-    Dark mode (https://tealfeed.com/darklight-mode-toggle-html-css-javascript-sxgub)
+    <!--Dark mode (https://tealfeed.com/darklight-mode-toggle-html-css-javascript-sxgub)
     Button toggling (https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp)
-    Downloaded png icon (https://www.flaticon.com/free-icon/dark-mode_8338708?term=night+mode&page=1&position=2&origin=tag&related_id=8338708)
-    -->
-    <button onclick="darkModeToggle()" id="darkModeBtn" title="Dark/light toggle"><img src="src/dark-mode.png" width="15"></button>
+    Downloaded `src/dark-mode.png` icon https://www.flaticon.com/free-icon/dark-mode_8338708?term=night+mode&page=1&position=2&origin=tag&related_id=8338708
+    Apple iOS switch (adapted from my SunwayUniWebForm and https://codeburst.io/pure-css3-input-as-the-ios-checkbox-8b6347d5cefb)-->
+    <!--[REMOVED, AS ARCHIVE ONLY] Language Changer https://youtu.be/xDHhZqWtOq8?t=53 -->
+    <input class="apple-switch" type="checkbox" onclick="darkModeToggle()" title="Dark/light toggle">
+    <!-- <button onclick="darkModeToggle()" id="darkModeBtn" title="Dark/light toggle"><img src="src/dark-mode.png" width="15"></button> -->
     <!--Script at bottom-->
 
-    <!--A pop up box for notice at top of the page but modified a little. Found here:https://codepen.io/imprakash/pen/GgNMXO 
-    Change button text on hover: https://stackoverflow.com/a/54242070 -->
-    <div class="overlayBox" oncontextmenu="return false;">
-        <div class="popup">
-            <h2>Page Responsiveness Warning</h2>
-            <div class="popup-content">
-                <!--Tabs https://youtu.be/oLqdy95LZSw & https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a -->
-                <div class="tabContainer">
-                    <input type="radio" id="tab3" name="tabContainer" checked="checked">
-                    <label for="tab3">Keyboard Shortcuts</label>
-                    <div class="tab">
-                        <p style="padding-top:0px;"><b>SHIFT</b> + <b>L</b> = Toggle Dark Mode</p>
-                    </div>
-
-                    <input type="radio" id="tab2" name="tabContainer" checked="checked">
-                    <label for="tab2">Language Removal Notice</label>
-                    <div class="tab">
-                        <p style="padding-top:0px;">🔤Chinese language does no longer supported already! Apologies and thanks for understanding.<br/>中文翻译功能已移除了。任何不便敬请原谅。</p>
-                    </div>
-
-                    <input type="radio" id="tab1" name="tabContainer" checked="checked">
-                    <label for="tab1">Webpage Layout</label>
-                    <div class="tab">
-                        <p style="padding-top:0px">⚠️Viewing this page using a PC or large-screen tablet is highly recommended since the page's responsiveness may not work well in smaller-screen devices, despite it supports most newer browsers.</p>
-                        <p style="padding-top:0px;">Thank you for understanding and Sukhi Hotu! 🙏🙏🙏</p>
-                    </div>
-                </div> <!--End of tabContainer-->
-            </div>
-            
-            <!-- <button class="closeBtn" data-dismiss="alert" id="popupCloseBtn"><span>OK</span></button> -->
-            <!--Swipe button https://youtu.be/L-tPKFxrvLk?t=73 -->
-            <a class="swipe-to-close-btn" id="popupCloseBtn"><span class="material-symbols-outlined">arrow_forward</span></a>
-        </div>
+    <!--Image Viewer https://codepen.io/abmin/pen/jZKrze -->
+    <!--`.imgViewerOk` class is required for images to be expanded-->
+    <div id="imgViewer">
+        <span class="imgViewerCloseBtn" title="Close">&times;</span>
+        <span class="imgViewerFullScreenBtn" onclick="imgViewerToFullScreen()" title="Further expand image"><span class="material-symbols-outlined">fullscreen</span></span>
+        <img class="imgViewerModalContent" id="imgViewerFull">
     </div>
-    <!--Script for popup msg tabs at bottom-->
-
-    <!--Language Changer (https://youtu.be/xDHhZqWtOq8?t=53)
-    Apple iOS switch (adapted from my SunwayUniWebForm and https://codeburst.io/pure-css3-input-as-the-ios-checkbox-8b6347d5cefb)-->
-    <!--
-    <span class="en">ABC</span>
-    <input class="apple-switch" type="checkbox" title="Change language here">
-    <span class="chi">中文</span> 
-    -->
+    <!--Scripts at bottom-->
 
     <!--A closable banner found on https://stackoverflow.com/a/26957495 -->
     <div id="fixed-alert">
-        <button id="btn-dismiss" data-dismiss="alert">Dismiss</button>
-        This webpage is currently being served as an archive for the past session recordings due to discontinuation.
-        <!--Script at bottom-->
+        Welcome to Mettiyarama Bhante's talk archive site. Keeps updating whenever new session is available.
+        <button id="closableBannerBtn" data-dismiss="alert">Dismiss</button>
     </div>
-    
+    <!--Script at bottom-->
+
     <!--This <header> <section> <footer> is found on https://www.w3schools.com/html/html_layout.asp
-    Responsive design for smaller screen sizes https://www.w3schools.com/html/html_responsive.asp#:~:text=What%20is%20Responsive%20Web%20Design%3F -->
+    Responsive design for smaller screen sizes https://www.w3schools.com/html/html_responsive.asp#:~:text=What%20is%20Responsive%20Web%20Design%3F
+    parallax page for <header>:https://www.w3schools.com/howto/howto_css_parallax.asp -->
     <header>
-        <h1>Wednesday Bhante's Talk</h1>
-        <p>Last Updated <u>8 June 2023, 01:49 UTC+10</u></p>
-        <hr/>
+        <div style="align-content:center;height:88%;">
+            <h1>Mettiyarama Bhante's Talk</h1>
+            <p style="font-size:10px;">Last edited on 13 Jan 2025 20:50 GMT+11</p>
+        </div>
+        <div style="align-content:end;cursor:default;bottom:0;">
+            <hr/>
+            <p style="margin:0px;padding:0px;font-size:40px;text-align:center;position:relative;cursor:pointer;">&darr;</p>
+            <p style="text-align:right;margin:0%;font-size:12px;"><a style="color:#eee" href="https://www.facebook.com/mettiyarama" target="_blank" rel="noopener noreferrer">Credit: (Facebook, 2023)</a></p>
+        </div>
     </header>
+    <!--Script at bottom-->
+
+    <!--Button to show/hide nav-left & nav-right-->
+    <button class="showNav" title="Toggle sidebar"><span class="material-symbols-outlined">menu</span></button>
+    <!--Script at bottom-->
 
     <section>
         <nav class="nav-left">
-            <h3>Navigation Panel</h3>
-            <li><a href="#session11">26 Apr 2023</a></li>
-            <li><a href="#session10">12 Apr 2023</a></li>
-            <li><a href="#session9">8 Mar 2023</a></li>
-            <li><a href="#session8">22 Feb 2023</a></li>
-            <li><a href="#session7">8 Feb 2023</a></li>
-            <li><a href="#session6">11 Jan 2023</a></li>
-            <li><a href="#session5">21 Dec 2022</a></li>
-            <li><a href="#session4">07 Dec 2022</a></li>
-            <li><a href="#session3">Additional Talk</a></li>
-            <li><a href="#session2">19 Oct 2022</a></li>
-            <li><a href="#session1">05 Oct 2022</a></li>
+            <h3>Content List</h3>
+            <!--Each below: href to display them as link only; onclick to jump to position without altering URL. Ref:https://stackoverflow.com/questions/56083985/how-to-refresh-a-page-and-load-at-top-after-an-anchor-has-been-clicked-ignoring/56109150#56109150 -->
+            <!--overflow-wrap : to prevent text go out of layout https://css-tricks.com/almanac/properties/o/overflow-wrap/ -->
+            <div class="paginationChangeableContent" style="overflow-wrap:break-word;"></div>
+
+            <!--Copy page URL https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
+            <button class="copyUrlBtn" onclick="copyUrl()" onmouseout="mouseOut()" id="copyUrlBtn">
+                <span class="material-symbols-outlined" style="font-size:14px;">link</span> Copy Link
+            </button>
+            <!--Show default share options https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share#examples -->
+            <button class="shareBtn" id="shareBtn">
+                <span class="material-symbols-outlined" style="font-size:14px;">ios_share</span> Share
+            </button>
+            <!--Script at bottom-->
         </nav>
 
-        <article oncontextmenu="return false;">
-            <!--This is a responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
-            <div id="resp-table">
-                <div id="resp-table-body">
-                    <button class="sortBy">Sorted By: <b>Most Recent</b></button>
-<!--Latest session. Sort them from newest one first.-->
-                <!--Image reference: https://www.youtube.com/error/ 
-                <img src="src/yt-monkey-404.png" width="auto" height="auto" title="Unable to fetch video (Source: YouTube, 2022)">-->
-<!--Latest session until here-->
-
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session11"><h3>26 Apr 2023<br/><code>佛陀的经钥匙系列开示(61) 之 12缘起法 - 总结 及 关于卫塞节</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F3348484115412074%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1fndI5m4GVpnAwiOH4vf38BxLPgeQzLtm/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session10"><h3>12 Apr 2023<br/><code>佛陀的经钥匙系列开示(60) 之 12缘起法 - 行</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F760444392379519%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1bDlYzlV59Od16OjzI_jO1-hZ2n85KyoY/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session9"><h3>8 Mar 2023<br/><code>佛陀的经钥匙系列开示(59) 之 12缘起法 - 受</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F518220817151731%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1MZkf_8aQuuzSGtCpj5AOUl1MmUaeva7X/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session8"><h3>22 Feb 2023<br/><code>佛陀的经钥匙系列开示(58) 之 12缘起法 - 爱</code></h3><blockquote>内容：爱的升起就是乐受在哪里出现，渴爱就在哪里升起。</blockquote></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F857293482023553%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1MriS7qQfrDq8qJbLfY71R_cczt6zqMJU/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session7"><h3>8 Feb 2023<br/><code>佛陀的经钥匙系列开示(57) 之 12缘起法 - 取 & 恭喜发<b>"内财"</b></code></h3><blockquote>内容：取，即执着、不放下，要求欲乐。<br/>&emsp;&emsp;&emsp;要灭掉取，就要放下、不执着。<br/>&emsp;&emsp;&emsp;有爱才有取，才会有有和生。</blockquote></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F2440597842756574%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1LIldpdsaDGJx38V4HsWfUVSx3eW_jnhQ/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session6"><h3>11 Jan 2023<br/><code>佛陀的经钥匙系列开示(56) 之 12缘起法 - 生 & 有</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F841652846924400%2F&show_text=false&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1ALlUBLb1fNxh4cqK71iYzXS-Zuf0cYLF/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session5"><h3>21 Dec 2022<br/><code>佛陀的经钥匙系列开示(55) 之 12缘起法 - 生</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F485266780406557%2F&show_text=true&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1W2NOHcSoAdXt2jXBJ_WME_CnntSGlI3A/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session4"><h3>07 Dec 2022<br/><code>佛陀的经钥匙系列开示(54) 之 12缘起法 - 老死</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F387791166865735%2F&show_text=true&t=0" width="700" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <iframe src="https://drive.google.com/file/d/1eTCeSwrnyWRbqIf4I7A_GKh8HmJAvW6a/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell" id="session3">
-                            <h3>Additional Talk: 03 Dec 2022<br/><code>十愿十行，利乐有情 Partnered with another Buddhist org.</code></h3>
-                        </div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <blockquote style="margin-top:0px;">🖼️<a href="https://www.facebook.com/photo?fbid=517111953788944&set=a.463413315825475" target="_blank" rel="noopener noreferrer">View event poster here<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></blockquote>
-                            
-                            <u>Part One Recorded</u><br/>
-                            <blockquote>⬇️Apologies for the <b>multiple audio sources</b> from the recording below. There was a mistake caused during recording.<br/>This video refers to <b>Part One (1pm to 3pm)</b> of the video. Please click on the host's profile below for <b>Part Two.</b></blockquote>
-                            <iframe src="https://drive.google.com/file/d/1naoUytyxtOnMZnr6KFMFz6mi9zNExSfZ/preview" allowfullscreen allow="autoplay; encrypted-media" width="600" height="300"></iframe>
-                            
-                            <br/><br/><u>Part Two Embedded</u><br/>
-                            <blockquote>⬇️This video is the continuing part of the session.</blockquote>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMbkapage%2Fvideos%2F677027227158363%2F&show_text=true&t=885" width="700" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class=“resp-table-row” id="session2">
-                        <div class="table-body-cell"><h3>19 Oct 2022<br/><code>佛陀的经钥匙系列开示(53) 之 12缘起法 - 五蕴</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmettiyarama%2Fvideos%2F488263863342529%2F&show_text=true&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <!--HTML video tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controlslist
-                            To embed GDrive video OPTION 1: https://stackoverflow.com/questions/48124306/embedding-google-drive-videos-using-html5-video 
-                            Disable video right click context menu:https://stackoverflow.com/a/47625557 -->
-                            <!--<video src="https://drive.google.com/uc?id=1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK&confirm=true" width="700" height="400" controls="true" controlslist="nodownload" oncontextmenu="return false;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" unmuted allowfullscreen></video>
-                            -->
-                            <!--Embed GDrive video OPTION 2: "embed item" button in 3-dot icon-->
-                            <iframe src="https://drive.google.com/file/d/1mzQuqqbtlA75Aqm9JLzcdEtD3S_hUtGK/preview" width="600" height="300" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-                    </div>
-                    
-                    <hr>
-                    <div class=“resp-table-row” id="session1">
-                        <div class="table-body-cell"><h3>05 Oct 2022<br/><code>佛陀的经钥匙系列开示(52) 之 12缘起法 - 食蕴</code></h3></div>
-                    </div>
-                    <div class=“resp-table-row”>
-                        <div class="table-body-cell">
-                            <u>Embedded</u><br/>
-                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100064704306924%2Fvideos%2F398707349117534%2F&t=0" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                            
-                            <br/><br/><u>Downloaded</u><br/>
-                            <blockquote>Unfortunately there was no downloaded recording for this session.</blockquote>
-                        </div>
-                    </div>
-                </div> <!--End table body-->
-            </div><!--End table-->
+        <article>
+            <p style="text-decoration:underline;cursor:default;">Sorted By: <b>Most Recent</b></p>
 
             <!--Pagination (https://www.w3schools.com/howto/howto_css_pagination.asp)-->
+            <!--With each <div> pages below, nav-left also included a <div>-->
             <div class="pagination">
-                <a href="javascript:void(0)" style="cursor:not-allowed;" title="Unavailable. This is the first page.">&laquo;</a>
-                <a class="activePage" href="javascript:void(0)">1</a>
-                <a href="javascript:void(0)" style="cursor:not-allowed;" title="Unavailable. This is the last page.">&raquo;</a>
+                <a href="javascript:void(0)" style="cursor:not-allowed;" title="Functionality Unavailable">&laquo;</a>
+                <a href="javascript:void(0)" onclick="goToSect(1)">1</a>
+                <a href="javascript:void(0)" onclick="goToSect(2)">2</a>
+                <a href="javascript:void(0)" onclick="goToSect(3)">3</a>
+                <a href="javascript:void(0)" onclick="goToSect(4)">4</a>
+                <a href="javascript:void(0)" onclick="goToSect(5)">5</a>
+                <a href="javascript:void(0)" style="cursor:not-allowed;" title="Functionality Unavailable">&raquo;</a>
+            </div>
+            <!--Script at bottom-->
+
+            <!--Below div is simple multiple column container(https://www.w3schools.com/howto/howto_css_three_columns.asp)-->
+            <!--[REMOVED, ARCHIVE ONLY] responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
+            <!--Implemented in css file-->
+
+            <!--Lazy loading for all iframe in <article> https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading#images_and_iframes -->
+
+            <!--=======TEMPLATE FOR NEW LISTING=======
+            =======To do before adding: [1]copy paste template below. [2]check each section pages & pagination. [3]update nav-left contents in pagination button's js script. [4]copy paste below into `data` folder.=======
+            <h3 id="session#">Template</h3>
+            <code>desc</code>
+            <blockquote>desc</blockquote>
+            <div class="table-row-div">
+                <div class="table-column-div">
+                    <u>Embedded</u><br/>
+                </div>
+                <div class="table-column-div">
+                    <u>Downloaded</u><br/>
+                    <table>
+                        <tr><th colspan="2">か行<sup>ぎょう</sup></th></tr>
+                        <tr><td>かもく</td><td>subject</td></tr>
+                        <tr><td>くすりや</td><td>medical drug store</td></tr>
+                        <tr><td>こたえ</td><td>answer</td></tr>
+                    </table>
+                </div>
+            </div>
+            -->
+
+            <!--A div used to include another html file into here https://www.w3schools.com/howto/howto_html_include.asp -->
+            <!--Dependent with pagination part-->
+            <div w3-include-html="" id="contentPage"></div>
+
+            <div id="contentPageLast">
+                <!--Inserting YT playlist https://developers.google.com/youtube/iframe_api_reference#Getting_Started -->
+                <h3 id="session2">Miscellaneous Bhante Talks</h3>
+                <code>Self-coded YouTube embedded player<br/><i>Unrelated to Mettiyarama Centre</i></code>
+                <div class="table-row-div">
+                    <div class="table-column-div">
+                        <iframe id="ytPlayer" loading="lazy" width="450" height="253" src="https://www.youtube.com/embed?listType=playlist&list=PLV-WE3LveWqrpHvtfFj2R1x-OQHbs9jLD&enablejsapi=1&disablekb=1&controls=0&autoplay=0&fs=0" frameborder="0" allow="encrypted-media;" referrerpolicy="no-referrer" allowfullscreen></iframe>
+                    </div>
+                    <div class="table-column-div">
+                        <table>
+                            <!--Progress Slider https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+                            <tr><td style="border:none;">Volume: <input type="range" min="0" max="100" value="35" id="YTEmbedSlider"></td></tr>
+                            <tr><td style="border:none;"><button id="YTEmbedNextBtn">&#9205; Next Video</button></td></tr>
+                            <tr><td style="border:none;"><button id="YTEmbedResetBtn" disabled>&#8635; Repeat Again</button></td></tr>
+                            <tr><td style="border:none;"><button id="YTEmbedShuffleBtn"><span class="material-symbols-outlined" style="font-size:15px;">shuffle</span> Shuffle Player</button></td></tr>
+                            <tr><td style="border:none;"><span id="YTEmbedCurrentTime"></span></td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <hr>
+                <h3 id="session1">Yet to Release <a href="https://manga-shinchan.com" target="_blank" rel="noopener noreferrer">manga-shinchan.com<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> Comic</h3>
+<!--Individual script for shinchan comic part-->
+<script>
+//Add new comic chapter in below 2 variables here
+var comicHeader = [
+    "Hiroshi Hirumeshi Saimaru (chap 110)",
+    "Hiroshi Hirumeshi (chap 81)"];
+var comicUrl = [
+    "https://manga-shinchan.com/book_data/article_data/110-hiroshi-hirumeshi-saimaru/110-hiroshi-hirumeshi-saimaru_01.jpg",
+    "https://manga-shinchan.com/book_data/article_data/081-hiroshi-hirumeshi/081-hiroshi-hirumeshi_01.jpg"];
+var comicUrlIndexCounter = 0;
+//Creating each comic chapter (i.e. the main row)
+//for(var x=0;x<comicHeader.length;x++){
+comicHeader.forEach(function(x){ //x means: each elements of comicHeader
+    //Add <hr> separating each comic chapter (change to contentPage# div for pagination pages purpose) (added if stmt to ignore creation of <hr> for 1st comic chapter)
+    //document.querySelector("article").appendChild(document.createElement("hr"));
+    if(comicUrlIndexCounter > 0){ document.getElementById("contentPageLast").appendChild(document.createElement("hr")); }
+    //Create parent table-row-div
+    var parentDiv = document.createElement("div");
+    parentDiv.classList.add("table-row-div");
+    //for pagination pages purpose, change to the page's div container
+    //document.querySelector("article").appendChild(parentDiv);
+    document.getElementById("contentPageLast").appendChild(parentDiv);
+    //Creating h3 title
+    var headerText = document.createElement("h3");
+    headerText.textContent = x; //comicHeader[x];
+    headerText.style.margin = "6px 0 15px 0";
+    parentDiv.appendChild(headerText);
+    //Create another div for the 2 slide left right buttons
+    var slideBtnDiv = document.createElement("div");
+    slideBtnDiv.style.textAlign = "right";
+    slideBtnDiv.style.marginTop = "-52px";
+    parentDiv.appendChild(slideBtnDiv);
+    //Create 2 slide left right buttons
+    var slideLeftBtn = document.createElement("button");
+    var slideRightBtn = document.createElement("button");
+    slideLeftBtn.id = "slideLeftBtn"+comicUrlIndexCounter;
+    slideRightBtn.id = "slideRightBtn"+comicUrlIndexCounter;  //Added comicUrlIndexCounter to assign each button to its respective childDiv
+    slideLeftBtn.innerHTML = "&#9668;";
+    slideRightBtn.innerHTML = "&#9658;";
+    slideLeftBtn.style.marginTop = "10px";
+    slideLeftBtn.style.paddingTop = "8px";
+    slideLeftBtn.style.paddingBottom = "8px";
+    slideLeftBtn.style.paddingLeft = "8px";
+    slideLeftBtn.style.paddingRight = "9px";
+    slideLeftBtn.style.fontSize = "12px";
+    slideLeftBtn.style.borderRadius = "50px";
+    slideLeftBtn.style.transition = ".2s";
+    slideLeftBtn.style.border = "2px solid #aaa";
+    slideLeftBtn.disabled = true;
+    slideRightBtn.style.marginLeft = "10px";
+    slideRightBtn.style.marginTop = "10px";
+    slideRightBtn.style.paddingTop = "8px";
+    slideRightBtn.style.paddingBottom = "8px";
+    slideRightBtn.style.paddingLeft = "8px";
+    slideRightBtn.style.paddingRight = "8px";
+    slideRightBtn.style.fontSize = "12px";
+    slideRightBtn.style.borderRadius = "50px";
+    slideRightBtn.style.transition = ".2s";
+    slideRightBtn.style.border = "2px solid #aaa";
+    //Styling of the 2 slide left right buttons
+    slideLeftBtn.addEventListener("mouseenter", function(){ //:hover
+        if(!slideLeftBtn.disabled){
+            slideLeftBtn.style.backgroundColor = "#cdcdcd";
+        }
+    });
+    slideRightBtn.addEventListener("mouseenter", function(){ //:hover
+        if(!slideRightBtn.disabled){
+            slideRightBtn.style.backgroundColor = "#cdcdcd";
+        }
+    });
+    slideLeftBtn.addEventListener("mouseleave", function(){ //normal
+        slideLeftBtn.style.backgroundColor = "#eee";
+    });
+    slideRightBtn.addEventListener("mouseleave", function(){ //normal
+        slideRightBtn.style.backgroundColor = "#eee";
+    });
+    slideBtnDiv.appendChild(slideLeftBtn);
+    slideBtnDiv.appendChild(slideRightBtn);
+    //Creating child table-row-div again to ease horizontal scroll on each comic page
+    var childDiv = document.createElement("div");
+    childDiv.classList.add("table-row-div");
+    childDiv.id = "comicChildRowDiv"+comicUrlIndexCounter;  //Added comicUrlIndexCounter to assign each button to its respective childDiv
+    childDiv.style.margin = "0px";
+    childDiv.style.padding = "5px";
+    childDiv.style.border = "none";
+    childDiv.style.boxShadow = "none";
+    childDiv.style.scrollBehaviour = "smooth";
+    parentDiv.appendChild(childDiv);
+
+    //Functionality for the 2 slide left right buttons (each comic row's buttons are respective to each childDiv)
+    slideLeftBtn.addEventListener("click", function(){
+        //To create a smooth scrolling effect https://stackoverflow.com/a/24636116
+        var scrollDistance = 0;
+        var smoothScrollInterval = setInterval(() => {
+            if(scrollDistance >= 350){ //change this for AMOUNT OF SCROLL
+                clearInterval(smoothScrollInterval);
+            }
+            document.getElementById(childDiv.id).scrollLeft -= 9; //change this for SCROLLING SPEED
+            scrollDistance += 9; //change this for SCROLLING SPEED
+        }, 0);
+        //Initial basic button functionality
+        //document.getElementById(childDiv.id).scrollLeft -= 350;
+    });
+    slideRightBtn.addEventListener("click", function(){
+        //To create a smooth scrolling effect https://stackoverflow.com/a/24636116
+        var scrollDistance = 0;
+        var smoothScrollInterval = setInterval(() => {
+            if(scrollDistance >= 350){ //change this for AMOUNT OF SCROLL
+                clearInterval(smoothScrollInterval);
+            }
+            document.getElementById(childDiv.id).scrollLeft += 9; //change this for SCROLLING SPEED
+            scrollDistance += 9; //change this for SCROLLING SPEED
+        }, 0);
+        //Initial basic button functionality
+        // document.getElementById(childDiv.id).scrollLeft += 350;
+    });
+    //To disable and enable the buttons when scrolled to max edge of childDiv
+    childDiv.addEventListener("scroll", function(){ //Ref: https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
+        if(Math.round(childDiv.scrollLeft) == 0){
+            slideLeftBtn.disabled = true;
+            slideRightBtn.disabled = false;
+        }else if(Math.round(childDiv.scrollLeft) == childDiv.scrollWidth - childDiv.clientWidth){ //To find max scroll length of childDiv: https://stackoverflow.com/a/5704386
+            slideLeftBtn.disabled = false;
+            slideRightBtn.disabled = true;
+        }else{
+            slideLeftBtn.disabled = false;
+            slideRightBtn.disabled = false;
+        }
+    });
+
+    //create each comic chapter's page (i.e. each image)
+    for(var i=1;i<=50;i++){
+        //Creating each page as an image
+        var testImg = document.createElement("img");
+        var truncatedComicUrl = comicUrl[comicUrlIndexCounter].slice(0,-6);  //remove ending few chars to change the number in the url (CHANGE THIS IF COMICURL HAS BEEN CHANGED)
+        if(i>=1 && i<=9){ //add 0 in front of 1 to 9 for the comicUrl
+            testImg.src = truncatedComicUrl + i.toString().padStart(2, '0') + ".jpg"; //https://www.tutorialspoint.com/How-to-pad-a-number-with-leading-zeros-in-JavaScript
+        }else{
+            testImg.src = truncatedComicUrl + i + ".jpg";
+        }
+        testImg.width = 300;
+        testImg.classList.add("imgViewerOk");
+        testImg.id = "comicImg";
+        //Creating table-column-div for each page
+        var innerDiv = document.createElement("div");
+        innerDiv.classList.add("table-column-div");
+        childDiv.appendChild(innerDiv).appendChild(testImg);
+        childDiv.innerHTML += "&emsp;";
+    }
+    comicUrlIndexCounter++;//increment 1 index for comicUrl array to create the next comic chapter
+});
+</script>
             </div>
 
             <!--Special text fields https://youtu.be/kcKkQgRz6K8?t=98 -->
@@ -341,90 +458,80 @@
                 <p style="font-size:10px">Be minded that you <u>consent to accept cookies</u> provided from this page.</p>
                 <div class="text-field-container">
                     <div class="text-field-inputbox">
-                        <input type="text" id="field1" required maxlength="100">
+                        <!--Include \n in textarea's value when submitted https://www.linkedin.com/advice/1/how-do-you-handle-multiline-text-line-breaks-html-skills-html#textarea-element -->
+                        <textarea wrap="hard" type="text" id="field1" required maxlength="300"></textarea>
                         <span>Write Your Notes Here</span>
                         <i></i>
                     </div>
+                    <input type="submit" id="specialTextFieldSubmitBtn" value="Save">
                 </div>
-                <input type="submit" id="specialTextFieldSubmitBtn" value="Save">
                 <legend id="specialTextFieldTitle2">Recently Saved Notes</legend>
                 <div id="specialTextFieldOutput"></div>
-                <input type="button" id="specialTextFieldClearBtn" value="Delete Notes">
+                <input type="button" id="specialTextFieldClearBtn" value="Delete Note">
             </div>
+            <!--Script at bottom-->
         </article>
 
         <nav class="nav-right">
-            <!--Copy page URL https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
-            <div class="tooltip">
-                <button class="copyUrlBtn" onclick="copyUrl()" onmouseout="mouseOut()" id="copyUrlBtn">
-                    <span class="material-symbols-outlined" style="font-size:14px;">link</span> Copy Link
-                </button>
-            </div>
-            <!--Show default share options -->
-                <button class="shareBtn" id="shareBtn">
-                    <span class="material-symbols-outlined" style="font-size:14px;">ios_share</span> Share
-                </button>
+            <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
+            <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Facebook-%230077B5.svg?style=flat&logo=facebook&logoColor=white" alt="Facebook"></a>
+            <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/WhatsApp-%23E4405F.svg?&style=flat&logo=whatsapp&logoColor=white&color=success" alt="Whatsapp"></a>
+            <a href="https://goo.gl/maps/Kxbnsz2F217UY6yP6" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Google%20Maps-%231877F2.svg?&style=flat&logo=googlemaps&logoColor=red&color=darkgreen" alt="Google Maps"></a>
+            <!--YT Subscribe Button (https://developers.google.com/youtube/youtube_subscribe_button )-->
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div class="g-ytsubscribe" data-channelid="UClNJOdkuBwPXQcVSjDxUyNw" data-layout="default" data-count="default"></div>
 
-            <h3>About This Page And Event</h3>
-            <p>
-                <!--https://github.com/madushadhanushka/github-readme#social-media-links -->
-                <a href="https://facebook.com/mettiyarama/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Facebook-%230077B5.svg?&style=flat&logo=facebook&logoColor=white" alt="Facebook"></a>
-                &nbsp;
-                <a href="https://api.whatsapp.com/send?phone=%2B60167039390" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/WhatsApp-%23E4405F.svg?&style=flat&logo=whatsapp&logoColor=white&color=success" alt="Whatsapp"></a>
-                &nbsp;
-                <a href="https://goo.gl/maps/Kxbnsz2F217UY6yP6" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Google%20Maps-%231877F2.svg?&style=flat&logo=googlemaps&logoColor=red&color=darkgreen" alt="Google Maps"></a>
-                <!--YT Subscribe Button (https://developers.google.com/youtube/youtube_subscribe_button )-->
-                <script src="https://apis.google.com/js/platform.js"></script>
-                <div class="g-ytsubscribe" data-channelid="UClNJOdkuBwPXQcVSjDxUyNw" data-layout="default" data-count="default"></div>
-            </p>
+            <h3>About This Website</h3>
             <!--Text indentation at paragraph: https://coder-coder.com/how-to-indent-paragraph-text-in-html-css/ -->
-            <p style="text-indent:35px;text-align: justify;">This webpage is created to compile and record the Buddhism talks presented by Bhante from <b>Mettiyarama Centre</b>. It's a Buddhist organisation and medication retreat based in <b>Kota Kinabalu, Sabah</b>.</p>
-            <p style="text-align: justify;">This talk is titled as <b>"The Golden Key of Buddha"</b> or <b>"佛陀的经钥匙系列"</b> in Chinese. It started about one and half of the year ago and is about "the truth of lifestyle" from the Buddha's teachings in which it's based on the most traditional and original knowledges from the <i>suttas.</i></p>
-            <p style="text-align: justify;">The organisation is based on <b>Theravada Buddhism</b>. Hence, the talk teaches about the truth of lifestyle based on Buddha's Teachings from (approx.) 2,500 years ago when The Buddha enlightened and gave numerous teachings to the community until his <i>nibbana</i> (kinda never reincarnated again). </p>
-            <p style="text-align:justify;">In a nutshell, this event is currently recurring and consists of various topics in the Buddha's Teachings, in which <b>to make people create loving-kindness</b> and <b>practice a centric heart</b> in our current life.</p>
+            <p style="text-indent:35px;text-align:justify;margin:0px;">This webpage is created to compile and record Bhante's talks from <b>Mettiyarama Centre</b>. It's a <b>Theravada Buddhism</b>-centred organisation and meditation retreat based in <i>Kota Kinabalu, Sabah</i>.</p>
 
-            <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
-            <p>
-                <div class="tooltip">
-                    Date: <b>every Wednesday <sup>&#8505;</sup></b>
-                    <span class="tooltipText">Every 2nd and 4th Wednesday of the month unless exceptions apply</span>
-                </div><br/>
-                <div class="tooltip">
-                    Time: <b>8:00pm (1 hour) <sup>&#8505;</sup></b>
-                    <span class="tooltipText">Time Zone: GMT+8</span>
-                </div><br/>
-                <div class="tooltip">
-                    Venue: <b>Zoom Meeting & Facebook Live <sup>&#8505;</sup></b>
-                    <span class="tooltipText">Details will be published prior to nearly the start of each event instance.</span>
-                </div><br/>
-            </p>
+            <!--Expandable collapsible for website about (same to nav-right's collapsible with changes)-->
+            <!--Script at bottom-->
+            <div class="expandableCollapsibleContent">
+                <p style="text-align:justify;">From 2022 till April 2023, the organisation hosted an online talk named <b>"The Golden Key of Buddha"</b> or <b>"佛陀的经钥匙系列"</b>. It's about "the truth of our life" based from Buddha's teachings from about 2600 years ago when The Buddha enlightened and gave numerous teachings or <i>Dhamma</i> which passed down until now.</p>
+                <p style="text-align:justify;">Next, starting from 2024, the organisation started a physical talk session event every Sunday fortnightly. The session recording was available on its social media site and are kinda presenting the contents in the aformentioned discontinued event from start.</p>
+                <p style="text-align:justify;">In a nutshell, the Bhante's talk consists various topics according to The Buddha's teachings, in an easy-to-understand manner whereby newbies could know them easily. The talks centers around how to <b>to create loving-kindness</b>, <b>practice a undiscriminated (wholesome) heart</b>, and most importantly, <b>understanding our lives that lead to no reincarnation/<i>nibbana</i></b>.</p>
 
-            <p style="font-size:12px; text-decoration:underline; text-align:right;">Updated on 16 Feb 2023 03:55pm GMT+8</p>
-        <!-- </nav>
-        <nav class="nav-right"> -->
-            <h3 class="collapsible">Videos Wouldn't Be Available After Some Time!</h3>
-            <div class="collapsibleContent">
-                <p style="text-indent:35px;text-align:justify;">Apparently seems like past video recordings in the targeted source's Facebook page <u>would be removed from public view</u> after some time. Hence, you might see a "Video Unavailable" for past embedded recordings. <b>They're not viewable already.</b></p>
+                <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
+                <p>
+                    <div class="tooltip">Date: <b>every fortnight Sunday <sup>&#8505;</sup></b>
+                        <span class="tooltipText">Unless exceptions apply</span>
+                    </div><br/>
+                    <div class="tooltip">Time: <b>morning time (1 hour) <sup>&#8505;</sup></b>
+                        <span class="tooltipText">Time Zone: GMT+8</span>
+                    </div><br/>
+                    <div class="tooltip">Venue: <b>Mettiyarama Centre <sup>&#8505;</sup></b>
+                        <span class="tooltipText">See widgets above for details</span>
+                    </div><br/>
+                </p>
+                <p style="font-size:12px;text-decoration:underline;text-align:right;">Description last updated on 5 Jan 2025 23:12 GMT+11</p>
             </div>
-        <!-- </nav>
-        <nav class="nav-right"> -->
+            <span class="expandableCollapsible">read more</span>
+
+
+            <!--Collapsible https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+            <!--Script at bottom-->
+            <h3 class="collapsible">Limited Viewability Videos</h3>
+            <div class="collapsibleContent">
+                <p style="text-indent:35px;text-align:justify;">Apparently seems like talk session recordings will be unavailable after some time from the targeted source. Hence, there will be "Video Unavailable" displayed for some videos. <b>They're not viewable already.</b></p>
+                <p style="text-align:justify;">I, as this website's creator and maintainer, acknowledge the rights of all talk session recordings are belong to its owner (Mettiyarama Centre). I will also cite any resources as references of how I get the data in the "Citations" section below.</p>
+                <p style="text-align:justify"><mark>Crucial note:</mark> Due to this website does not have any official affiliation and copyright permission granted with the targeted source, however this doesn't mean unauthorised redistribution or local downloads are permitted. Any copyright breaches regarding website user's side are not related to this website. <u>Please only view the contents in this website.</u></p>
+            </div>
+
             <h3 class="collapsible">About Me</h3>
             <div class="collapsibleContent">
                 <p style="text-align:justify;text-indent:35px;">Hello there! I'm hongjchang and this webpage was created myself! since 05 Oct 2022.</p>
                 <p style="text-align:justify;">The purposes of creating this webpage are (1)I was inspired from a project of the data visualisation subject during my university study recently when I was introduced into GitHub Pages and found it interesting to host webpages online without additional money. Besides, (2)I wanted <u>to record past live streams</u> for future rewatches, as well as <u>sharing the talks with others</u> who're also interested and/or finding this.</p>
                 <p style="text-align:justify">Hope you like this page and feel free to share this page with others. Neither sponsorships nor cooperations with any third-parties are affiliated to this webpage.</p>
             </div>
-        <!-- </nav>
-        <nav class="nav-right"> -->
+
             <h3 class="collapsible">Citations and Attributions</h3>
             <div class="collapsibleContent">
-                <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2022). All Google Drive videos (unless stated otherwise) are converted and downloaded via this website. My primary intention is to "persist" these sessions since official ones will be removed from view. I acknowledge the owner of the downloaded belongs to the targeted source (Mettiyarama Centre). I also cite this website as I used it to download the videos from Facebook.</p>
-                <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). All embedded past streams and webpage's favicon are adapted from the targeted source's profile page, unless stated otherwise.</p>
-                <p><a href="https://www.flaticon.com/free-icons/night-mode" target="_blank" rel="noopener noreferrer">Icon Hubs - Flaticon<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2023). Dark Mode Icon.</p>
-                <p>Page theme is adapted from <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>
+                <p><a href="https://fdown.net/index.php" target="_blank" rel="noopener noreferrer">FDOWN.net<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2022). Some of the Google Drive embeddeds (unless stated otherwise) are downloaded via this website. </p>
+                <p><a href="https://www.facebook.com/profile.php?id=100064704306924" target="_blank" rel="noopener noreferrer">Facebook<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> (2025). All embedded session recordings (excluding Google Drive embeds) and website favicon are adapted from here.</p>
+                <p><a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" rel="noopener noreferrer">W3Schools<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>Website theme adaptation.</p>
             </div>
-        <!-- </nav>
-        <nav class="nav-right"> -->
+
             <h3>Tags</h3>
             <p>
                 <a href="https://www.google.com/search?q=bhante%20talks" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23bhante%20talks-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
@@ -432,231 +539,672 @@
                 <a href="https://www.google.com/search?q=buddhist" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhist-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
                 <a href="https://www.google.com/search?q=buddhism" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddhism-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
                 <a href="https://www.google.com/search?q=buddha" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23buddha-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                <a href="https://www.google.com/search?q=meditation%20centre" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23meditation%20centre-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
                 <a href="https://www.google.com/search?q=mettiyarama" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23mettiyarama-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
-                <a href="https://www.google.com/search?q=kota%20kinabalu" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23kota%20kinabalu-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
                 <a href="https://www.google.com/search?q=sabah" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%23sabah-%231877F2.svg?&style=flat&logoColor=white&color=075713"></a>
             </p>
         </nav>
     </section>
 
     <footer>
-        <p>No Copyright &copy; hongjchang &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
+        <p>No Copyright &copy; 2025 hongjchang &#8901; Website not affiliated with Mettiyarama Centre &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
     </footer>
-    </div>
 </body>
 </html>
 
 
-<!----------------All scripts---------------->
-<!----DEV NOTES: Features using LocalStorage: 1.dark mode 2.special text field 3.last scroll position----->
+<!---------------All scripts---------------
+DEV NOTES:
+Features using LocalStorage:
+[COMMENTED] dark mode
+2. last scroll position
+3. special text field note saving (notesIndex & notes# 2 keys)
+4. saved yt embed volume
+5. saved page number for pagination
+-->
 <script>
-    //Script for loading screen & remove scroll after popup msg closed
-    var myVar;
-    function loadingScreen(){ myVar = setTimeout(showPage, 2000); }
-    function showPage(){
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("all-content").style.display = "block";
-        
-        //Remove a css property (https://www.geeksforgeeks.org/how-to-remove-css-property-using-javascript/)
-        document.styleSheets[0].cssRules[1].style.removeProperty('background-color');
-    }
-    //Code below from here: https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
-    function disableScroll() {
-        document.body.classList.add("no-scroll");
-    }
-    function enableScroll() {
-        document.body.classList.remove("no-scroll");
-    }
+//Individual script for saving scroll position https://medium.com/front-end-weekly/boost-user-experience-memorizing-scroll-position-with-javascript-2adfb6ca6c2b
+let savedScrollPosition = localStorage.getItem("savedScrollPosition");
+
+//if saved scroll position exists, scroll to that position
+if(savedScrollPosition !== null){
+    document.documentElement.scrollTop = Number(savedScrollPosition);
+}
+//Saved scroll position when page unloaded
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("savedScrollPosition", document.documentElement.scrollTop);
+});
 </script>
 
 <script>
-    //KNOWN PROBLEM: This feature work as good (but sometimes not). unless redoing the loading screen by removing all-contents div.
-    //Individual script for saving scroll position https://medium.com/front-end-weekly/boost-user-experience-memorizing-scroll-position-with-javascript-2adfb6ca6c2b
-    let savedScrollPosition = localStorage.getItem("savedScrollPosition");
-
-    //if saved scroll position exists, scroll to that position
-    if(savedScrollPosition !== null){
-        document.documentElement.scrollTop = Number(savedScrollPosition);
+//Individual script for Keyboard shortcut https://youtu.be/lNJMDTSkNXo?t=304
+document.addEventListener("keydown", e => {
+    if(e.key.toLowerCase() === 'd' && e.shiftKey){ //dark mode
+        e.preventDefault();
+        darkModeToggle();
     }
-    //Saved scroll position when page unloaded
-    window.addEventListener("beforeunload", () => {
-        localStorage.setItem("savedScrollPosition", document.documentElement.scrollTop);
-    });
+    else if(e.keyCode == 123){
+        //disable F12 (https://stackoverflow.com/a/28575776)
+        //NOTE: dev tools still can be open from chrome's 3 dot menu > 'more tools' > developer tools
+        e.preventDefault();
+        return false;
+    }else if(e.ctrlKey && e.shiftKey && e.keyCode == 73){ //Disable ctrl+shift+I (https://stackoverflow.com/a/28575776)
+        e.preventDefault();
+        return false;
+    }
+});
 </script>
 
 <script>
-    //Script for special text field with LOCAL STORAGE https://youtu.be/k8yJCeuP6I8?t=467
-    var field1 = document.getElementById("field1");
-    var specialTextFieldSubmitBtn = document.getElementById("specialTextFieldSubmitBtn");
-    var specialTextFieldClearBtn = document.getElementById("specialTextFieldClearBtn");
-    var specialTextFieldOutput = document.getElementById("specialTextFieldOutput");
+//Script for loading screen
+disableScroll();
+var randomLoaderAppearance = Math.floor(Math.random()*2); //make loader or loading icon to appear randomly
+//hide loader, discord logo, loading caption first
+if(randomLoaderAppearance == 0){
+    document.querySelector(".loadingIcon").style.display = "none";
+    document.querySelector(".loadingCaptionDiscord").style.display = "none";
+    document.querySelector(".loader").style.display = "inline-block";
+}else if(randomLoaderAppearance == 1){
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".loadingIcon").style.display = "block";
+    document.querySelector(".loadingCaptionDiscord").style.display = "block";
+}
+//Dismiss loading screen some time after page is loaded
+window.onload = function(){
+    setTimeout(() => {
+        document.getElementById("loader-wrapper").style.transition = "1s";
+        document.getElementById("loader-wrapper").style.transform = "translateY(-100%)";
+        setTimeout(function(){ document.getElementById("loader-wrapper").remove(); }, 1000); //delete loader div after some time
+    }, 1500); //1000 = 1 sec
+};
+</script>
 
-    //Hide remove all button if no data
-    if(localStorage.length <= 2){
-        document.getElementById("specialTextFieldTitle2").style.display = "none";
-        specialTextFieldOutput.style.display = "none";
-        specialTextFieldClearBtn.style.display = "none";
-    }
+<script>
+//Script for popup message
+var popupSlidingCloseBtn = document.querySelector('#popupCloseBtn');
+var popupExitBtn = document.querySelector('#popupExitBtn');
+var usernameString = document.getElementById("username");
+var passwordString = document.getElementById("password");
+popupSlidingCloseBtn.addEventListener("click", function(){
+    if(usernameString.value == "pudding" && passwordString.value == "pudding"){
+        document.querySelector('.overlayBox').style.display = 'none';
 
-    specialTextFieldSubmitBtn.onclick = function() {
-        const key1 = "Notes";
-        const value1 = field1.value;
-        
-        if(key1 && value1){
-            //prompt user about data overrwriting before save to local storage
-            if(localStorage.length > 2){
-                if(!confirm("Your old data will be overwritten. Do you wish to continue?")){ return; }
-            }
-            localStorage.setItem(key1, value1);
-            alert("Please refresh page to view updated data.")
-            field1.value = null; //Clear text field after save
-            //location.reload();
+        //=====Remove this if condition only if arrow clicking (in header part) dont work=====
+        if(document.documentElement.scrollTop != 0){ //check if scroll position is at top after popup message is closed
+            enableScroll();
         }
-    };
-    specialTextFieldClearBtn.onclick = function(){
-        if(confirm("Are you sure you want to delete your notes?")){
-            let darkModeValue = localStorage.getItem("darkMode");  //Clear everything except these 2 key value pairs (https://stackoverflow.com/a/27258666)
-            let savedScrollPositionValue = localStorage.getItem("savedScrollPosition");
-            localStorage.clear();
-            localStorage.setItem("darkMode", darkModeValue);
-            localStorage.setItem("savedScrollPosition", savedScrollPositionValue);
-            location.reload();
-        }
-    };
-
-    //display data
-    for(let i=0;i<localStorage.length;i++){
-        const key = localStorage.key(i);
-        const value = localStorage.getItem(key);
-
-        if(key == "savedScrollPosition" || key == "darkMode"){ continue; } //To prevent displaying these 2 data
-
-        specialTextFieldOutput.innerHTML += `${value}<br/>`;
+    }else if(!usernameString.value || !passwordString.value){
+        alert("Username and password are required before this popup could be dismissed.");
+    }else{
+        alert("Invalid username or password entered. Please try again.");
     }
+});
+popupExitBtn.addEventListener("click", function(){
+    if(confirm("You are leaving this page. Confirm?")){
+        window.location.replace("https://time.is/clock");
+    }else{ return false; }
+});
 </script>
 
 <script>
-    //Script for the go to top button
-    let mybutton = document.getElementById("toTopBtn");
-    window.onscroll = function() {
-        if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
-            mybutton.style.display = "block";
-        }else{
-            mybutton.style.display = "none";
-        }
-    };
-    function toTop() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+//Script for return to top button
+let toTopBtn = document.getElementById("toTopBtn");
+//check scroll position on page load to see if button should display or not
+if(document.documentElement.scrollTop > 800){
+    toTopBtn.style.display = "block";
+} else{
+    toTopBtn.style.display = "none";
+}
+//check scroll position when a scroll is detected
+document.onscroll = function() {
+    if(document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
+        toTopBtn.style.display = "block";
+    }else{
+        toTopBtn.style.display = "none";
     }
+};
+//return to top when button is clicked
+function toTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 </script>
 
 <script>
-    //Script for closable banner
-    var btn = document.querySelector('#btn-dismiss');
-    btn.addEventListener("click", function(){
-        var alert = document.querySelector('#fixed-alert');
-        alert.style.display = 'none';
-    });
+//Script for scrolling progress bar
+window.onscroll = function() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("scrollProgressBar").style.width = scrolled + "%";
+};
 </script>
 
 <script>
-    //Script for popup message
-    var btn = document.querySelector('#popupCloseBtn');
-    btn.addEventListener("click", function(){
-        var alert = document.querySelector('.overlayBox');
-        alert.style.display = 'none';
+//Script for dark mode
+checkDarkMode(); //Check dark mode state everytime when page loads
+function darkModeToggle(){ //Provoked when button clicked
+    document.body.classList.toggle("dark");
+
+    //Update darkMode state after toggling
+    if(document.body.classList.contains("dark")){
+        //localStorage.setItem("darkMode", "true");
+        document.querySelector(".apple-switch").checked = true;
+    }else{
+        //localStorage.setItem("darkMode", "false");
+        document.querySelector(".apple-switch").checked = false;
+    }
+}
+function checkDarkMode(){
+    //Checking localStorage to see saved state is dark or light mode
+    /*if(localStorage.getItem("darkMode") == "true"){
+        document.body.classList.add("dark");
+        document.querySelector(".apple-switch").checked = true;
+        return; //Added this to prioritise the program into checking localStorage first before user's device's theme
+    }else if(localStorage.getItem("darkMode") == "false"){
+        document.body.classList.remove("dark");
+        document.querySelector(".apple-switch").checked = false;
+        return; //Added this to prioritise the program into checking localStorage first before user's device's theme
+    }*/
+    //Decide dark mode by checking device's theme (https://stackoverflow.com/a/57795495)
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+        //localStorage.setItem("darkMode", "true");
+        document.body.classList.add("dark");
+        document.querySelector(".apple-switch").checked = true;
+    }else{
+        //localStorage.setItem("darkMode", "false");
+        document.body.classList.remove("dark");
+        document.querySelector(".apple-switch").checked = false;
+    }
+}
+//Keep watching for dark mode changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", event => {
+    if(event.matches){
+        //localStorage.setItem("darkMode", "true");
+        document.body.classList.add("dark");
+        document.querySelector(".apple-switch").checked = true;
+    }else{
+        //localStorage.setItem("darkMode", "false");
+        document.body.classList.remove("dark");
+        document.querySelector(".apple-switch").checked = false;
+    }
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+//Script for image viewer
+$(".imgViewerOk").click(function(){//Show imgViewer
+    $("#imgViewerFull").attr("src", $(this).attr("src"));
+    $('#imgViewer').show();
+    disableScroll();
+});
+$("#imgViewer .imgViewerCloseBtn").click(function(){//Close imgViewer by button
+    $('#imgViewer').hide();
+    enableScroll();
+});
+//Close imgViewer by anywhere in parent area https://stackoverflow.com/a/9183467
+$('#imgViewer').on('click', function(e) {
+    if (e.target !== this){return;} //do nothing if clicked imgViewerModalContent (which is the image area)
+    $('#imgViewer').hide();
+    enableScroll();
+});
+</script><script>
+//disable image drag https://stackoverflow.com/a/7439078
+document.querySelector("img").setAttribute('draggable', false);
+//https://www.w3schools.com/jsref/api_fullscreen.asp
+function imgViewerToFullScreen(){
+    if(document.getElementById("imgViewerFull").requestFullscreen){
+        document.getElementById("imgViewerFull").requestFullscreen();
+    }else if(document.getElementById("imgViewerFull").webkitRequestFullScreen){ //for safari
+        document.getElementById("imgViewerFull").webkitRequestFullScreen();
+    }
+}
+</script>
+
+<script>
+//Script for closable banner
+var btn = document.querySelector('#closableBannerBtn');
+btn.addEventListener("click", function(){
+    var alert = document.querySelector('#fixed-alert');
+    alert.style.display = 'none';
+});
+</script>
+
+<script>
+//Script for auto scroll down from header part when clicking down arrow
+//=====Disabled scroll when at top & need to click the arrow=====
+var downArrowClick = document.querySelector("header").lastElementChild.querySelector("hr").nextElementSibling;
+//Scroll down when clicked
+downArrowClick.addEventListener("click", function(){
+    document.documentElement.scrollTo(0, 700);
+    enableScroll(); //Added this since disabled scroll at top (script at bottom)
+});
+
+//Individual script for disabling scroll when at top & need to click arrow to scroll down
+//=====Remove this if arrow clicking (in header part) dont work=====
+document.addEventListener("scroll", function(){
+    if(document.documentElement.scrollTop == 0){
+        disableScroll();
+    }else if(document.querySelector('.overlayBox').style.display != 'none'){
+        disableScroll();
+    }else{
         enableScroll();
-    });
-</script>
-
-<script>
-    //Script for progress bar
-    window.onscroll = function() {progressFunction()};
-    function progressFunction() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("scrollProgressBar").style.width = scrolled + "%";
     }
+});
 </script>
 
 <script>
-    //Script for dark mode
-    checkDarkMode(); //Check dark mode state everytime when page loads (uses session storage instead of local storage since don't want mix up special text field part with this)
-    function darkModeToggle(){ //Provoked when button clicked
-        document.body.classList.toggle("dark");
+//Script for show/hide nav sidebar button
+//Only show the showNav button after scroll past header part
+document.addEventListener("scroll", function(){
+    if(document.documentElement.scrollTop < 400){
+        document.querySelector(".showNav").style.display = "none";
+    }else{
+        document.querySelector(".showNav").style.removeProperty("display");
+    }
+});
 
-        //Update darkMode state after toggling
-        if(document.body.classList.contains("dark")){
-            localStorage.setItem("darkMode", "true");
+//When clicking showNav button
+document.querySelector(".showNav").addEventListener("click", function(){
+    if(document.querySelector(".nav-left").style.display != "none" && document.querySelector(".nav-right").style.display != "none"){
+        //hide sidebar
+        document.querySelector(".nav-left").style.display = "none";
+        document.querySelector(".nav-right").style.display = "none";
+        document.querySelector("article").style.width = "100%";
+    }else{
+        //show sidebar
+        document.querySelector(".nav-left").style.removeProperty("display");
+        document.querySelector(".nav-right").style.removeProperty("display");
+        //check current screen size to prevent article element not fitting edge to edge when in screen size < 1100px
+        if(window.innerWidth <= 1100){
+            document.querySelector("article").style.width = "100%";
         }else{
-            localStorage.setItem("darkMode", "false");
+            document.querySelector("article").style.width = "70%";
         }
     }
-    function checkDarkMode(){
-        if(localStorage.getItem("darkMode") == "true"){
-            document.body.classList.add("dark");
+});
+</script>
+
+<script>
+//Script for copy URL button
+function copyUrl(){
+    navigator.clipboard.writeText(window.location.href);
+
+    var copyUrlBtn = document.getElementById("copyUrlBtn");
+    copyUrlBtn.innerHTML = "&check; URL copied!";
+}
+function mouseOut(){
+    var copyUrlBtn = document.getElementById("copyUrlBtn");
+    copyUrlBtn.innerHTML = `<span class="material-symbols-outlined" style="font-size:14px;">link</span> Copy Link`;
+}
+</script>
+<script>
+//Script for default share options button
+const shareData = {title: "Mettiyarama Bhante's Talk", text: "Archive website that compiles all past Mettiyarama Bhante's talks.", url: "https://hongjchang.github.io/Mettiyarama-Talk",};
+const shareBtn = document.getElementById("shareBtn");
+shareBtn.addEventListener("click", async () => {
+    try{
+        await navigator.share(shareData);
+        console.log("Share page success!");
+    }catch (err){
+        console.log("Error to share page: ${err}");
+    }
+});
+</script>
+
+<script>
+//Script for pagination (including sectioning pages)
+//Array to store each page's nav-left content list (number of elements = total pages)
+var navLeftContent = [
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session30').scrollIntoView();">15 Dec 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session29').scrollIntoView();">1 Dec 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session28').scrollIntoView();">17 Nov 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session27').scrollIntoView();">3 Nov 2024</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session26').scrollIntoView();">6 Oct 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session25').scrollIntoView();">1 Sept 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session24').scrollIntoView();">25 Aug 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session23').scrollIntoView();">17 Aug 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session22').scrollIntoView();">4 Aug 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session21').scrollIntoView();">21 July 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session20').scrollIntoView();">7 July 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session19').scrollIntoView();">22 May 2024</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session18').scrollIntoView();">19 May 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session17').scrollIntoView();">12 May 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session16').scrollIntoView();">5 May 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session15').scrollIntoView();">21 Apr 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session14').scrollIntoView();">7 Apr 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session13').scrollIntoView();">26 Apr 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session12').scrollIntoView();">12 Apr 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session11').scrollIntoView();">8 Mar 2023</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session10').scrollIntoView();">22 Feb 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session9').scrollIntoView();">8 Feb 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session8').scrollIntoView();">11 Jan 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session7').scrollIntoView();">21 Dec 2022</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session6').scrollIntoView();">07 Dec 2022</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session5').scrollIntoView();">03 Dec 2022</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session4').scrollIntoView();">19 Oct 2022</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session3').scrollIntoView();">05 Oct 2022</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session2').scrollIntoView();">Miscellaneous Embed</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session1').scrollIntoView();">Comics</a></li>`];
+
+//When page 1st load, show only pg1 and hide others
+for(let i=1; i<=5; i++){ //i = number of pages include last page = number of files in `data` folder + 1
+    if(localStorage.getItem("paginationPageID") == -1){//Show last content page if saved page number = -1
+        document.getElementById("contentPageLast").style.display = "block";
+        document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
+        document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[navLeftContent.length-1];
+    }else if(i == Number(localStorage.getItem("paginationPageID"))){ //if i = saved page number
+        //document.getElementById("contentPage"+i).style.display = "block";
+        //Display the selected section page by including respective html file
+        document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-"+i+".html");
+        includeHTML();
+        document.querySelector(".pagination").children[i].classList.add("activePage");
+        document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[i-1];
+    }else if(Number(localStorage.getItem("paginationPageID")) == null/*i == 1*/){ //if no page number is saved
+        //document.getElementById("contentPage"+i).style.display = "block"; //show pg1 only
+        //Display the selected section page by including respective html file
+        document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-1.html");
+        includeHTML();
+        document.querySelector(".pagination").children[i].classList.add("activePage"); //add activePage class to pg1
+        document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[0];
+    }else{ //not selected page
+        //document.getElementById("contentPage"+i).style.display = "none";
+        document.querySelector(".pagination").children[i].classList.remove("activePage");
+        
+        //To hide last page if not to display it
+        document.getElementById("contentPageLast").style.display = "none";
+        document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.remove("activePage");
+    }
+}
+
+//Function for when user clicks on a pagination page button and go to the clicked page
+//When a pagination button is clicked, hide all other pages and only show the required page. Also change selected page in pagination (i.e. the 'activePage' class)
+function goToSect(sectionID){
+    //Loop to show required page, and hide all other pages
+    for(let i=1; i<=5; i++){ //i = number of pages include last page = number of files in `data` folder + 1
+        if(i == sectionID && sectionID == 5){//Show last content page if saved page number = -1
+            document.getElementById("contentPage").innerHTML = null; //Clear content of contentPage div
+            document.getElementById("contentPageLast").style.display = "block";
+            document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
+            document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[navLeftContent.length-1];
+            localStorage.setItem("paginationPageID", -1); //Save currently showing page to localStorage
+        }else if(i == sectionID && sectionID != 5){
+            //document.getElementById("contentPage"+i).style.display = "block";//Display the selected section page
+            //Display the selected section page by including respective html file
+            document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-"+i+".html");
+            includeHTML();
+            
+            document.querySelector(".pagination").children[i].classList.add("activePage");
+            document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[i-1]; //assign the specific page's nav-left content
+            localStorage.setItem("paginationPageID", i); //Save currently showing page to localStorage
         }else{
-            document.body.classList.remove("dark");
+            //document.getElementById("contentPage"+i).style.display = "none";
+            document.querySelector(".pagination").children[i].classList.remove("activePage");
+
+            //To hide last page if not to display it
+            document.getElementById("contentPageLast").style.display = "none";
+            document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.remove("activePage");
         }
     }
-</script>
+}
 
-<script>
-    //Individual script for Keyboard shortcut https://youtu.be/lNJMDTSkNXo?t=304
-    document.addEventListener("keydown", e => {
-        if(e.key.toLowerCase() === 'l' && e.shiftKey){ //dark mode
-            e.preventDefault();
-            darkModeToggle();
+//Function for including html file into here
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  //Loop through a collection of all HTML elements:
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    //search for elements with a certain atrribute:
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      //Make an HTTP request using the attribute value as the file name
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "<blockquote>Page not found.</blockquote>";}
+          //Remove the attribute, and call this function once more
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
         }
-    });
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;//Exit the function:
+    }
+  }
+}
 </script>
 
 <script>
-    //Expand collapse for right nav (https://www.w3schools.com/howto/howto_js_collapsible.asp)
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+//Script for YT embed video
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var ytPlayer;
+function onYouTubeIframeAPIReady(){
+    ytPlayer = new YT.Player("ytPlayer", {
+        events: { 'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange, 'onError': onError }
+    });
+}
+//-------code below is together with slider (not related to YT embed)------
+//Go back 1st video button
+document.getElementById("YTEmbedResetBtn").onclick = function(){
+    //Enable back next button and revert disabling reset button
+    document.getElementById("YTEmbedNextBtn").disabled = false;
+    document.getElementById("YTEmbedResetBtn").disabled = true;
+    //ytPlayer.setShuffle(true); //Reshuffle playlist when repeat from start since the embedded playlist has 200 videos cap
+    ytPlayer.playVideoAt(0);
+    ytPlayer.stopVideo();
+}
+//Skip next video button
+document.getElementById("YTEmbedNextBtn").onclick = function(){
+    ytPlayer.nextVideo();
+    ytPlayer.stopVideo();
+};
+//set embed video volume everytime when slider changes
+document.getElementById("YTEmbedSlider").oninput = function(){
+    ytPlayer.setVolume(this.value);
+    //save volume to local storage
+    localStorage.setItem("savedEmbedVol", document.getElementById("YTEmbedSlider").value);
+};
+//shuffle playlist button
+document.getElementById("YTEmbedShuffleBtn").onclick = function(){
+    ytPlayer.setShuffle(true); //Ref:https://developers.google.com/youtube/iframe_api_reference#setShuffle
+};
+//get volume from local storage
+var savedEmbedVol = localStorage.getItem("savedEmbedVol");
+if(savedEmbedVol !== null){
+    document.getElementById("YTEmbedSlider").value = Number(savedEmbedVol);
+    ytPlayer.setVolume(Number(savedEmbedVol));
+}
+//--------code until here--------
+function onPlayerReady(event){
+    //set volume based on local storage saved volume when player is loaded, else set default volume
+    if(savedEmbedVol !== null){
+        event.target.setVolume(Number(savedEmbedVol));
+    }else{
+        event.target.setVolume(35);
+    }
+    event.target.playVideoAt(0); //Initiate video playing (player state = 1) starting from 1st video of the list
+}
+function onPlayerStateChange(event){
+    //if current playing = last video in playlist, disable next button, enable reset button
+    if(event.target.getPlaylistIndex() == event.target.getPlaylist().length - 1){
+        document.getElementById("YTEmbedNextBtn").disabled = true; //https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+        document.getElementById("YTEmbedResetBtn").disabled = false;
+    }else{
+        document.getElementById("YTEmbedResetBtn").disabled = true;
+    }
 
-    for (i = 0; i < coll.length; i++) {
+    if(event.data == YT.PlayerState.PLAYING){
+        //track video current timestamp
+        /************
+         * KNOWN ISSUE:
+         * when clicking next video button, and next video got error to play, the displayed message is replaced by timestamp message instead of error code message.
+         * Reason might be: current video >> next video >> execute onplayerstatechange() >> player state = playing >> interval below started >> video can't play >> execute onerror()
+         * So below interval still runs and replaced the message.
+        ************/
+        document.getElementById("YTEmbedCurrentTime").style.visibility = "visible";
+        var trackCurrentTimeInterval = setInterval(function(){
+            //Calculation from seconds into minutes:seconds format
+            var currentSecs = Math.floor(event.target.getCurrentTime());
+            var currentMinutes = Math.floor(currentSecs / 60);
+            var currentSeconds = currentSecs % 60;
+            //Display current timestamp
+            document.getElementById("YTEmbedCurrentTime").innerHTML = "Current timestamp: " + currentMinutes + ":" + currentSeconds;
+        }, 0); //delay 1000 = 1 sec
+    }else if(event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED){
+        //clear timestamp tracking interval & span text content
+        document.getElementById("YTEmbedCurrentTime").innerHTML = "";
+        document.getElementById("YTEmbedCurrentTime").style.visibility = "hidden";
+        clearInterval(trackCurrentTimeInterval);
+    }
+}
+function onError(event){
+    //Display error code if video cannot play
+    document.getElementById("YTEmbedCurrentTime").style.visibility = "visible"; //make sure error code message is visible
+    document.getElementById("YTEmbedCurrentTime").innerHTML = "Playback failed with error: (<a href='https://developers.google.com/youtube/iframe_api_reference#onError' target='_blank' rel='noopener noreferrer'>" + event.data + "<span class='material-symbols-outlined' style='font-size:10px;vertical-align:super;'>open_in_new</span></a>)";
+
+    //if current playing = last video in playlist, enable reset button
+    if(ytPlayer.getPlaylistIndex() == ytPlayer.getPlaylist().length - 1){
+        document.getElementById("YTEmbedNextBtn").disabled = true;
+        document.getElementById("YTEmbedResetBtn").disabled = false; //https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+        return;
+    }
+
+    //disable next button
+    document.getElementById("YTEmbedNextBtn").disabled = true;
+    //auto next video if video can't play after some seconds of delay
+    setTimeout(function() {
+        document.getElementById("YTEmbedCurrentTime").innerHTML = "";
+        document.getElementById("YTEmbedCurrentTime").style.visibility = "hidden"; //hide the error code message
+        event.target.nextVideo();
+        event.target.pauseVideo();
+        //enable back next button in case next video can be played normally
+        document.getElementById("YTEmbedNextBtn").disabled = false;
+    }, 3000);
+}
+</script>
+    
+<script>
+//Script for special text field with LOCAL STORAGE https://youtu.be/k8yJCeuP6I8?t=467
+var field1 = document.getElementById("field1");
+var specialTextFieldSubmitBtn = document.getElementById("specialTextFieldSubmitBtn");
+var specialTextFieldClearBtn = document.getElementById("specialTextFieldClearBtn");
+var specialTextFieldOutput = document.getElementById("specialTextFieldOutput");
+
+//Hide remove all button if no data
+//if(localStorage.length <= 3){
+if(localStorage.getItem("notesIndex") == null || localStorage.getItem("notesIndex") == 0){
+    document.getElementById("specialTextFieldTitle2").style.display = "none";
+    specialTextFieldOutput.style.display = "none";
+    specialTextFieldClearBtn.style.display = "none";
+}
+
+//Disable text field & submit button if there is note saved already
+if(localStorage.getItem("notesIndex") == 50){
+    field1.disabled = true;
+    specialTextFieldSubmitBtn.disabled = true;
+    field1.style.cursor = "not-allowed";
+    specialTextFieldSubmitBtn.style.cursor = "not-allowed";
+    field1.nextElementSibling.innerHTML = "Max 50 saved notes reached. Delete some to add more.";
+    field1.nextElementSibling.style.color = "red";
+}else{
+    field1.disabled = false;
+    specialTextFieldSubmitBtn.disabled = false;
+    field1.style.removeProperty("cursor");
+    specialTextFieldSubmitBtn.style.removeProperty("cursor");
+    field1.nextElementSibling.innerHTML = "Write Your Notes Here";
+    field1.nextElementSibling.style.color = "#333";
+}
+
+var index = 0; //to count saved notes elements
+//Check if saved notes index is exist in localstorage. If yes, get its value
+if(localStorage.getItem("notesIndex") != null){
+    index = Number(localStorage.getItem("notesIndex"));
+}
+
+specialTextFieldSubmitBtn.onclick = function() {
+    const key1 = "notes";
+    const value1 = field1.value;
+    
+    if(key1 && value1){
+        //prompt user about data overwriting before save to local storage
+        /*if(localStorage.getItem(key1) != null){ //if(localStorage.length > 3){
+            if(!confirm("Your old data will be overwritten. Do you wish to continue?")){ return; }
+        }*/
+        localStorage.setItem("notesIndex", index+1); //set/update saved notes' index
+        localStorage.setItem(key1+index, value1);
+        index += 1; //increment by 1 since this whole script ONLY EXECUTE 1 TIME, so index var won't update while localstorage's updated when each note is saved
+        alert("Please refresh page to view updated data.")
+        field1.value = null; //Clear text field after save
+
+        if(index == 50){ location.reload(); } //Reload page when reached 50 saved notes (since 50 is maximum)
+    }
+};
+specialTextFieldClearBtn.onclick = function(){
+    if(confirm("Are you sure you want to delete your MOST RECENT note?")){
+        localStorage.removeItem("notes"+(index-1));
+        localStorage.setItem("notesIndex", index-1);
+
+        if(index == 1){ localStorage.removeItem("notesIndex"); } //Remove notesIndex key from localstorage if current to-be-deleted note is last 1
+
+        location.reload();
+    }
+};
+
+//display data (below code supports displaying "array" of saved notes instead of 1 note)
+var currNotesIndex = 0; //New variable for tracking each saved note element
+let savedNotesDict = {}; //New dictionary to store saved notes for sorting before displaying out
+for(let i=0;i<localStorage.length;i++){
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+
+    if(!key.includes("notes") || key == "notesIndex"/* key != "notes" */){ //To prevent displaying data other than saved notes
+        continue;
+    }else{ //if current element is a saved note
+        savedNotesDict[key] = value; //store it into a dictionary for ascending order sort
+        currNotesIndex += 1; //increment notesIndex (in this for loop only, not applying to other parts) to get each saved notes' index
+    }
+    //specialTextFieldOutput.innerHTML += `${value}<br/>`;
+}
+//Display sorted saved notes that is stored in the dictionary
+for(let i=0;i<Object.keys(savedNotesDict).length;i++){
+    specialTextFieldOutput.innerHTML += `${savedNotesDict["notes"+i]}<p style="font-size:7px;margin:0;padding:0;"><br/></p>`;
+}
+</script>
+
+<script>
+//Script for expandable collapsible in website about (same with right-nav's collapsible with changes)
+document.querySelector(".expandableCollapsible").addEventListener("click", function() {
+    var content = document.querySelector(".expandableCollapsibleContent");
+    if(content.style.maxHeight){ //collapse collapsible
+        content.style.maxHeight = null;
+        document.querySelector(".expandableCollapsible").innerHTML = "more details";
+        document.querySelector(".nav-right").scrollIntoView(); //Scroll back to top of this collapsible
+    } else { //expand collapsible
+        content.style.maxHeight = content.scrollHeight + "px";
+        document.querySelector(".expandableCollapsible").innerHTML = "show less";
+    }
+});
+</script>
+
+<script>
+//Script for collapsible in right nav
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-        this.classList.toggle("activeCollap");
+        this.classList.toggle("active");
         var content = this.nextElementSibling;
         if (content.style.maxHeight) {
-        content.style.maxHeight = null;
+            content.style.maxHeight = null;
         } else {
-        content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = content.scrollHeight + "px";
         }
     });
-    }
+}
 </script>
-
-<script>
-    //Script for share page button (copy URL feature)
-    function copyUrl(){
-        navigator.clipboard.writeText(window.location.href);
-
-        var copyUrlBtn = document.getElementById("copyUrlBtn");
-        copyUrlBtn.innerHTML = "&check; URL copied!";
-    }
-    function mouseOut(){
-        var copyUrlBtn = document.getElementById("copyUrlBtn");
-        copyUrlBtn.innerHTML = `<span class="material-symbols-outlined" style="font-size:14px;">link</span> Copy Link`;
-    }
-</script>
-
-<script>
-    //Script for default share options button https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share#examples
-    const shareData = {title: "Wed-Bhante-Talk", text: "Bhante talk", url: "https://hongjchang.github.io/Mettiyarama-Talk",};
-    const shareBtn = document.getElementById("shareBtn");
-    shareBtn.addEventListener("click", async () => {
-        try{
-            await navigator.share(shareData);
-            console.log("Share page success!");
-        }catch (err){
-            console.log("Error to share page: ${err}");
-        }
-    });
-</script>
-<!----------All scripts until here----------->

@@ -1,120 +1,118 @@
-/*========Animated Scroll========*/
-html{
+/*DEFAULT COLOUR: rgb(7, 87, 19)
+TOTAL FONTS USED: Georgia, product sans, ubuntu*/
+/*========Uncategorised========*/
+* {
+	box-sizing: border-box;
+}
+html{/*Animated Scroll*/
 	scroll-behavior: smooth;
 }
-
-/*========Uncategorised========*/
 body{
-	/* background-color: rgba(157, 242, 170, 0.45); */
-	background-image: linear-gradient(#eef5ef,#d0f2d5,#72e182);
+	background-image: linear-gradient(#e7f3e4,#addbad, #54d256);
 	font-family: 'Ubuntu', sans-serif;
-	margin-top: 0%;
-	margin-left: 0%;
-	margin-right: 0%;
-	margin-bottom: 0%;
-	background-color: rgb(7, 87, 19);
 	transition: 1s;
 	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
-
-section hr{
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 30px;
-	height:3px;
-	border-radius: 17px;
-	background: rgb(7,87,19);
+iframe{
 	border: none;
 }
-
-iframe{
-	border:none;
-}
-
-/*Disable Scrolling (index.html line 132)*/
-.no-scroll{
+.no-scroll{/*Disable Scrolling*/
 	height: 100%;
 	overflow: hidden;
 }
 
-.sortBy{
-	position: sticky;
-	bottom: 7px;
-	font-size: 13px;
-	font-family: 'Ubuntu';
-	color: black;
-	border: none;
-	cursor: default;
-	padding:7px;
+/*========Google font style========*/
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+h3 {
+	font-family: 'Product Sans', sans-serif;
+	font-weight: 500;
+	font-size: 22px;
+	margin: 20px 0 15px 0; /*top-right-bottom-left*/
 }
-
-.copyUrlBtn, #shareBtn{ 
-	font-family: 'Ubuntu', sans-serif;
-	border-radius: 20px;
-	cursor: pointer;
-	border: none;
-	padding: 10px;
-	margin: 5px;
+h3:hover{ color: rgb(7,87,19); }
+blockquote{
+	font-family: 'Product Sans Light';
+	font-size: 14px;
+	border: 2px solid silver;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 5px;
+	width: fit-content;
+}
+code {
 	font-size: 15px;
-	background-color: #eef5ef;
-	box-shadow: 2.5px 2px 10px rgb(3, 32, 7); /*inset offsetX offsetY blurradius spreadradius colour*/
-	transition: .4s;
- }
- .copyUrlBtn:hover, #shareBtn:hover{
-	background-color: rgb(7,87,19);
-	box-shadow: none;
-	color: white;
- }
+	font-family: 'Product Sans', sans-serif;
+	margin: 10px 0px 10px 0px; /*top-right-bottom-left*/
+}
+@media only screen and (max-width:800px){
+	section h3{ font-size: 20px; }
+	code { font-size: 12px; }
+	article blockquote { font-size: 11px; }
+}
 
-/*========Dark Mode========*/
-/*
+/*========Hyperlinks========*/
+* a:link {
+	text-decoration: none;
+	color: rgb(20, 144, 39);
+}
+* a:visited{
+	color: rgb(37, 137, 231);
+}
+* a:hover{
+	color: rgb(125, 63, 27);
+	text-decoration: underline;
+}
+
+/*========Dark Mode========
 Background: rgb(5,52,12)
-Text:rgb(146, 197, 154)
-*/
+Text:rgb(146, 197, 154) */
 body.dark{
-	background-color: rgb(7,87,19);
 	color: #dedede;
-	background-image: linear-gradient(#27472b,#0f2912);
+	background: #0b2b0f;
 }
-body.dark ::selection{
-	background-color:rgb(7,87,19);
+body.dark h3:hover{ color: rgb(146, 197, 154); }
+body.dark a:link{ color: rgb(25, 202, 52); }
+body.dark a:hover{ color: rgb(220, 150, 110); }
+body.dark ::selection{ background-color:rgb(7,87,19); }
+body.dark::-webkit-scrollbar-track { background: #272227; }
+body.dark::-webkit-scrollbar-thumb {
+    background: #777;
+    border: 3.3px solid #272227;
 }
-body.dark .sortBy{
-	color:#dedede;
-	background-color: black;
+body.dark::-webkit-scrollbar-thumb:hover {
+    background: #999;
+    border: 3.3px solid #272227;
 }
-body.dark section hr{
-	background: #dedede;
+body.dark::-webkit-scrollbar-thumb:active {
+    background: #bbb;
+    border: 3.3px solid #272227;
 }
-body.dark #darkModeBtn {
-	background-color: #878787;
+/*Custom scrollbar same with above's due to bug for popup message and table-row-div's scrollbar colour in dark mode*/
+body.dark ::-webkit-scrollbar-track {
+	background: #272227;
 }
-body.dark #darkModeBtn:hover {
-	background-color: #aaa;
+body.dark ::-webkit-scrollbar-thumb {
+    background: #777;
+    border: 3.3px solid #272227;
 }
-body.dark #darkModeBtn:active {
-	background-color: #ddd;
+body.dark ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+    border: 3.3px solid #272227;
 }
-body.dark #toTopBtn{
-	background-color: #878787;
+body.dark ::-webkit-scrollbar-thumb:active {
+    background: #bbb;
+    border: 3.3px solid #272227;
 }
-body.dark #toTopBtn:hover{
-	background-color: #aaa;
-}
-body.dark #toTopBtn:active{
-	background-color: #ddd;
-}
-body.dark article blockquote{
-	border: 2px solid #aaa;
-}
+/*Copied things until here*/
 body.dark .popup{
-	background: black;
-	border: 4px solid #878787;
+	background: #242424;
+	border: 4px solid #bbb;
 }
-body.dark .popup h2{
-	color: rgb(146, 197, 154);
-}
-body.dark .popup .closeBtn{
+body.dark .popup h2{ color: rgb(146, 197, 154); }
+body.dark .popup .popup-content{ color:rgb(146, 197, 154); }
+/* body.dark .popup .closeBtn{
 	color: rgb(146, 197, 154);
 	background-color: black;
 }
@@ -127,415 +125,254 @@ body.dark .popup .closeBtn:active {
 	color: #047533;
 	background-color: #d0f3d5;
 	box-shadow: -2px -2px rgb(92, 92, 92);
+} */
+body.dark .swipe-to-close-btn{ background: #242424;color: rgb(146, 197, 154); }
+body.dark .swipe-to-close-btn:hover{ color:#047533;background-color: #aaa; }
+body.dark .swipe-to-close-btn:active{ background-color: #d0f3d5; }
+body.dark .popup .exitBtn{
+	color: #eee;
+	background-color: #242424;
 }
-body.dark .popup .popup-content{
-	color:rgb(146, 197, 154);
+body.dark .popup .exitBtn:hover {
+	color: #d80606;
+	background-color: #aaa;
+	box-shadow: 2px 3px rgba(183, 183, 183, 0.5);
 }
-body.dark header{
-	background-color: rgb(5, 60, 13);
+body.dark .popup .exitBtn:active {
+	color: #940606;
+	background-color: #e1baba;
+	box-shadow: -2px -2px rgba(92, 92, 92, 0.5);
 }
-body.dark nav{
-	background:#222;
+body.dark .tabContainer label{
+	color: #878787;
+	background: #1f1f1f;
 }
-body.dark .nav-right{
-	background: #222;
+body.dark .tabContainer label:hover{
+    background: #333;
+    color: #fff;
 }
-body.dark .nav-left h3:hover{ color: rgb(146, 197, 154); }
-body.dark .nav-right h3:hover{ color: rgb(146, 197, 154); }
-body.dark article{
-	background-color: black;
+body.dark .tabContainer .tab, body.dark .tabContainer input[type="radio"]:checked + label{
+	background: #333;
+	color: #fff;
 }
-body.dark footer{
-	background-color: rgb(5, 60, 13);
+body.dark .popup-text-field-container{
+	background-color: #333;
+	box-shadow: 1.5px 5px 15px #9a9a9a;
 }
+body.dark .popup-text-field-container .popup-text-field-inputbox span{color: #fff;}
+body.dark #toTopBtn{ background-color: #878787; }
+body.dark #toTopBtn:hover{ background-color: #aaa; }
+body.dark #toTopBtn:active{ background-color: #ddd; }
+/* body.dark #darkModeBtn { background-color: #878787; }
+body.dark #darkModeBtn:hover { background-color: #aaa; }
+body.dark #darkModeBtn:active { background-color: #ddd; } */
 body.dark #fixed-alert{
 	background-color: rgb(11, 65, 88);
 	color: #aaa;
 }
-body.dark a:hover{
-	color: rgb(216, 182, 160);
+body.dark .showNav{ background-color: #bbb; }
+body.dark .showNav:hover {background-color:#999;}
+body.dark .showNav:active {background-color: #878787;}
+body.dark header{ background-color: rgb(5, 60, 13); }
+body.dark section hr{ background: #dedede; }
+body.dark nav{ background:rgba(34, 34, 34, 0.75); }
+body.dark article{ background-color: #282828; }
+body.dark footer{ background-image: linear-gradient(to right, rgb(5, 60, 13),rgb(7,87,19),rgb(7, 87, 19),rgb(5, 60, 13)); }
+body.dark .copyUrlBtn, body.dark #shareBtn{ background-color: #686868; color: white; }
+body.dark .copyUrlBtn:hover, body.dark #shareBtn:hover{
+	background-color: rgb(7,87,19);
+	color: white;
+	box-shadow: inset 1px 1px 13px rgb(114, 114, 114);
 }
+body.dark .table-row-div{ background-color: #383838; }
+body.dark #YTEmbedSlider::-webkit-slider-thumb{ background:rgb(12, 161, 35); }
+body.dark .pagination a{ color: white; }
+body.dark .pagination a.activePage{ background-color: rgb(5, 60, 13); }
+body.dark .pagination a:hover:not(.activePage) { background-color: #333; }
+body.dark .big-container{background-color: #383838;}
+body.dark .big-container .text-field-inputbox span{ color: #fff; }
+body.dark #specialTextFieldSubmitBtn, body.dark #specialTextFieldClearBtn{
+    color: #000;
+    background-color: #fff;
+}
+body.dark #specialTextFieldSubmitBtn:hover{
+	background: #000;
+	color: #fff;
+    box-shadow: 0 5px 15px rgba(224, 224, 224, 0.4);
+}
+body.dark #specialTextFieldSubmitBtn:active{
+    box-shadow: none;
+}
+body.dark #specialTextFieldClearBtn:hover{
+	background: #ff0000;
+	color: #fff;
+    box-shadow: 0 5px 15px rgb(109, 109, 109);
+}
+body.dark #specialTextFieldClearBtn:active{
+	background: #b00000;
+    box-shadow: none;
+}
+body.dark .bgEffectToggle{
+	color: #fff;
+}
+body.dark .bgEffectToggle:hover { background-color: #666; }
+body.dark .expandableCollapsible:hover{ color: rgb(146, 197, 154); }
 body.dark .tooltip .tooltipText {
 	background-color: #dedede;
 	color: black;
 }
-body.dark .tabContainer label{
-	color: #ccc;
-	background: #222;
-}
-body.dark .tabContainer .tab, body.dark .tabContainer input[type="radio"]:checked + label{
-	background: #333;
-}
-body.dark .activeCollap, body.dark .collapsible:hover {
-	color: rgb(146, 197, 154);
-}
-body.dark .pagination a{
-	color: white;
-}
-body.dark .pagination a.activePage{
-	background-color: rgb(5, 60, 13);
-}
-body.dark .pagination a:hover:not(.activePage) { background-color: #333; }
-body.dark .en{ color: white; }
-body.dark .chi { color: white; }
-body.dark .big-container{background-color: #111;}
-body.dark .text-field-container{background-color: #222;}
-body.dark .text-field-container .text-field-inputbox span{color: #fff;}
-body.dark .swipe-to-close-btn{ background: #242424;color: rgb(146, 197, 154); }
-body.dark .swipe-to-close-btn:hover{ color:#047533;background-color: #aaa; }
-body.dark .swipe-to-close-btn:active{ background-color: #d0f3d5; }
-body.dark .copyUrlBtn, body.dark #shareBtn{ background-color: #686868; color: white; transition: .4s; }
-body.dark .copyUrlBtn:hover, body.dark #shareBtn:hover{
-	background-color: rgb(7,87,19);
-	color: white;
-	box-shadow: inset 2px -2px 5px rgb(3, 32, 7); /*inset offsetX offsetY blurradius spreadradius colour*/
-}
-/*=======Dark Mode Button========*/
-#darkModeBtn {
-	border: none;
-	outline: none;
-	cursor: pointer;
-	/* bottom: 120px;
-	right: 35px;
-	border-radius: 50px;
-	padding-top: 13px;
-	padding-bottom: 10px;
-	padding-left: 15px;
-	padding-right: 15px; */
-	bottom: 0px; left: 0px; padding: 3px;
-	position: fixed;
-	z-index: 4;
-	transition: .4s;
-}
-#darkModeBtn:hover {
-	background-color: #bbb;
-}
-#darkModeBtn:active {
-	background-color: #aaa;
-}
+body.dark .active, body.dark .collapsible:hover { color: rgb(146, 197, 154); }
 
-/*========Apple Switch & Language Changer========*/
-input.apple-switch{ /*Inactive look*/
-	bottom: 120px;
-	right: 50px;
+/*========Background effect========*/
+.bgEffectCircle{
 	position: fixed;
-	z-index: 2;
-	appearance: none;
-	outline: none;
-	width: 50px;
-	height: 30px;
-	background-color: white;
-	border: 1px solid #D9DADC;
-	border-radius: 50px;
-	box-shadow: inset -20px 0 0 0 white;
-	transition-duration: 0.3s;
-}
-input.apple-switch:after{ /*switch circle*/
-	content: "";
-	position: absolute;
-	top: 1px;
-	left: 1px;
-	width: 26px;
-	height: 26px;
-	background-color: transparent;
+	z-index: -1;
+	bottom: 0;
+	width: 20px;
+	aspect-ratio: 1/1;
+	background: #e5a2e0;
+	box-shadow: 0 0 10px #e5a2e0,
+				0 0 20px #e5a2e0,
+				0 0 30px #e5a2e0,
+				0 0 50px #e5a2e0;
 	border-radius: 50%;
-	box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+	animation: bgEffectCircleAnimate 5s linear forwards;
 }
-input.apple-switch:checked{
-	border-color: rgb(7, 87, 19);
-	box-shadow: inset 20px 0 0 0 rgb(7, 87, 19);
+@keyframes bgEffectCircleAnimate{
+	0%{ /*transform: translateY(-100vh);*/ transform: translate(100vh, -100vh); opacity: 1; }
+	50%{ opacity: 1; }
+	75%{ opacity: 0.7; }
+	100%{ /*transform: translateY(0);*/ transform: translate(0, 0); opacity: 0; }
 }
-input.apple-switch:checked:after{ /*circle shadow that change direction*/
-	left: 20px;
-	box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+.bgEffectCircle:before{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 25%;
+	width: 50%;
+	height: 100vh;
+	opacity: 0.5;
+	background: transparent/*linear-gradient(transparent, #baef0b)*/;
 }
-/*--------Language Toggling Part--------*/
-/*The part where main focus is*/
-input.apple-switch:checked ~ .lang-content.contentEng{
-	display: none;
+.bgEffectToggle{
+    position: fixed;
+	bottom: 5px;
+	left: 10px;
+    color: black;
+	background: transparent;
+    font-size: 7px;
+    padding: 2px;
+    transition: 0.3s;
+    border: none;
+    z-index: 2;
 }
-input.apple-switch:checked ~ .lang-content.contentChi{
-	display: block;
-}
-.en{
-	color: rgb(14, 137, 190);
-	font-size: 14px;
+.bgEffectToggle:hover {
+    text-decoration: underline;
 	font-weight: bold;
-	bottom: 130px;
-	right: 110px;
-	position: fixed;
-	z-index: 2;
-}
-.chi{
-	color: rgb(14, 137, 190);
-	font-size: 14px;
-	font-weight: bold;
-	bottom: 130px;
-	right: 17px;
-	position: fixed;
-	z-index: 2;
-}
-
-/*========Return to top button=======*/
-#toTopBtn {
-	border: none;
-	outline: none;
-	color: rgb(7, 87, 19);
-	cursor: pointer;
-	bottom: 40px;
-	right: 38px;
-	position: fixed;
-	z-index: 2;
-	padding:10px;
-	border-radius: 50px;
-	font-family: 'Ubuntu';
-	font-weight: bold;
-	font-size: 16px;
-	animation-timing-function: ease-in-out;
-	/* animation: rotate 3.3s linear infinite; */
-	transition: .4s;
-}
-/* @keyframes rotate { to {transform: rotate(360deg);} } */
-#toTopBtn:hover {
-	background-color:#bbb;
-	animation-play-state:paused;
-}
-#toTopBtn:active {
-	background-color: #aaa;
 }
 
 /*========Loading Screen========*/
-#loader {
-	position: absolute;
-	z-index: 1;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	/* a loading icon (not used)
-	left: 50%;
-	top: 50%;
-	margin-top: 0%;
-	margin-left: 0%;
-	margin-bottom: 0%;
-	margin-right: 0%;
-	width: 120px;
-	height: 120px;
-	margin: -76px 0 0 -76px;
-	border: 16px solid #f3f3f3;
-	border-radius: 50%;
-	border-top: 16px solid #3498db;
-	-webkit-animation: spin 2s linear infinite;
-	animation: spin 2s linear infinite; */
-  }
-.loadingIcon{
-	transform:translate(-50%,-50%);
-	top: 50%;
-	left: 50%;
-	position: absolute;
-  }
-  .loadingCaption{
-	position:absolute;
-	font-size:9px;
-	text-align:center;
-	bottom: 1%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	color:lightgrey;
-  }
-  /* @-webkit-keyframes spin {
-	0% { -webkit-transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-  } */
-  /* Add animation to "page content" */
-  .animate-bottom {
-	display: none;
-	position: relative;
-	-webkit-animation-name: animatebottom;
-	-webkit-animation-duration: 1.5s;
-	animation-name: animatebottom;
-	animation-duration: 1.5s;
-  }
-  @-webkit-keyframes animatebottom {
-	from { bottom:-100px; opacity:0 } 
-	to { bottom:0px; opacity:1 }
-  }
-  @keyframes animatebottom { 
-	from{ bottom:-100px; opacity:0 } 
-	to{ bottom:0; opacity:1 }
-  }
-
-/*========Google font style========*/
-@import url('https://fonts.cdnfonts.com/css/google-sans');
-section h3 {
-	font-family: 'Product Sans', sans-serif;
-	font-weight: 500;
-	font-size: 22px;
+#loader-wrapper{
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: rgb(7, 87, 19);
+    display: flex;
 }
-code {
-	font-size: 14px;
-	font-family: 'Product Sans', sans-serif;
+.loader{
+    /* display: inline-block; */display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2.3s infinite ease;
+    top: 50%;
+    left: 50%;
 }
-article blockquote{
-	font-family: 'Product Sans Light';
-	font-size: 14px;
-	border: 2px solid silver;
-	padding: 5px;
-	border-radius: 5px;
-	width: fit-content;
+.loader-inner{
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2.3s infinite ease-in;
 }
-@media only screen and (max-width:800px){
-	section h3{ font-size: 20px; }
-	code { font-size: 12px; }
-	article blockquote { font-size: 11px; }
+.loadingIcon {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    display: none;
+}
+.loadingCaptionDiscord {
+    position: absolute;
+    font-size: 9px;
+    text-align: center;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: lightgrey;
+    display: none;
+}
+@keyframes loader{
+    0%{ transform: rotate(0deg); }
+    25%{ transform: rotate(180deg); }
+    50%{ transform: rotate(180deg); }
+    75%{ transform: rotate(360deg); }
+    100%{ transform: rotate(360deg); }
+}
+@keyframes loader-inner {
+    0%{ height: 0%; }
+    25%{ height: 0%; }
+    50%{ height: 100%; }
+    75%{ height: 100%; }
+    100%{ height: 0%; }
 }
 
-/*========Hyperlinks========*/
-* a:link {
-	text-decoration: none;
-	color: rgb(25, 202, 52);
+/*========Custom Scroll Bar========*/
+::-webkit-scrollbar {/* width */
+    width: 13px;
 }
-* a:visited{
-	color: rgb(65, 185, 237);
+::-webkit-scrollbar-track {
+    background: transparent;
 }
-* a:hover{
-	color: rgb(125, 63, 27);
-	text-decoration: underline;
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: rgba(0,0,0,0.4);
+    border: 3.3px solid rgba(0,0,0,0);
+    background-clip: padding-box;
 }
-
-/*========Header Section========*/
-* {
-	box-sizing: border-box;
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.6);
+    border: 3.3px solid rgba(0,0,0,0);
+    background-clip: padding-box;
 }
-header {
-	/* old background-color: rgb(110, 83, 67); */
-	background-color: rgb(7, 87, 19);
-	padding: 20px;
-	text-align: center;
-	font-size: 35px;
-	color: white;
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0,0,0,0.7);
+    border: 3.3px solid rgba(0,0,0,0);
+    background-clip: padding-box;
 }
-h1{
-	font-family: Georgia, 'Times New Roman', sans-serif;
+::-webkit-resizer {
+    background: scroll;
 }
-header p{
-	font-size: 12px;
-}
-header hr{
-	margin: 0px;
-	padding: 0px;
+::-webkit-scrollbar-track-piece {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-/*========Body Part========*/
-@media only screen and (max-width:1100px){
-	section .nav-left, section article, section .nav-right{
-		width: 100%;
-		position: relative;
-	}
-	section .nav-right{
-		float: left;
-	}
-}
-@media only screen and (max-width:440px){
-	header h1{ font-size: 40px; }
-	header p{ font-size: 9px; }
-}
-nav {
-	background: #ccc;
-	padding: 20px;
-}
-.nav-left{
-	width: 11%;
-	float: left;
-	list-style: none;
-	position: sticky;
-	top: 0%;
-	left: 0%;
-	z-index: 1;
-}
-.nav-left h3:hover{ color: rgb(7, 87, 19); }
-.nav-left li{
-	padding-bottom:4px;
-}
-.nav-right{
-	float: right;
-	background: #ccc;
-	width: 20%;
-}
-.nav-right h3{
-	padding-top: 10px;
-}
-.nav-right h3:hover{ color: rgb(7, 87, 19); }
-article {
-	float: left;
-	padding: 10px;
-	width: 69%;
-	background-color: #f1f1f1;
-	overflow: hidden;
-}
-/* section{ overflow: auto; } //commented this to make nav-left sticked while scrolling */
-section::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-footer {
-	/*background-color: rgb(112, 97, 88);*/
-	background-color: rgb(7, 87, 19);
-	padding: 1px;
-	text-align: center;
-	color: white;
-	position: relative;
-	z-index: 1;
-}
-
-/*========Article content in main body========*/
-#resp-table {
-	width: 100%;
-	display: table;
-}
-#resp-table-body{
-	display: table-row-group;
-}
-.resp-table-row{
-	display: table-row;
-}
-.table-body-cell{
-	display: table-cell;
-	padding-left: 10px;
-	padding-right: 5px;
-	padding-bottom: 10px;
-}
-
-/*========Pagination=======*/
-.pagination{
-	margin-left: 47%;
-	margin-bottom: 10px;
-	padding: 30px 0px 8px 0px;
-}
-.pagination a{
-	color: black;
-	padding: 8px 16px;
-	text-decoration: none;
-	transition: background-color .3s;
-}
-.pagination a.activePage{
-	background-color: rgb(7, 87, 19);
-	color: white;
-}
-.pagination a:hover:not(.activePage) { background-color: #ccc; }
-
-/*========Top Popup Message=======*/
+/*========Popup Message=======*/
 .overlayBox {
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.75);
 	transition: opacity 250ms;
 	visibility: visible;
 	opacity: 1;
@@ -546,13 +383,14 @@ footer {
 	opacity: 1;
 }
 .popup {
-	margin: 100px auto;
+	margin: 70px auto;
 	padding: 20px;
+    padding-bottom: 0px;
 	background: #fff;
 	border-radius: 13px;
-	border: 4px solid white;
-	height:52%;
-	width: 52%;
+	border: 4px solid rgb(7, 87, 19);
+	height:80%;
+	width: 72%;
 	position: relative;
 	transition: all 1s;
 	cursor: default;
@@ -566,10 +404,18 @@ footer {
 	font-family: 'Ubuntu';
 	font-size: 30px;
 }
-.popup .closeBtn { /*Popup's close button*/
+.popup .popup-content { /*Content texts*/
+	height: 78%;
+    /* display: contents; */
+	overflow: auto;
+	font-size: 17px;
+	font-weight: 550;
+	color: rgb(7,87,19);
+}
+/* .popup .closeBtn {
 	position: absolute;
 	left:40px;
-	bottom: 20px;
+	bottom: 10px;
 	transition: all 200ms;
 	font-size: 20px;
 	font-weight: bold;
@@ -581,7 +427,7 @@ footer {
 	cursor: pointer;
 	padding:10px;
 	margin:0px;
-	width:90%;
+	width:80%;
 }
 .popup .closeBtn:hover {
 	color: #06D85F;
@@ -604,42 +450,53 @@ footer {
 }
 .popup .closeBtn:hover:before{
 	content: 'Close Message';
+} */
+.popup .exitBtn{
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+	transition: all 200ms;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Ubuntu';
+	color: #222;
+	background-color: #fff;
+    text-align: center;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+    height: fit-content;
 }
-.popup .popup-content { /*Content texts*/
-	max-height: 75%;
-	overflow: auto;
-	font-size: 17px;
-	font-weight: 550;
-	color: rgb(7,87,19);
-	padding-right: 27px;
+.popup .exitBtn:hover {
+	color: #d80606;
+	background-color: rgba(224,215,207,0.2);
+	border-radius: 30px;
+	border: none;
+	box-shadow: 2px 3px rgb(71, 71, 71, 0.5);
 }
-@media screen and (max-width: 1000px){
-	.popup{
-		width: 80%;
-		height:50%;
-	}
-	.popup .content{
-		font-size: 15px;
-	}
+.popup .exitBtn:active {
+	color: #d80606;
+	background-color: #e1baba;
+	border-radius: 30px;
+	border: none;
+	text-decoration:underline;
+	box-shadow: -2px -2px rgba(71, 71, 71, 0.5);
 }
-@media screen and (max-width: 830px){
-	.popup{
-		width: 80%;
-		height:70%;
-	}
-	.popup .content{
-		font-size: 15px;
-	}
-	.popup h2{
-		font-size: 24px;
-	}
+.popup .exitBtn:hover span{
+	display: none;
 }
-
+.popup .exitBtn:hover:before{
+	content: 'Leave';
+}
 /*========Popup Message Swipe Close Button========*/
 .swipe-to-close-btn{
-	position: relative;
-	width: 170px;
+	position: absolute;
+	left: 15px;
+    bottom: 20px;
+	width: 210px;
 	height: 50px;
+	padding-left: 20px; /*for button's text's positioning*/
 	background: white;
 	border-radius: 60px;
 	display: flex;
@@ -647,22 +504,11 @@ footer {
 	align-items: center;
 	color: #222;
 	text-decoration: none;
-	padding-left: 40px;
 	transition: 0.5s;
 	overflow: hidden;
 	font-family: 'Ubuntu', sans-serif;
-	left: 300px;
-	margin-top: 10px;
-}
-@media screen and (max-width: 1100px) {
-	.swipe-to-close-btn{
-		left: 0px;
-	}
-}
-@media screen and (max-height: 670px) {
-	.swipe-to-close-btn{ height: 40px; width: 160px; }
-	.swipe-to-close-btn span{ width:30px; height: 30px; }
-	.swipe-to-close-btn:hover span{ left: calc(100% - 35px); }
+    font-size: 18px;
+	cursor: pointer;
 }
 .swipe-to-close-btn:hover{
 	padding-left: 0px;
@@ -671,14 +517,14 @@ footer {
 	background-color: #eef5ef;
 	text-decoration: none;
 }
-.swipe-to-close-btn:before{ content: "OK"; }
-.swipe-to-close-btn:hover:before{ content: "Dismiss"; }
+.swipe-to-close-btn:before{ content: "Log In"; }
+.swipe-to-close-btn:hover:before{ content: "Close Message"; }
 .swipe-to-close-btn:active{ background-color: #d0f3d5; }
 .swipe-to-close-btn span{
 	position: absolute;
 	left: 5px;
-	width: 40px;
-	height: 40px;
+	width: 38px;
+	height: 38px;
 	background: rgb(7,87,19);
 	border-radius: 50%;
 	transition: 0.5s ease-in-out;
@@ -689,7 +535,7 @@ footer {
 	font-size: 1.3em;
 }
 .swipe-to-close-btn:hover span{ /*gap between the circle and button edge*/
-	left: calc(100% - 45px);
+	left: calc(100% - 44px);
 }
 .swipe-to-close-btn:after{ /*the little fast swipe diagonal*/
 	content: '';
@@ -704,14 +550,33 @@ footer {
 .swipe-to-close-btn:hover:after{
 	transform: translateX(170px) skewX(30deg);
 }
-
+@media (max-width: 1100px){
+	.popup{ width: 86%; }
+}
+@media (max-width: 830px){
+	.popup{ width: 86%; height:80%; }
+	.popup h2{ font-size: 22px; }
+    /* .popup .closeBtn{ width: 65%; } */
+}
+@media (max-height: 670px) {
+	.swipe-to-close-btn{ height: 30px; width: 150px; font-size: 15px; }
+	.swipe-to-close-btn span{ width:25px; height: 25px; }
+    .swipe-to-close-btn:hover span{ left: calc(100% - 30px); }
+    .popup .exitBtn{ font-size: 13px; }
+    .popup .exitBtn span{ font-size: 15px; }
+}
+@media (max-width:650px){
+	/* .popup .closeBtn{ width: 40%; } */
+    .popup .exitBtn{ font-size: 12px; }
+    .popup .exitBtn span{ font-size: 13px; }
+}
+@media (max-width: 430px){ .popup{ height: 90%; margin: 30px auto; } }
 /*========2 Tabs For Each Session========*/
 .tabContainer{
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 760px;
-	margin: 0px auto auto 0px;
-	padding: 10px 5px 0px 5px; /*left-bottom-right-top*/
+	padding: 10px 5px 0px 5px; /*top-right-bottom-left*/
+	margin: 10px auto 10px auto; /* top-right-bottom-left */
 }
 .tabContainer input[type="radio"]{
 	display: none;
@@ -719,15 +584,20 @@ footer {
 .tabContainer label{
 	padding: 10px;
 	background: #eee;
+    color: rgba(7, 87, 19, 0.75);
 	font-weight: bold;
 	transition: 0.5s;
 	cursor: pointer;
 	margin-left: 10px;
 	margin-right: 0px;
 }
+.tabContainer label:hover{
+    background: #dedede;
+    color: rgb(7, 87, 19);
+}
 .tabContainer .tab{
 	width: 100%;
-	padding:20px;
+	padding:15px;
 	border-radius: 8px;
 	background: #dedede;
 	order: 1; /*This one will decide whether tabs are at top or bottom (as in the video)*/
@@ -735,6 +605,13 @@ footer {
 	font-size: 16px;
 	-webkit-animation: fadeEffect 0.5s; /*Add a fade animation (found on W3Schools' fade tab article)*/
 	animation: fadeEffect 0.5s;
+}
+.tabContainer input[type="radio"]:checked + label + .tab{
+	display: block;
+}
+.tabContainer input[type="radio"]:checked + label {
+	background: #dedede;
+    color: rgb(7, 87, 19);
 }
 @-webkit-keyframes fadeEffect{
 	from {opacity: 0;}
@@ -744,144 +621,111 @@ footer {
 	from {opacity: 0;}
 	to {opacity: 1;}
 }
-.tabContainer input[type="radio"]:checked + label + .tab{
-	display: block;
-}
-.tabContainer input[type="radio"]:checked + label {
-	background: #dedede;
+@media screen and (max-width: 1264px){
+	.tabContainer label{ font-size: 15px; }
 }
 @media screen and (max-width: 830px){
-	.tabContainer label{
-		font-size: 10px;
-	}
-	.tabContainer .tab{
-		font-size: 15px;
-	}
+	.tabContainer label{ font-size: 12px; }
+	.tabContainer .tab{ font-size: 14px; }
 }
-@media screen and (max-width: 1264px){
-	.tabContainer label{
-		font-size: 12px;
-	}
+/*========Special text fields for popup message (copied from notes taking area below)========*/
+.popup-text-field-container{
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 17px rgba(0,0,0,0.5); /*length x, length y, blur, colour*/
+    /*Below 2 properties + margin-left right to auto to make this div center align*/
+    display: block;
+    margin: 25px auto 0px auto; /*top-right-bottom-left*/
 }
-
-/*========Collapsible For Right Nav========*/
-.collapsible { /*Expand collapse button*/
-	cursor: pointer;
-	border: none;
-	outline: none;
-	margin-top: 0px;
-	margin-bottom:0px;
+.popup-text-field-container .popup-text-field-inputbox{/*Text field whole input element*/
+    position: relative;
+    width: 350px;
+    margin: 30px auto 30px auto; /*top-right-bottom-left*/
+    z-index: 0;
 }
-/*.active =  Add background color to collapsible when clicked
-    hover = a background color when hover */
-.activeCollap, .collapsible:hover {
-	color: rgb(7,87,19);
-}
-/*!!!!!!CSS's unicode = \xxxxx = hex       HTML's = &#xxxxx!!!!!!!*/
-.collapsible:before{
-	content: "\25BC"; /* Unicode for down triangle */
-	font-size: 10px;
-	float: right;
-	margin-left: 5px;
-}
-.activeCollap:before{
-	content: "\25B2"; /*Unicode for up triangle*/
-}
-/* Style the collapsible content. Note: hidden by default */
-.collapsibleContent {
-	overflow: hidden;
-	margin-top: 0px;
-	margin-bottom:0px;
-	max-height: 0;
-	transition: max-height 0.5s ease-out;
-}
-
-/*========Tooltip text========*/
-.tooltip {
-	position: relative;
-	display: inline-block;
-	border-bottom: 1px none black; /* If you want dots under the hoverable text */
-	cursor: help;
-}
-/* Tooltip text */
-.tooltip .tooltipText {
-	visibility: hidden;
-	width: fit-content;
-	background-color: #555;
-	font-size: 14px;
-	color: #fff;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 6px;
-
-	/* Position the tooltip text */
-	position: absolute;
-	z-index: 1;
-	top: 105%;
-	left: 50%;
-	margin-left: -60px;
-
-	/* Fade in tooltip */
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-/* Tooltip arrow */
-.tooltip .tooltipText::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: none;
-	border-color: #555 transparent transparent transparent;
-}
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltipText {
-	visibility: visible;
-	opacity: 0.93;
-}
-
-/*========Closable banner========*/
-#fixed-alert {
+.popup-text-field-container .popup-text-field-inputbox input{
+    position: relative;
+    padding: 8px 10px;
     width: 100%;
-    height: 1%;
-    background-color: rgb(146, 214, 243);
-	color: #555;
-    position: sticky;
-	top: 0;
-    padding-top: 0.3%;
-	padding-bottom: 0.5%;
-	padding-left: 0.5%;
-	padding-right: 0.5%;
-	text-align: center;
-	font-size: 14px;
-	z-index: 2;
-	font-family: 'Product Sans';
-	font-weight: 600;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    z-index: 2;
+	font-family: 'Ubuntu', sans-serif;
 }
-#btn-dismiss {
-    width: auto;
-	background-color: transparent;
-	color: rgb(235, 30, 23);
-	font-size:16px;
-	font-family: 'Product Sans';
-	font-weight: bold;
+.popup-text-field-container .popup-text-field-inputbox span{/*Text field label*/
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+.popup-text-field-container .popup-text-field-inputbox input:valid ~ span,
+.popup-text-field-container .popup-text-field-inputbox input:focus ~ span{
+    font-size: 0.75em;
+	padding: 15px 0;
+    transform: translateY(-32px);
+}
+.popup-text-field-container .popup-text-field-inputbox i{/*Text field's bottom line*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    /* background: linear-gradient(45deg, #2196f3,#ff4685); */
+	background: linear-gradient(60deg, #075713,#47ff62);
+    transition: 0.5s;
+    z-index: 1;
+    border-radius: 4px;
+    pointer-events: none;
+}
+.popup-text-field-container .popup-text-field-inputbox input:valid ~ i,
+.popup-text-field-container .popup-text-field-inputbox input:focus ~ i{
+    height: 100%;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+@media screen and (max-width: 930px){
+    .popup-text-field-container .popup-text-field-inputbox{ width: fit-content; }
+}
+@media (max-width: 670px){ .popup-text-field-container{ width: fit-content; } }
+
+/*========Return to top button=======*/
+#toTopBtn {
 	border: none;
 	outline: none;
+	color: rgb(7, 87, 19);
 	cursor: pointer;
-	overflow: hidden;
+	bottom: 70px;
+	right: 20px;
+	position: fixed;
+	z-index: 2;
+	padding:10px;
+	border-radius: 50px;
+	font-family: 'Ubuntu';
+	font-weight: bold;
+	font-size: 16px;
+	animation-timing-function: ease-in-out;
+	/* animation: rotate 3.3s linear infinite; */
 	transition: .4s;
 }
-#btn-dismiss:hover{
-	color: rgb(143, 16, 12);
-	text-decoration: underline;
+/* @keyframes rotate { to {transform: rotate(360deg);} } */
+#toTopBtn:hover {
+	background-color:#bbb;
+	/* animation-play-state:paused; */
+}
+#toTopBtn:active {
+	background-color: #aaa;
 }
 
-/*========For Scrolling Progress========*/
+/*========Scrolling Progress Bar========*/
 .progress-container {
 	width: 100%;
 	height: 4px;
@@ -895,39 +739,388 @@ footer {
 	width: 0%;
 }
 
-/*========Custom Scroll Bar========*/
-/* width */
-::-webkit-scrollbar {
-	width: 15px;
+/*========Dark mode using Apple Switch button========*/
+input.apple-switch{ /*Inactive look*/
+	bottom: 20px;
+	right: 20px;
+	position: fixed;
+	z-index: 2;
+	appearance: none;
+	outline: none;
+	width: 50px; /*if wanted to change button size*/
+	height: 30px; /*if wanted to change button size*/
+	background-color: white;
+	border: 1px solid #D9DADC;
+	border-radius: 50px;
+	box-shadow: inset -20px 0 0 0 white;
+	transition-duration: 0.3s;
 }
-::-webkit-scrollbar-track {
-	background: #ccc;
+input.apple-switch:after{ /*switch circle*/
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 26px; /*if wanted to change button size*/
+	height: 26px; /*if wanted to change button size*/
+	background-color: transparent;
+	border-radius: 50%;
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+    background-image: url("src/dark-mode.png"); /*To add icon into the circle*/
+    background-position: center; /*To add icon into the circle*/
+    background-size: cover; /*To add icon into the circle*/
 }
-::-webkit-scrollbar-thumb {
-	border-radius: 20px;
-	background: rgba(0,0,0,0.3);
-	border: 3.3px solid rgba(0,0,0,0);
-	background-clip: padding-box;
+input.apple-switch:checked{
+	border-color: rgb(7, 87, 19);
+	box-shadow: inset 20px 0 0 0 rgb(7, 87, 19); /*if wanted to change button size*/
 }
-::-webkit-scrollbar-thumb:hover {
-	background: rgba(0,0,0,0.6);
-	border: 3.3px solid rgba(0,0,0,0);
-	background-clip: padding-box;
+input.apple-switch:checked:after{ /*circle shadow that change direction*/
+	left: 20px;
+	box-shadow: -2px 4px 3px rgba(0,0,0,0.05); /*if wanted to change button size*/
 }
-::-webkit-scrollbar-thumb:active {
-	background: rgba(0,0,0,0.7);
-	border: 3.3px solid rgba(0,0,0,0);
-	background-clip: padding-box;
+/*Dark Mode Button*/
+/*#darkModeBtn {
+	border: none;
+	outline: none;
+	cursor: pointer;*/
+	/* bottom: 120px;
+	right: 35px;
+	border-radius: 50px;
+	padding-top: 13px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px; */
+	/*bottom: 0px; left: 0px; padding: 3px;
+	position: fixed;
+	z-index: 4;
+	transition: .4s;
 }
-::-webkit-resizer {
-	background: scroll;
+#darkModeBtn:hover {
+	background-color: #bbb;
 }
-::-webkit-scrollbar-track-piece{
-	padding-left: 5px;
-	padding-right: 5px;
+#darkModeBtn:active {
+	background-color: #aaa;
+}*/
+
+/*========Image Viewer========*/
+.imgViewerOk{ /*images that can be expanded*/
+	cursor: zoom-in;
+	transition: 0.3s;
+}
+#imgViewer{ /*image viewer background*/
+	display: none;
+	position: fixed;
+	z-index: 3;
+	padding-top: 40px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.43);
+	cursor: zoom-out;
+}
+.imgViewerModalContent{ /*image viewer's image to display place*/
+	margin: auto;
+	display: block;
+	max-width: 80%;
+	cursor: default;
+	animation-name: img-viewer-zoom;
+	animation-duration: 1s;
+}
+@keyframes img-viewer-zoom {
+	from{/*transform:scale(0);*/opacity: 0;}
+	to{/*transform:scale(1);*/opacity: 1;}
+}
+#imgViewer .imgViewerCloseBtn{ /*image viewer's close button*/
+	/* position: absolute; */
+	position: fixed;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+#imgViewer .imgViewerFullScreenBtn{ /*image viewer's full screen button*/
+	/* position: absolute; */
+	position: fixed;
+	top: 70px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+#imgViewer .imgViewerCloseBtn:hover,#imgViewer .imgViewerFullScreenBtn:hover, #imgViewer .imgViewerCloseBtn:focus,#imgViewer .imgViewerFullScreenBtn:focus{
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+@media only screen and (max-width:700px){
+	.imgViewerModalContent{ width:100%; }
 }
 
-/*========Special Text Field (Newsletter Sub)========*/
+/*========Closable banner========*/
+#fixed-alert {
+    width: 100%;
+    height: 1%;
+    background-color: rgb(146, 214, 243);
+    color: #555;
+    position: sticky;
+    top: 0;
+    padding-top: 0.3%;
+    padding-bottom: 0.5%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    text-align: center;
+    font-size: 14px;
+    z-index: 2;
+    font-family: 'Product Sans';
+    font-weight: 600;
+}
+#closableBannerBtn {
+    width: auto;
+    background-color: transparent;
+    color: rgb(235, 30, 23);
+    font-size:16px;
+    font-family: 'Product Sans';
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .4s;
+}
+#closableBannerBtn:hover{
+    color: rgb(143, 16, 12);
+    text-decoration: underline;
+}
+
+/*========Body Part (Header, Section(nav(nav-left, nav-right), article), Footer)========*/
+header {
+	background-color: rgb(7, 87, 19);
+	text-align: center;
+	font-size: 40px;
+	color: white;
+	padding: 20px;
+    width: 100%;
+    height: 100vh; /*Set to 100vh not 100% to max-out header's height regardless screen size https://www.shecodes.io/athena/73045-how-to-make-a-header-take-up-the-whole-top-of-the-screen-in-html */
+    text-shadow: 1px 1px #000;
+
+    /*parallax effect*/
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("src/home-icon.png"); /*make pic darker by adding layers to bg-img property*/
+	min-height: 500px;
+	background-attachment: fixed;
+	background-position: center/*set image's position ==> 50% 75%*/;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+header h1{
+	font-family: 'Georgia', sans-serif;
+}
+header hr{
+	margin: 0px;
+	padding: 0px;
+}
+section hr{
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 30px;
+    margin-bottom: 20px;
+	height: 4px;
+	border-radius: 25px;
+	background: rgb(7,87,19);
+	border: none;
+}
+nav {
+	background: rgba(147, 147, 147, 0.7);
+	padding: 17px;
+}
+.nav-left{
+	width: 12%;
+	float: left;
+	list-style: none;
+    /*below 4 attr are to stick sidebar to top when scrolling*/
+	position: sticky;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+}
+.nav-left li{
+	padding-bottom: 6px;
+}
+.nav-right{
+	float: right;
+	width: 18%;
+}
+article {
+	float: left;
+	padding: 20px;
+	width: 70%;
+	background-color: #f1f1f1;
+	overflow: hidden;
+}
+/* section{ overflow: auto; } //commented this to make nav-left sticked while scrolling */
+section::after { /*clear floats after columns*/
+	content: "";
+	display: table;
+	clear: both;
+}
+footer {
+	/* background-color: rgb(7, 87, 19); */
+    background-image: linear-gradient(to right, rgb(111, 209, 126),rgb(7, 87, 19),rgb(7, 87, 19),rgb(111, 209, 126));
+	padding: 1px;
+	text-align: center;
+	color: white;
+	position: relative;
+}
+@media only screen and (max-width:1366px) { /*turn off parallax for sake of some mobile devices*/
+	header{ background-attachment: scroll; }
+}
+@media (max-width:1100px){
+	section .nav-left, section article, section .nav-right{
+		width: 100%;
+		position: relative;
+	}
+	section .nav-right{
+		float: left;
+	}
+}
+@media only screen and (max-width:500px){
+	header h1{ font-size: 34px; }
+	header p{ font-size: 9px; }
+}
+
+/*========Show/Hide Nav Sidebar Button========*/
+.showNav{
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    z-index: 2;
+    color: rgb(7, 87, 19);
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+    border: none;
+    vertical-align: middle;
+}
+.showNav:hover {
+    background-color:#cdcdcd;
+}
+.showNav:active {
+    background-color: #aaa;
+}
+
+/*========Copy URL and share buttons========*/
+.copyUrlBtn, #shareBtn{ 
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    margin: 5px;
+    font-size: 15px;
+    background-color: #eef5ef;
+    box-shadow: 2.5px 2px 10px rgb(3, 32, 7); /*inset offsetX offsetY blurradius spreadradius colour*/
+    transition: .4s;
+}
+.copyUrlBtn:hover, #shareBtn:hover{
+    background-color: rgb(7,87,19);
+    box-shadow: none;
+    color: white;
+}
+
+/*========Each big container as row with child columns in <article> section========*/
+.table-row-div{
+    width: 95%;
+    white-space: nowrap;
+    box-shadow: 3px 3px 7px #adacac;
+    /*box-shadow: 1px 1px 7px 1px #adacac;inset offsetXlength offsetYlength blurradiuslength spreadradiuslength colour*/
+    transition: .2s;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.table-row-div:hover{
+    box-shadow: 5px 5px 10px 2px #adacac;
+}
+.table-row-div::after{/*clear floats after row*/
+    content: "";
+    display: table;
+    clear: both;
+}
+.table-column-div{
+    /* float: left; */
+    width: fit-content;
+    margin-right: 30px;
+    margin-top: 0px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align:top;
+}
+@media screen and (max-width:600px){ .table-column-div{ width:100%; } }
+/*global styling only. specifics in each table in html file*/
+table {
+    width: fit-content;
+    border-collapse: collapse;
+    text-align: left;
+}
+th, td{
+    border: 2px solid rgb(9, 122, 26);
+    padding: 5px 0 5px 0; /*top right bottom left*/
+    max-width: max-content;
+    text-wrap: wrap;
+}
+
+/*========Embed YT player's volume slider========*/
+#YTEmbedSlider{
+    appearance: none;
+    width: fit-content;
+    height: 4px;
+    vertical-align: middle;
+    border-radius: 20px;
+    background: rgba(211, 211, 211, 0.7);
+    outline: none;
+    transition: opacity 0.2s;
+}
+#YTEmbedSlider:active{
+    height: 7px;
+    background: rgb(170, 170, 170);
+}
+#YTEmbedSlider::-webkit-slider-thumb{
+    appearance: none;
+    width: 9px;
+    height: 9px;
+    vertical-align: middle;
+    border-radius: 80px;
+    background:rgb(7, 87, 19);
+    cursor: pointer;
+}
+
+/*========Pagination=======*/
+.pagination{
+	margin-left: 5px;
+	margin-bottom: 30px;
+	padding: 30px 0px 8px 0px;
+}
+.pagination a{
+	color: black;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+}
+.pagination a.activePage{
+	background-color: rgb(7, 87, 19);
+	color: white;
+}
+.pagination a:hover:not(.activePage) { background-color: #ccc; }
+@media (max-width:800px){ .pagination{ margin-left: 0px; } }
+@media only screen and (max-width:630px){ .pagination{ margin-left: 0px; } }
+
+/*========Special Text Field (Notes taking corner)========*/
 .big-container{
     padding: 20px;
 	margin-top: 15px;
@@ -949,22 +1142,26 @@ footer {
     position: relative;
     padding: 3px;
 	padding-left: 15px;
+    margin-bottom: 20px;
     /* justify-content: center;
     align-items:center; */
     border-radius: 8px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    box-shadow: 8px 5px 30px rgba(0,0,0,0.25);
 }
 /*Text field whole input element*/
 .text-field-container .text-field-inputbox{
     position: relative;
-    width: 350px;
+    width: 450px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 13px;
 }
-.text-field-container .text-field-inputbox input{
+@media (max-width:700px) { .text-field-container .text-field-inputbox{ width: fit-content; } }
+.text-field-container .text-field-inputbox input, .text-field-container .text-field-inputbox textarea{
     position: relative;
     padding: 8px 10px;
     width: 100%;
+	height: 130px;
+	resize: none; /*To prevent a bug that after resize typed texts will go out of layout*/
     border: none;
     outline: none;
     background: transparent;
@@ -978,6 +1175,7 @@ footer {
 .text-field-container .text-field-inputbox span{
     position: absolute;
     left: 0;
+	bottom: 0;
     padding: 10px 0;
     pointer-events: none;
     font-size: 1em;
@@ -986,10 +1184,12 @@ footer {
     letter-spacing: 0.05em;
 }
 .text-field-container .text-field-inputbox input:valid ~ span,
-.text-field-container .text-field-inputbox input:focus ~ span{
+.text-field-container .text-field-inputbox input:focus ~ span, .text-field-container .text-field-inputbox textarea:valid ~ span,
+.text-field-container .text-field-inputbox textarea:focus ~ span{
     font-size: 0.75em;
 	padding: 15px 0;
-    transform: translateY(-32px);
+    /* transform: translateY(-32px); */
+	transform: translateY(-123px);
 }
 /*Text field's bottom line*/
 .text-field-container .text-field-inputbox i{
@@ -1006,11 +1206,16 @@ footer {
     pointer-events: none;
 }
 .text-field-container .text-field-inputbox input:valid ~ i,
-.text-field-container .text-field-inputbox input:focus ~ i{
+.text-field-container .text-field-inputbox input:focus ~ i, .text-field-container .text-field-inputbox textarea:valid ~ i,
+.text-field-container .text-field-inputbox textarea:focus ~ i{
     height: 100%;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
 }
-/*Submit button*/
+#specialTextFieldOutput{
+	overflow-wrap: break-word; /*to cater text that dont wrap & break the layout https://css-tricks.com/almanac/properties/o/overflow-wrap/ */
+	max-height: 300px;
+	overflow-y: auto;
+}
 #specialTextFieldSubmitBtn, #specialTextFieldClearBtn{
     position: relative;
     margin: 15px 43%;
@@ -1022,13 +1227,116 @@ footer {
 	border: 0;
 	font-family: 'Ubuntu', sans-serif;
 	transition: 0.3s;
+    cursor: pointer;
 }
-#specialTextFieldSubmitBtn:hover, #specialTextFieldClearBtn:hover{
+#specialTextFieldSubmitBtn:hover{
     /* background: linear-gradient(45deg, #2196f3,#ff4685);*/
 	background: #fff;
 	color: #000;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
-#specialTextFieldSubmitBtn:active, #specialTextFieldClearBtn:active{
+#specialTextFieldSubmitBtn:active{
     box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+}
+#specialTextFieldClearBtn:hover{
+    /* background: linear-gradient(45deg, #2196f3,#ff4685);*/
+	background: #ff0000;
+    box-shadow: 0 5px 15px #777;
+}
+#specialTextFieldClearBtn:active{
+	background: #b00000;
+    box-shadow: none;
+}
+
+/*========Tooltip text========*/
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px none black; /* If you want dots under the hoverable text */
+	cursor: help;
+}
+.tooltip .tooltipText {/* Tooltip text */
+	visibility: hidden;
+	width: fit-content;
+	background-color: #555;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 6px;
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	top: 105%;
+	left: 50%;
+	margin-left: -60px;
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.tooltip .tooltipText::after {/* Tooltip arrow */
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: none;
+	border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltipText {/* Show the tooltip text when you mouse over the tooltip container */
+	visibility: visible;
+	opacity: 0.93;
+}
+
+/*========Expandable Collapsible for website about (same with right-nav's collapsible with changes)========*/
+.expandableCollapsible { /*Collapsible header*/
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 0;
+}
+.expandableCollapsible:hover {
+    color: rgb(7,87,19);
+    text-decoration: none;
+}
+.expandableCollapsibleContent {
+    overflow: hidden;
+    max-height: 0;
+    margin: 0px;
+    transition: max-height 0.5s ease-out;
+}
+
+/*========Collapsible For Right Nav========*/
+.collapsible { /*Expand collapse button*/
+	cursor: pointer;
+	border: none;
+	outline: none;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+/*.active =  Add background color to collapsible when it is expanded
+    hover = just like other css's :hover */
+.active, .collapsible:hover {
+	color: rgb(7,87,19);
+}
+/*!!!!!!CSS's unicode = \xxxxx = hex       HTML's = &#xxxxx!!!!!!!*/
+.collapsible:before{
+	content: "\25BC"; /* Unicode for down triangle */
+	font-size: 10px;
+	float: right;
+	margin-left: 5px;
+}
+.active:before{
+	content: "\25B2"; /*Unicode for up triangle*/
+}
+/* Style the collapsible content. Note: hidden by default */
+.collapsibleContent {
+	overflow: hidden;
+	margin-top: 0px;
+	margin-bottom:0px;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
 }
