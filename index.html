@@ -197,7 +197,7 @@
     <header>
         <div style="align-content:center;height:88%;">
             <h1>Mettiyarama Bhante's Talk</h1>
-            <p style="font-size:10px;">Last edited on 13 Jan 2025 20:50 GMT+11</p>
+            <p style="font-size:10px;">Last edited on 13 Jan 2025 23:46 GMT+11</p>
         </div>
         <div style="align-content:end;cursor:default;bottom:0;">
             <hr/>
@@ -494,7 +494,7 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
 
                 <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
                 <p>
-                    <div class="tooltip">Date: <b>every fortnight Sunday <sup>&#8505;</sup></b>
+                    <div class="tooltip">Date: <b>every Sunday fortnightly <sup>&#8505;</sup></b>
                         <span class="tooltipText">Unless exceptions apply</span>
                     </div><br/>
                     <div class="tooltip">Time: <b>morning time (1 hour) <sup>&#8505;</sup></b>
@@ -511,18 +511,18 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
 
             <!--Collapsible https://www.w3schools.com/howto/howto_js_collapsible.asp -->
             <!--Script at bottom-->
-            <h3 class="collapsible">Limited Viewability Videos</h3>
+            <h3 class="collapsible">Videos With Limited Viewability</h3>
             <div class="collapsibleContent">
                 <p style="text-indent:35px;text-align:justify;">Apparently seems like talk session recordings will be unavailable after some time from the targeted source. Hence, there will be "Video Unavailable" displayed for some videos. <b>They're not viewable already.</b></p>
                 <p style="text-align:justify;">I, as this website's creator and maintainer, acknowledge the rights of all talk session recordings are belong to its owner (Mettiyarama Centre). I will also cite any resources as references of how I get the data in the "Citations" section below.</p>
-                <p style="text-align:justify"><mark>Crucial note:</mark> Due to this website does not have any official affiliation and copyright permission granted with the targeted source, however this doesn't mean unauthorised redistribution or local downloads are permitted. Any copyright breaches regarding website user's side are not related to this website. <u>Please only view the contents in this website.</u></p>
+                <p style="text-align:justify"><mark>Crucial note:</mark> Strictly no unauthorised redistribution or downloads permitted. Any copyright breaches regarding this site's user (meaning you as this website reader) are not related to this website. <u>Please only view the contents online.</u></p>
             </div>
 
             <h3 class="collapsible">About Me</h3>
             <div class="collapsibleContent">
-                <p style="text-align:justify;text-indent:35px;">Hello there! I'm hongjchang and this webpage was created myself! since 05 Oct 2022.</p>
-                <p style="text-align:justify;">The purposes of creating this webpage are (1)I was inspired from a project of the data visualisation subject during my university study recently when I was introduced into GitHub Pages and found it interesting to host webpages online without additional money. Besides, (2)I wanted <u>to record past live streams</u> for future rewatches, as well as <u>sharing the talks with others</u> who're also interested and/or finding this.</p>
-                <p style="text-align:justify">Hope you like this page and feel free to share this page with others. Neither sponsorships nor cooperations with any third-parties are affiliated to this webpage.</p>
+                <p style="text-align:justify;text-indent:35px;">Hello there! I'm hongjchang and this webpage was created individually myself! Since 05 Oct 2022.</p>
+                <p style="text-align:justify;">The purposes of developing this project are (1)I was inspired from a project of the data visualisation subject during my university study when I was introduced to GitHub Pages and found it interesting to host webpages online without additional costs. (2)I wanted <u>to record the talks</u> for future rewatches, as well as <u>sharing the talks with others</u> who're also interested.</p>
+                <p style="text-align:justify">Hope you like this page and feel free to share this page with others.</p>
             </div>
 
             <h3 class="collapsible">Citations and Attributions</h3>
@@ -546,7 +546,7 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
     </section>
 
     <footer>
-        <p>No Copyright &copy; 2025 hongjchang &#8901; Website not affiliated with Mettiyarama Centre &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
+        <p>No Copyright &copy; 2025 hongjchang &#8901; Not affiliated nor cooperated with Mettiyarama Centre &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
     </footer>
 </body>
 </html>
@@ -900,13 +900,15 @@ for(let i=1; i<=5; i++){ //i = number of pages include last page = number of fil
         includeHTML();
         document.querySelector(".pagination").children[i].classList.add("activePage");
         document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[i-1];
-    }else if(Number(localStorage.getItem("paginationPageID")) == null/*i == 1*/){ //if no page number is saved
+    }else if(localStorage.getItem("paginationPageID") == null/*i == 1*/){ //if no page number is saved
         //document.getElementById("contentPage"+i).style.display = "block"; //show pg1 only
         //Display the selected section page by including respective html file
         document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-1.html");
         includeHTML();
-        document.querySelector(".pagination").children[i].classList.add("activePage"); //add activePage class to pg1
+        document.querySelector(".pagination").children[1].classList.add("activePage"); //add activePage class to pg1
         document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[0];
+        //To hide last page if not to display it
+        document.getElementById("contentPageLast").style.display = "none";
     }else{ //not selected page
         //document.getElementById("contentPage"+i).style.display = "none";
         document.querySelector(".pagination").children[i].classList.remove("activePage");
