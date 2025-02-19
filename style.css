@@ -1068,9 +1068,10 @@ table {
     border-collapse: collapse;
     text-align: left;
 }
+th{ text-align: center; }
 th, td{
     border: 2px solid rgb(9, 122, 26);
-    padding: 5px 0 5px 0; /*top right bottom left*/
+    padding: 5px 5px 5px 5px; /*top right bottom left*/
     max-width: max-content;
     text-wrap: wrap;
 }
