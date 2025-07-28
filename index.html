@@ -15,7 +15,7 @@
     Different favicon in light & dark modes https://favicon.im/blog/favicon-for-light-dark-modes
     Emoji page favicon https://css-tricks.com/emoji-as-a-favicon/ -->
     <link rel="icon" href="src/home-icon.png" type="image/x-icon" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙏</text></svg>" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>" type="image/x-icon" media="(prefers-color-scheme: dark)">
 
     <!--For Responsive Page (https://www.w3schools.com/html/html_responsive.asp)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -197,7 +197,7 @@
     <header>
         <div style="align-content:center;height:88%;">
             <h1>Mettiyarama Bhante's Talk</h1>
-            <p style="font-size:10px;">Last edited on 12 Mar 2025 18:55 GMT+11</p>
+            <p style="font-size:10px;">Last modified on 28 Jul 2025 23:05 GMT+10</p>
         </div>
         <div style="align-content:end;cursor:default;bottom:0;">
             <hr/>
@@ -242,6 +242,7 @@
                 <a href="javascript:void(0)" onclick="goToSect(3)">3</a>
                 <a href="javascript:void(0)" onclick="goToSect(4)">4</a>
                 <a href="javascript:void(0)" onclick="goToSect(5)">5</a>
+                <a href="javascript:void(0)" onclick="goToSect(6)">6</a>
                 <a href="javascript:void(0)" style="cursor:not-allowed;" title="Functionality Unavailable">&raquo;</a>
             </div>
             <!--Script at bottom-->
@@ -306,19 +307,19 @@
 <script>
 //Add new comic chapter in below 2 variables here
 var comicHeader = [
-    "Hiroshi Hirumeshi (chap 88)",
-    "Hiroshi Hirumeshi (chap 89)",
-    "Hiroshi Hirumeshi (chap 90)",
-    "New shinchan (chap 246)",
-    "Shinchan (chap 424)",
-    "Shinchan (chap 425)"];
+    "ひろしひるめし さいまる (chap 115)",
+    "カスカベダンサーズ (chap 1)",
+    "カスカベダンサーズ (chap 2)",
+    "カスカベダンサーズ (chap 3)",
+    "カスカベダンサーズ (chap 4)",
+    "カスカベダンサーズ (chap 5)"];
 var comicUrl = [
-    "https://manga-shinchan.com/book_data/article_data/088-hiroshi-hirumeshi/088-hiroshi-hirumeshi_01.jpg",
-    "https://manga-shinchan.com/book_data/article_data/089-hiroshi-hirumeshi/089-hiroshi-hirumeshi_01.jpg",
-    "https://manga-shinchan.com/book_data/article_data/090-hiroshi-hirumeshi/090-hiroshi-hirumeshi_01.jpg",
-    "https://manga-shinchan.com/book_data/article_data/246-new-shinchan/246-new-shinchan_01.jpg",
-    "https://manga-shinchan.com/book_data/article_data/424-shinchan/424-shinchan_01.jpg",
-    "https://manga-shinchan.com/book_data/article_data/425-shinchan/425-shinchan_01.jpg"];
+    "https://manga-shinchan.com/book_data/article_data/115-hiroshi-hirumeshi-saimaru/115-hiroshi-hirumeshi-saimaru_01.jpg",
+    "https://manga-shinchan.com/book_data/article_data/1-kasukabedancers-comicarise/1-kasukabedancers-comicarise_01.jpg",
+    "https://manga-shinchan.com/book_data/article_data/2-kasukabedancers-comicarise/2-kasukabedancers-comicarise_01.jpg",
+    "https://manga-shinchan.com/book_data/article_data/3-kasukabedancers-comicarise/3-kasukabedancers-comicarise_01.jpg",
+    "https://manga-shinchan.com/book_data/article_data/4-kasukabedancers-comicarise/4-kasukabedancers-comicarise_01.jpg",
+    "https://manga-shinchan.com/book_data/article_data/5-kasukabedancers-comicarise/5-kasukabedancers-comicarise_01.jpg"];
 var comicUrlIndexCounter = 0;
 //Creating each comic chapter (i.e. the main row)
 //for(var x=0;x<comicHeader.length;x++){
@@ -471,8 +472,8 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
                 <div class="text-field-container">
                     <div class="text-field-inputbox">
                         <!--Include \n in textarea's value when submitted https://www.linkedin.com/advice/1/how-do-you-handle-multiline-text-line-breaks-html-skills-html#textarea-element -->
-                        <textarea wrap="hard" type="text" id="field1" required maxlength="300"></textarea>
-                        <span>Write Your Notes Here</span>
+                        <textarea wrap="hard" type="text" id="field1" required maxlength="300" title=""></textarea>
+                        <span>Write something here</span>
                         <i></i>
                     </div>
                     <input type="submit" id="specialTextFieldSubmitBtn" value="Save">
@@ -503,23 +504,22 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
                 <p style="text-align:justify;">From 2022 till April 2023, the organisation hosted an online talk named <b>"The Golden Key of Buddha"</b> or <b>"佛陀的经钥匙系列"</b>. It's about "the truth of our life" based from Buddha's teachings from about 2600 years ago when The Buddha enlightened and gave numerous teachings or <i>Dhamma</i> which passed down until now.</p>
                 <p style="text-align:justify;">Next, starting from 2024, the organisation started a physical talk session event every Sunday fortnightly. The session recording was available on its social media site and are kinda presenting the contents in the aformentioned discontinued event from start.</p>
                 <p style="text-align:justify;">In a nutshell, the Bhante's talk consists various topics according to The Buddha's teachings, in an easy-to-understand manner whereby newbies could know them easily. The talks centers around how to <b>to create loving-kindness</b>, <b>practice a undiscriminated (wholesome) heart</b>, and most importantly, <b>understanding our lives that lead to no reincarnation/<i>nibbana</i></b>.</p>
-
-                <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
-                <p>
-                    <div class="tooltip">Date: <b>every Sunday fortnightly <sup>&#8505;</sup></b>
-                        <span class="tooltipText">Unless exceptions apply</span>
-                    </div><br/>
-                    <div class="tooltip">Time: <b>morning time (1 hour) <sup>&#8505;</sup></b>
-                        <span class="tooltipText">Time Zone: GMT+8</span>
-                    </div><br/>
-                    <div class="tooltip">Venue: <b>Mettiyarama Centre <sup>&#8505;</sup></b>
-                        <span class="tooltipText">See widgets above for details</span>
-                    </div><br/>
-                </p>
-                <p style="font-size:12px;text-decoration:underline;text-align:right;">Description last updated on 5 Jan 2025 23:12 GMT+11</p>
             </div>
             <span class="expandableCollapsible">read more</span>
 
+            <!--Tooltips found on https://www.w3schools.com/howto/howto_css_tooltip.asp-->
+            <p>
+                <div class="tooltip">Date: <b>every 2<sup>nd</sup> and 4<sup>th</sup> Sunday of the month <sup>&#8505;</sup></b>
+                    <span class="tooltipText">Unless exceptions apply</span>
+                </div><br/>
+                <div class="tooltip">Time: <b>9am (1 hour) <sup>&#8505;</sup></b>
+                    <span class="tooltipText">Time Zone: GMT+8</span>
+                </div><br/>
+                <div class="tooltip">Venue: <b>Mettiyarama Centre <sup>&#8505;</sup></b>
+                    <span class="tooltipText">See widgets above for details</span>
+                </div><br/>
+            </p>
+            <p style="font-size:12px;text-decoration:underline;text-align:right;">Description last updated on 5 Jan 2025 23:12 GMT+11</p>
 
             <!--Collapsible https://www.w3schools.com/howto/howto_js_collapsible.asp -->
             <!--Script at bottom-->
@@ -558,7 +558,7 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
     </section>
 
     <footer>
-        <p>No Copyright &copy; 2025 hongjchang &#8901; Not affiliated nor cooperated with Mettiyarama Centre &#8901; Hosted with <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a></p>
+        No Copyright &copy; 2025 hongjchang &#8901; Not affiliated with Mettiyarama Centre &#8901; Hosted in <a href="https://github.com/hongjchang/Mettiyarama-Talk" target="_blank" rel="noopener noreferrer">GitHub Pages<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a>
     </footer>
 </body>
 </html>
@@ -868,7 +868,13 @@ shareBtn.addEventListener("click", async () => {
 //Script for pagination (including sectioning pages)
 //Array to store each page's nav-left content list (number of elements = total pages)
 var navLeftContent = [
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session33').scrollIntoView();">2 Mar 2025</a></li>
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session39').scrollIntoView();">6 Jul 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session38').scrollIntoView();">18 May 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session37').scrollIntoView();">4 May 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session36').scrollIntoView();">20 Apr 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session35').scrollIntoView();">6 Apr 2025</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session34').scrollIntoView();">16 Mar 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session33').scrollIntoView();">2 Mar 2025</a></li>
 <li><a href="javascript:void(0)" onclick="document.getElementById('session32').scrollIntoView();">16 Feb 2025</a></li>
 <li><a href="javascript:void(0)" onclick="document.getElementById('session31').scrollIntoView();">29 Jan 2025</a></li>
 <li><a href="javascript:void(0)" onclick="document.getElementById('session30').scrollIntoView();">15 Dec 2024</a></li>
@@ -903,7 +909,7 @@ var navLeftContent = [
 <li><a href="javascript:void(0)" onclick="document.getElementById('session1').scrollIntoView();">Comics</a></li>`];
 
 //When page 1st load, show only pg1 and hide others
-for(let i=1; i<=5; i++){ //i = number of pages include last page = number of files in `data` folder + 1
+for(let i=1; i<=6; i++){ //i = number of pages include last page = number of files in `data` folder + 1
     if(localStorage.getItem("paginationPageID") == -1){//Show last content page if saved page number = -1
         document.getElementById("contentPageLast").style.display = "block";
         document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
@@ -938,14 +944,14 @@ for(let i=1; i<=5; i++){ //i = number of pages include last page = number of fil
 //When a pagination button is clicked, hide all other pages and only show the required page. Also change selected page in pagination (i.e. the 'activePage' class)
 function goToSect(sectionID){
     //Loop to show required page, and hide all other pages
-    for(let i=1; i<=5; i++){ //i = number of pages include last page = number of files in `data` folder + 1
-        if(i == sectionID && sectionID == 5){//Show last content page if saved page number = -1
+    for(let i=1; i<=6; i++){ //i = number of pages include last page = number of files in `data` folder + 1
+        if(i == sectionID && sectionID == 6){//Show last content page if saved page number = -1
             document.getElementById("contentPage").innerHTML = null; //Clear content of contentPage div
             document.getElementById("contentPageLast").style.display = "block";
             document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
             document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[navLeftContent.length-1];
             localStorage.setItem("paginationPageID", -1); //Save currently showing page to localStorage
-        }else if(i == sectionID && sectionID != 5){
+        }else if(i == sectionID && sectionID != 6){
             //document.getElementById("contentPage"+i).style.display = "block";//Display the selected section page
             //Display the selected section page by including respective html file
             document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-"+i+".html");
