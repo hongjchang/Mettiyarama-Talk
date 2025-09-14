@@ -197,7 +197,7 @@
     <header>
         <div style="align-content:center;height:88%;">
             <h1>Mettiyarama Bhante's Talk</h1>
-            <p style="font-size:10px;">Last modified on 21 Aug 2025 17:06 GMT+10</p>
+            <p style="font-size:10px;">Last modified on 15 Sept 2025 00:20 GMT+10</p>
         </div>
         <div style="align-content:end;cursor:default;bottom:0;">
             <hr/>
@@ -243,6 +243,7 @@
                 <a href="javascript:void(0)" onclick="goToSect(4)">4</a>
                 <a href="javascript:void(0)" onclick="goToSect(5)">5</a>
                 <a href="javascript:void(0)" onclick="goToSect(6)">6</a>
+                <a href="javascript:void(0)" onclick="goToSect(7)">7</a>
                 <a href="javascript:void(0)" style="cursor:not-allowed;" title="Functionality Unavailable">&raquo;</a>
             </div>
             <!--Script at bottom-->
@@ -868,7 +869,9 @@ shareBtn.addEventListener("click", async () => {
 //Script for pagination (including sectioning pages)
 //Array to store each page's nav-left content list (number of elements = total pages)
 var navLeftContent = [
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session41').scrollIntoView();">17 Aug 2025</a></li>
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session43').scrollIntoView();">21 Sept 2025</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session42').scrollIntoView();">7 Sept 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session41').scrollIntoView();">17 Aug 2025</a></li>
 <li><a href="javascript:void(0)" onclick="document.getElementById('session40').scrollIntoView();">3 Aug 2025</a></li>
 <li><a href="javascript:void(0)" onclick="document.getElementById('session39').scrollIntoView();">6 Jul 2025</a></li>
 <li><a href="javascript:void(0)" onclick="document.getElementById('session38').scrollIntoView();">18 May 2025</a></li>
@@ -911,7 +914,7 @@ var navLeftContent = [
 <li><a href="javascript:void(0)" onclick="document.getElementById('session1').scrollIntoView();">Comics</a></li>`];
 
 //When page 1st load, show only pg1 and hide others
-for(let i=1; i<=6; i++){ //i = number of pages include last page = number of files in `data` folder + 1
+for(let i=1; i<=7; i++){ //i = number of pages include last page = number of files in `data` folder + 1
     if(localStorage.getItem("paginationPageID") == -1){//Show last content page if saved page number = -1
         document.getElementById("contentPageLast").style.display = "block";
         document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
@@ -946,14 +949,14 @@ for(let i=1; i<=6; i++){ //i = number of pages include last page = number of fil
 //When a pagination button is clicked, hide all other pages and only show the required page. Also change selected page in pagination (i.e. the 'activePage' class)
 function goToSect(sectionID){
     //Loop to show required page, and hide all other pages
-    for(let i=1; i<=6; i++){ //i = number of pages include last page = number of files in `data` folder + 1
-        if(i == sectionID && sectionID == 6){//Show last content page if saved page number = -1
+    for(let i=1; i<=7; i++){ //i = number of pages include last page = number of files in `data` folder + 1
+        if(i == sectionID && sectionID == 7){//Show last content page if saved page number = -1
             document.getElementById("contentPage").innerHTML = null; //Clear content of contentPage div
             document.getElementById("contentPageLast").style.display = "block";
             document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
             document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[navLeftContent.length-1];
             localStorage.setItem("paginationPageID", -1); //Save currently showing page to localStorage
-        }else if(i == sectionID && sectionID != 6){
+        }else if(i == sectionID && sectionID != 7){
             //document.getElementById("contentPage"+i).style.display = "block";//Display the selected section page
             //Display the selected section page by including respective html file
             document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-"+i+".html");
