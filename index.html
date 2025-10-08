@@ -197,7 +197,7 @@
     <header>
         <div style="align-content:center;height:88%;">
             <h1>Mettiyarama Bhante's Talk</h1>
-            <p style="font-size:10px;">Last modified on 22 Sept 2025 23:28 GMT+10</p>
+            <p style="font-size:10px;">Last modified on 9 Oct 2025 01:14 GMT+11</p>
         </div>
         <div style="align-content:end;cursor:default;bottom:0;">
             <hr/>
@@ -243,12 +243,12 @@
                 <a href="javascript:void(0)" onclick="goToSect(4)">4</a>
                 <a href="javascript:void(0)" onclick="goToSect(5)">5</a>
                 <a href="javascript:void(0)" onclick="goToSect(6)">6</a>
-                <a href="javascript:void(0)" onclick="goToSect(7)">7</a>
+                <a href="javascript:void(0)" onclick="goToSect(7)">-</a>
                 <a href="javascript:void(0)" style="cursor:not-allowed;" title="Functionality Unavailable">&raquo;</a>
             </div>
             <!--Script at bottom-->
 
-            <p style="text-decoration:underline;cursor:default;">Sorted By: <b>Most Recent</b></p>
+            <p style="text-decoration:underline;cursor:default;">Sorted by <b>Oldest</b></p>
 
             <!--Below div is simple multiple column container(https://www.w3schools.com/howto/howto_css_three_columns.asp)-->
             <!--[REMOVED, ARCHIVE ONLY] responsive table from https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/ -->
@@ -282,26 +282,6 @@
             <div w3-include-html="" id="contentPage"></div>
 
             <div id="contentPageLast">
-                <!--Inserting YT playlist https://developers.google.com/youtube/iframe_api_reference#Getting_Started -->
-                <h3 id="session2">Miscellaneous Bhante Talks</h3>
-                <code>Self-coded YouTube embedded player<br/><i>Unrelated to Mettiyarama Centre</i></code>
-                <div class="table-row-div">
-                    <div class="table-column-div">
-                        <iframe id="ytPlayer" loading="lazy" width="450" height="253" src="https://www.youtube.com/embed?listType=playlist&list=PLV-WE3LveWqrpHvtfFj2R1x-OQHbs9jLD&enablejsapi=1&disablekb=1&controls=0&autoplay=0&fs=0" frameborder="0" allow="encrypted-media;" referrerpolicy="no-referrer" allowfullscreen></iframe>
-                    </div>
-                    <div class="table-column-div">
-                        <table>
-                            <!--Progress Slider https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
-                            <tr><td style="border:none;">Volume: <input type="range" min="0" max="100" value="35" id="YTEmbedSlider"></td></tr>
-                            <tr><td style="border:none;"><button id="YTEmbedNextBtn">&#9205; Next Video</button></td></tr>
-                            <tr><td style="border:none;"><button id="YTEmbedResetBtn" disabled>&#8635; Repeat Again</button></td></tr>
-                            <tr><td style="border:none;"><button id="YTEmbedShuffleBtn"><span class="material-symbols-outlined" style="font-size:15px;">shuffle</span> Shuffle Player</button></td></tr>
-                            <tr><td style="border:none;"><span id="YTEmbedCurrentTime"></span></td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <hr>
                 <h3 id="session1">Yet to Release <a href="https://manga-shinchan.com" target="_blank" rel="noopener noreferrer">manga-shinchan.com<span class="material-symbols-outlined" style="font-size:12px; vertical-align:super;">open_in_new</span></a> Comic</h3>
                 <code>Despite no relevance with the site's main focus, due to this section was implemented individually, as a personal complement it is included here😎.</code>
 <!--Individual script for shinchan comic part-->
@@ -464,6 +444,25 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
     comicUrlIndexCounter++;//increment 1 index for comicUrl array to create the next comic chapter
 });
 </script>
+                <hr>
+                <!--Inserting YT playlist https://developers.google.com/youtube/iframe_api_reference#Getting_Started -->
+                <h3 id="session2">Miscellaneous Bhante Talks</h3>
+                <code>Self-coded YouTube embedded player<br/><i>Unrelated to Mettiyarama Centre</i></code>
+                <div class="table-row-div">
+                    <div class="table-column-div">
+                        <iframe id="ytPlayer" loading="lazy" width="450" height="253" src="https://www.youtube.com/embed?listType=playlist&list=PLV-WE3LveWqrpHvtfFj2R1x-OQHbs9jLD&enablejsapi=1&disablekb=1&controls=0&autoplay=0&fs=0" frameborder="0" allow="encrypted-media;" referrerpolicy="no-referrer" allowfullscreen></iframe>
+                    </div>
+                    <div class="table-column-div">
+                        <table>
+                            <!--Progress Slider https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+                            <tr><td style="border:none;">Volume: <input type="range" min="0" max="100" value="35" id="YTEmbedSlider"></td></tr>
+                            <tr><td style="border:none;"><button id="YTEmbedNextBtn">&#9205; Next Video</button></td></tr>
+                            <tr><td style="border:none;"><button id="YTEmbedResetBtn" disabled>&#8635; Repeat Again</button></td></tr>
+                            <tr><td style="border:none;"><button id="YTEmbedShuffleBtn"><span class="material-symbols-outlined" style="font-size:15px;">shuffle</span> Shuffle Player</button></td></tr>
+                            <tr><td style="border:none;"><span id="YTEmbedCurrentTime"></span></td></tr>
+                        </table>
+                    </div>
+                </div>
             </div>
 
             <!--Special text fields https://youtu.be/kcKkQgRz6K8?t=98 -->
@@ -869,49 +868,51 @@ shareBtn.addEventListener("click", async () => {
 //Script for pagination (including sectioning pages)
 //Array to store each page's nav-left content list (number of elements = total pages)
 var navLeftContent = [
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session43').scrollIntoView();">21 Sept 2025</a></li>`,
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session42').scrollIntoView();">7 Sept 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session41').scrollIntoView();">17 Aug 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session40').scrollIntoView();">3 Aug 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session39').scrollIntoView();">6 Jul 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session38').scrollIntoView();">18 May 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session37').scrollIntoView();">4 May 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session36').scrollIntoView();">20 Apr 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session35').scrollIntoView();">6 Apr 2025</a></li>`,
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session34').scrollIntoView();">16 Mar 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session33').scrollIntoView();">2 Mar 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session32').scrollIntoView();">16 Feb 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session31').scrollIntoView();">29 Jan 2025</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session30').scrollIntoView();">15 Dec 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session29').scrollIntoView();">1 Dec 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session28').scrollIntoView();">17 Nov 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session27').scrollIntoView();">3 Nov 2024</a></li>`,
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session26').scrollIntoView();">6 Oct 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session25').scrollIntoView();">1 Sept 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session24').scrollIntoView();">25 Aug 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session23').scrollIntoView();">17 Aug 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session22').scrollIntoView();">4 Aug 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session21').scrollIntoView();">21 July 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session20').scrollIntoView();">7 July 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session19').scrollIntoView();">22 May 2024</a></li>`,
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session18').scrollIntoView();">19 May 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session17').scrollIntoView();">12 May 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session16').scrollIntoView();">5 May 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session15').scrollIntoView();">21 Apr 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session14').scrollIntoView();">7 Apr 2024</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session13').scrollIntoView();">26 Apr 2023</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session12').scrollIntoView();">12 Apr 2023</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session11').scrollIntoView();">8 Mar 2023</a></li>`,
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session10').scrollIntoView();">22 Feb 2023</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session9').scrollIntoView();">8 Feb 2023</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session8').scrollIntoView();">11 Jan 2023</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session7').scrollIntoView();">21 Dec 2022</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session6').scrollIntoView();">07 Dec 2022</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session5').scrollIntoView();">03 Dec 2022</a></li>
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session3').scrollIntoView();">05 Oct 2022</a></li>
 <li><a href="javascript:void(0)" onclick="document.getElementById('session4').scrollIntoView();">19 Oct 2022</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session3').scrollIntoView();">05 Oct 2022</a></li>`,
-`<li><a href="javascript:void(0)" onclick="document.getElementById('session2').scrollIntoView();">Miscellaneous Embed</a></li>
-<li><a href="javascript:void(0)" onclick="document.getElementById('session1').scrollIntoView();">Comics</a></li>`];
+<li><a href="javascript:void(0)" onclick="document.getElementById('session5').scrollIntoView();">03 Dec 2022</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session6').scrollIntoView();">07 Dec 2022</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session7').scrollIntoView();">21 Dec 2022</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session8').scrollIntoView();">11 Jan 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session9').scrollIntoView();">8 Feb 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session10').scrollIntoView();">22 Feb 2023</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session11').scrollIntoView();">8 Mar 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session12').scrollIntoView();">12 Apr 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session13').scrollIntoView();">26 Apr 2023</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session14').scrollIntoView();">7 Apr 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session15').scrollIntoView();">21 Apr 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session16').scrollIntoView();">5 May 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session17').scrollIntoView();">12 May 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session18').scrollIntoView();">19 May 2024</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session19').scrollIntoView();">22 May 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session20').scrollIntoView();">7 July 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session21').scrollIntoView();">21 July 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session22').scrollIntoView();">4 Aug 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session23').scrollIntoView();">17 Aug 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session24').scrollIntoView();">25 Aug 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session25').scrollIntoView();">1 Sept 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session26').scrollIntoView();">6 Oct 2024</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session27').scrollIntoView();">3 Nov 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session28').scrollIntoView();">17 Nov 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session29').scrollIntoView();">1 Dec 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session30').scrollIntoView();">15 Dec 2024</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session31').scrollIntoView();">29 Jan 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session32').scrollIntoView();">16 Feb 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session33').scrollIntoView();">2 Mar 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session34').scrollIntoView();">16 Mar 2025</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session35').scrollIntoView();">6 Apr 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session36').scrollIntoView();">20 Apr 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session37').scrollIntoView();">4 May 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session38').scrollIntoView();">18 May 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session39').scrollIntoView();">6 Jul 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session40').scrollIntoView();">3 Aug 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session41').scrollIntoView();">17 Aug 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session42').scrollIntoView();">7 Sept 2025</a></li>`,
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session43').scrollIntoView();">21 Sept 2025</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session44').scrollIntoView();">5 Oct 2025</a></li>`,
+/*----New page's nav-left content list start from above this line----*/
+`<li><a href="javascript:void(0)" onclick="document.getElementById('session1').scrollIntoView();">Comics</a></li>
+<li><a href="javascript:void(0)" onclick="document.getElementById('session2').scrollIntoView();">Miscellaneous Embed</a></li>`];
 
 //When page 1st load, show only pg1 and hide others
 for(let i=1; i<=7; i++){ //i = number of pages include last page = number of files in `data` folder + 1
