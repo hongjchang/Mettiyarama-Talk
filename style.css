@@ -186,9 +186,9 @@ body.dark .copyUrlBtn:hover, body.dark #shareBtn:hover{
 }
 body.dark .table-row-div{ background-color: #383838; }
 body.dark #YTEmbedSlider::-webkit-slider-thumb{ background:rgb(12, 161, 35); }
-body.dark .pagination a{ color: white; }
-body.dark .pagination a.activePage{ background-color: rgb(5, 60, 13); }
-body.dark .pagination a:hover:not(.activePage) { background-color: #333; }
+body.dark .pagination a, body.dark .pagination2 a{ color: white; }
+body.dark .pagination a.activePage, body.dark .pagination2 a.activePage{ background-color: rgb(5, 60, 13); }
+body.dark .pagination a:hover:not(.activePage), body.dark .pagination2 a:hover:not(.activePage) { background-color: #333; }
 body.dark .big-container{background-color: #383838;}
 body.dark .big-container .text-field-inputbox span{ color: #fff; }
 body.dark #specialTextFieldSubmitBtn, body.dark #specialTextFieldClearBtn{
@@ -1103,24 +1103,24 @@ th, td{
 }
 
 /*========Pagination=======*/
-.pagination{
+.pagination, .pagination2{
 	margin-left: 5px;
 	margin-bottom: 30px;
 	padding: 30px 0px 8px 0px;
 }
-.pagination a{
+.pagination a, .pagination2 a{
 	color: black;
 	padding: 8px 16px;
 	text-decoration: none;
 	transition: background-color .3s;
 }
-.pagination a.activePage{
+.pagination a.activePage, .pagination2 a.activePage{
 	background-color: rgb(7, 87, 19);
 	color: white;
 }
-.pagination a:hover:not(.activePage) { background-color: #ccc; }
-@media (max-width:800px){ .pagination{ margin-left: 0px; } }
-@media only screen and (max-width:630px){ .pagination{ margin-left: 0px; } }
+.pagination a:hover:not(.activePage), .pagination2 a:hover:not(.activePage) { background-color: #ccc; }
+@media (max-width:800px){ .pagination, .pagination2{ margin-left: 0px; } }
+@media only screen and (max-width:630px){ .pagination, .pagination2{ margin-left: 0px; } }
 
 /*========Special Text Field (Notes taking corner)========*/
 .big-container{

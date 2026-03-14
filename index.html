@@ -197,7 +197,7 @@
     <header>
         <div style="align-content:center;height:88%;">
             <h1>Mettiyarama Bhante's Talk</h1>
-            <p style="font-size:10px;">Last modified on 26 Dec 2025 13:31 GMT+11</p>
+            <p style="font-size:10px;">Last modified on 14 Mar 2026 23:01 GMT+11</p>
         </div>
         <div style="align-content:end;cursor:default;bottom:0;">
             <hr/>
@@ -463,6 +463,19 @@ comicHeader.forEach(function(x){ //x means: each elements of comicHeader
                         </table>
                     </div>
                 </div>
+            </div>
+
+            <!--Pagination (copied from the page beginning, MUST BE UPDATED WITH PAGINATION ABOVE)-->
+            <div class="pagination2">
+                <a href="javascript:void(0)" style="cursor:not-allowed;" title="Functionality Unavailable">&laquo;</a>
+                <a href="javascript:void(0)" onclick="goToSect(1)">1</a>
+                <a href="javascript:void(0)" onclick="goToSect(2)">2</a>
+                <a href="javascript:void(0)" onclick="goToSect(3)">3</a>
+                <a href="javascript:void(0)" onclick="goToSect(4)">4</a>
+                <a href="javascript:void(0)" onclick="goToSect(5)">5</a>
+                <a href="javascript:void(0)" onclick="goToSect(6)">6</a>
+                <a href="javascript:void(0)" onclick="goToSect(7)">-</a>
+                <a href="javascript:void(0)" style="cursor:not-allowed;" title="Functionality Unavailable">&raquo;</a>
             </div>
 
             <!--Special text fields https://youtu.be/kcKkQgRz6K8?t=98 -->
@@ -924,6 +937,7 @@ for(let i=1; i<=7; i++){ //i = number of pages include last page = number of fil
     if(localStorage.getItem("paginationPageID") == -1){//Show last content page if saved page number = -1
         document.getElementById("contentPageLast").style.display = "block";
         document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
+        document.querySelector(".pagination2").children[document.querySelector(".pagination2").childElementCount-2].classList.add("activePage");    //for 2nd pagination at page bottom (same line as line above)
         document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[navLeftContent.length-1];
     }else if(i == Number(localStorage.getItem("paginationPageID"))){ //if i = saved page number
         //document.getElementById("contentPage"+i).style.display = "block";
@@ -931,6 +945,7 @@ for(let i=1; i<=7; i++){ //i = number of pages include last page = number of fil
         document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-"+i+".html");
         includeHTML();
         document.querySelector(".pagination").children[i].classList.add("activePage");
+        document.querySelector(".pagination2").children[i].classList.add("activePage");    //for 2nd pagination at page bottom (same line as line above)
         document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[i-1];
     }else if(localStorage.getItem("paginationPageID") == null/*i == 1*/){ //if no page number is saved
         //document.getElementById("contentPage"+i).style.display = "block"; //show pg1 only
@@ -938,16 +953,19 @@ for(let i=1; i<=7; i++){ //i = number of pages include last page = number of fil
         document.getElementById("contentPage").setAttribute("w3-include-html", "data/main-content-1.html");
         includeHTML();
         document.querySelector(".pagination").children[1].classList.add("activePage"); //add activePage class to pg1
+        document.querySelector(".pagination2").children[1].classList.add("activePage"); //for 2nd pagination at page bottom (same as line above)
         document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[0];
         //To hide last page if not to display it
         document.getElementById("contentPageLast").style.display = "none";
     }else{ //not selected page
         //document.getElementById("contentPage"+i).style.display = "none";
         document.querySelector(".pagination").children[i].classList.remove("activePage");
+        document.querySelector(".pagination2").children[i].classList.remove("activePage");  //for 2nd pagination at page bottom (same as line above)
         
         //To hide last page if not to display it
         document.getElementById("contentPageLast").style.display = "none";
         document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.remove("activePage");
+        document.querySelector(".pagination2").children[document.querySelector(".pagination2").childElementCount-2].classList.remove("activePage"); //for 2nd pagination at page bottom (same as line above)
     }
 }
 
@@ -960,6 +978,7 @@ function goToSect(sectionID){
             document.getElementById("contentPage").innerHTML = null; //Clear content of contentPage div
             document.getElementById("contentPageLast").style.display = "block";
             document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.add("activePage");
+            document.querySelector(".pagination2").children[document.querySelector(".pagination2").childElementCount-2].classList.add("activePage");    //for 2nd pagination at page bottom (same as line above)
             document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[navLeftContent.length-1];
             localStorage.setItem("paginationPageID", -1); //Save currently showing page to localStorage
         }else if(i == sectionID && sectionID != 7){
@@ -969,15 +988,18 @@ function goToSect(sectionID){
             includeHTML();
             
             document.querySelector(".pagination").children[i].classList.add("activePage");
+            document.querySelector(".pagination2").children[i].classList.add("activePage");  //for 2nd pagination at page bottom (same as line above)
             document.querySelector(".nav-left").querySelector(".paginationChangeableContent").innerHTML = navLeftContent[i-1]; //assign the specific page's nav-left content
             localStorage.setItem("paginationPageID", i); //Save currently showing page to localStorage
         }else{
             //document.getElementById("contentPage"+i).style.display = "none";
             document.querySelector(".pagination").children[i].classList.remove("activePage");
+            document.querySelector(".pagination2").children[i].classList.remove("activePage");  //for 2nd pagination at page bottom (same as line above)
 
             //To hide last page if not to display it
             document.getElementById("contentPageLast").style.display = "none";
             document.querySelector(".pagination").children[document.querySelector(".pagination").childElementCount-2].classList.remove("activePage");
+            document.querySelector(".pagination2").children[document.querySelector(".pagination2").childElementCount-2].classList.remove("activePage");   //for 2nd pagination at page bottom (same as line above)
         }
     }
 }
