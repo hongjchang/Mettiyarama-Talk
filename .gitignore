@@ -11,6 +11,8 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+#Other repository files excluded to commit
 text-field-index.html
 text-field-style.css
 plays/*
